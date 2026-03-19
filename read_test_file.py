@@ -39,13 +39,13 @@ You can use Edge objects like this:
 from ast import literal_eval
 
 class GraphNode:
-    def __init__(self, name, x, y, edges = None, is_destination = False):
+    def __init__(self, name, x, y, edges = None, is_origin = False, is_destination = False):
         self.name = name
         self.x = x
         self.y = y
         self.edges = edges or []
         self.is_destination = is_destination
-        self.visited = False
+        self.is_origin = is_origin
 
     def goal_test():
         return self.is_destination
@@ -107,6 +107,7 @@ def read_test_file(path):
 
                 case 3:
                     origin = nodes[int(content)]
+                    origin.is_origin = True
 
                 case 4:
                     for x in content.split("; "):
@@ -119,24 +120,44 @@ def read_test_file(path):
 
     return origin
 
-def graph_to_string(graph_node, indent = 0):
-    graph_node.visited = True
-
+def to_test_file(node):
     result = ""
 
-    def tabs(n):
-        if n == 0: return ""
-        return "\t" + tabs(n - 1)
+    origin = 0
+    nodes = []
+    edges = []
+    destinations = []
 
-    result += tabs(indent) + str(graph_node)
+    def discover(node):
+        if node in nodes: return
 
-    if len(graph_node.edges) > 0:
-        result += " ["
+        nodes.append(node)
 
-    for edge in graph_node.edges:
-        result += tabs(indent) + f"-- {edge.cost} ->" + (str(edge.node_to) if edge.node_to.visited else graph_to_string(edge.node_to, indent=indent+1)) + "\n"
+        for edge in node.edges:
+            edges.append(edge)
+            discover(edge.node_to)
 
-    if len(graph_node.edges) > 0:
-        result += "]"
+    discover(node)
 
-print(graph_to_string(read_test_file("tests/PathFinder-test.txt")))
+    nodes.sort(key=lambda n : n.name)
+
+    result += "Nodes:\n"
+
+    for node in nodes:
+        if node.is_origin: origin = node.name
+        if node.is_destination: destinations.append(str(node.name))
+
+        result += f"{node.name}: ({node.x},{node.y})\n"
+
+    result += "Edges:\n"
+
+    for edge in edges:
+        result += f"({edge.node_from.name},{edge.node_to.name}): {edge.cost}\n"
+
+    result += f"\nOrigin:\n{str(origin)}"
+
+    result += "\nDestinations:\n" + "; ".join(destinations)
+
+    return result
+
+print(to_test_file(read_test_file("tests/PathFinder-test.txt")))
