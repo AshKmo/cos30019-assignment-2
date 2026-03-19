@@ -159,5 +159,3 @@ def to_test_file(node):
     result += "\nDestinations:\n" + "; ".join(destinations)
 
     return result
-
-print(to_test_file(read_test_file("tests/PathFinder-test.txt")))
