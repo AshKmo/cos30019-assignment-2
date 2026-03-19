@@ -4,7 +4,7 @@ USAGE:
 
 Put this script in the same folder as your script, and add this line to the top of your script:
 
-    import read_test_file
+    from test_file_lib import read_test_file
 
 Now you can use the function read_test_file(path) to read test files.
 
