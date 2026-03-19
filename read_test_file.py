@@ -10,54 +10,57 @@ Now you can use the function read_test_file(path) to read test files.
 
 Just call the function with the path to the file you want to read, e.g.
 
-    read_test_file("PathFinder-test.txt")
+    read_test_file("tests/PathFinder-test.txt")
 
-This function returns a Node object representing the origin.
+This function returns a GraphNode object that represents the origin of the graph (the initial state).
 
-You can use Node objects like this:
+You can use GraphNode objects like this:
 
-    node = read_test_file("PathFinder-test.txt")
+    graph_node = read_test_file("tests/PathFinder-test.txt") # read the graph from the file
 
-    node.is_destination # this is True only if this is a destination node
+    graph_node.is_destination # this is True only if this is one of the destinations
 
-    node.options # this is the list of possible options for this node
+    graph_node.edges # this is the list of possible edges for this graph node
 
-Each of the options in a node is an Option object
+Each of the edges in a graph node is an Edge object.
 
-You can use Option objects like this:
+You can use Edge objects like this:
 
-    option = node.options[0] # get the first option. Options are sorted by name as per the assignment document
+    edge = graph_node.edges[0] # get the first edge. Edges are sorted by the name of the graph node to which they point, as per the assignment document
 
-    option.next_node # this is the next node the agent will be at if it chooses this option
+    edge.node_to # the graph node that this edge points toward; the next node the agent will be at
 
-    option.cost # this is the cost of the path to the next node
+    edge.node_from # the graph node that this edge points away from
+
+    edge.cost # this is the cost of the path to the next graph node
 
 '''
 
 from ast import literal_eval
 
-class Node:
-    def __init__(self, name, x, y, is_destination = False):
+class GraphNode:
+    def __init__(self, name, x, y, edges = None, is_destination = False):
         self.name = name
         self.x = x
         self.y = y
-        self.options = []
+        self.edges = edges or []
         self.is_destination = is_destination
+        self.visited = False
 
     def goal_test():
         return self.is_destination
 
     def __repr__(self):
-        return f"Node{{{self.name}: {(self.x, self.y)}}}"
+        return f"GraphNode{{{self.name}: {(self.x, self.y)}}}"
 
-class Option:
-    def __init__(self, node, next_node, cost):
-        self.node = node
-        self.next_node = next_node
+class Edge:
+    def __init__(self, node_from, node_to, cost):
+        self.node_from = node_from
+        self.node_to = node_to
         self.cost = cost
 
     def __repr__(self):
-        return f"Option{{{(self.node.name, self.next_node.name)}: {self.cost}}}"
+        return f"Edge{{{(self.node_from.name, self.node_to.name)}: {self.cost}}}"
 
 def read_test_file(path):
     nodes = {}
@@ -92,7 +95,7 @@ def read_test_file(path):
                     name = int(s[0])
                     (x, y) = literal_eval(s[1])
 
-                    nodes[name] = Node(name, x, y)
+                    nodes[name] = GraphNode(name, x, y)
 
                 case 2:
                     s = content.split(": ")
@@ -100,7 +103,7 @@ def read_test_file(path):
                     (start, end) = literal_eval(s[0])
                     cost = int(s[1])
 
-                    nodes[start].options.append(Option(nodes[start], nodes[end], cost))
+                    nodes[start].edges.append(Edge(nodes[start], nodes[end], cost))
 
                 case 3:
                     origin = nodes[int(content)]
@@ -112,8 +115,28 @@ def read_test_file(path):
                         nodes[int(x)].is_destination = True
 
     for node in nodes.values():
-        node.options.sort(key=lambda o : o.next_node.name)
+        node.edges.sort(key=lambda o : o.node_to.name)
 
     return origin
 
-print(read_test_file("PathFinder-test.txt").options)
+def graph_to_string(graph_node, indent = 0):
+    graph_node.visited = True
+
+    result = ""
+
+    def tabs(n):
+        if n == 0: return ""
+        return "\t" + tabs(n - 1)
+
+    result += tabs(indent) + str(graph_node)
+
+    if len(graph_node.edges) > 0:
+        result += " ["
+
+    for edge in graph_node.edges:
+        result += tabs(indent) + f"-- {edge.cost} ->" + (str(edge.node_to) if edge.node_to.visited else graph_to_string(edge.node_to, indent=indent+1)) + "\n"
+
+    if len(graph_node.edges) > 0:
+        result += "]"
+
+print(graph_to_string(read_test_file("tests/PathFinder-test.txt")))
