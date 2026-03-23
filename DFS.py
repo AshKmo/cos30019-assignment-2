@@ -13,7 +13,7 @@ class Node:
         self.parent = parent
 
 # creates a list of the names of the states in the path from the root node to the node containing said state
-def action_path(branch): return action_path(branch.parent) + [branch.state.name] if branch else []
+def action_path(branch): return action_path(branch.parent) + [branch.state] if branch else []
 
 # performs depth first search from a given origin vertex
 def depth_first_search(origin):
@@ -57,9 +57,5 @@ def depth_first_search(origin):
     # if the loop exited normally then a destination was not found
     if not frontier: branch = None
 
-    # print the destination state name, the number of nodes created, and the path of states taken
-    print(branch and branch.state.name, node_count)
-    print(action_path(branch))
-
-# test the algorithm using the file given on the assignment page
-depth_first_search(read_test_file("tests/PathFinder-test.txt"))
+    # return the path to the destination
+    return action_path(branch)

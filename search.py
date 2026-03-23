@@ -1,11 +1,19 @@
 #this file is for exectuting pathfinding scripts, named 'search.py' as per the assignment specifications
 #you will need to add code here for importing your own algorithms and executing scripts based on commands
 #in the same directory as this file, run 'python search.py (file path) (alogrithm), to run this code
+
 import sys
+
 from test_file_lib import read_test_file
+
 from BFS import breadth_first_search
+from DFS import depth_first_search
 
 def main():
+    if len(sys.argv) < 3:
+        print("usage: python search.py <data-file> <search-method>")
+        sys.exit(1)
+
     filename = sys.argv[1]
     method = sys.argv[2].lower()
 
@@ -17,6 +25,11 @@ def main():
         #add a case for your scripts here
         case "bfs":
             path = breadth_first_search(node)
+        case "dfs":
+            path = depth_first_search(node)
+        case _:
+            print("no such search method: " + method)
+            sys.exit(1)
 
     #prints in expected output format as per the assignment specification e.g.
     #(filename) (method)
