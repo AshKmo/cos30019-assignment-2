@@ -19,7 +19,7 @@ def breadth_first_search(node: test_file_lib.GraphNode):
 
         #once the destination is reached, we make a list of nodes tracing a path from the origin to the destination and return it
         if location.is_destination:
-            path = []
+            path: list[test_file_lib.GraphNode] = []
             current = location
             while current != None:
                 path.append(current)
