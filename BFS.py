@@ -25,7 +25,7 @@ def breadth_first_search(node: test_file_lib.GraphNode):
                 path.append(current)
                 current = parent[current]
             path.reverse()
-            return path
+            return (path, len(parent))
         
         if location not in visited:
             #make sure the location is flagged as visited so that it wont be re-visited
