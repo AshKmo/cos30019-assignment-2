@@ -58,4 +58,4 @@ def depth_first_search(origin):
     if not frontier: branch = None
 
     # return the path to the destination
-    return action_path(branch)
+    return (action_path(branch), node_count)
