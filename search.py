@@ -8,6 +8,9 @@ from test_file_lib import read_test_file
 
 from BFS import breadth_first_search
 from DFS import depth_first_search
+from A_star import a_star_search
+
+import heuristics
 
 def main():
     if len(sys.argv) < 3:
@@ -17,7 +20,7 @@ def main():
     filename = sys.argv[1]
     method = sys.argv[2].lower()
 
-    node = read_test_file(filename)
+    (origin, destinations, graph_nodes) = read_test_file(filename)
 
     #when writing your scripts, please have them return path as a list of GraphNode objects ordered from origin to destination
     result = None
@@ -25,9 +28,11 @@ def main():
     match method:
         #add a case for your scripts here
         case "bfs":
-            result = breadth_first_search(node)
+            result = breadth_first_search(origin)
         case "dfs":
-            result = depth_first_search(node)
+            result = depth_first_search(origin)
+        case "a_star":
+            result = a_star_search(origin, heuristics.DistanceHeuristic(origin, destinations, graph_nodes))
         case _:
             print("no such search method: " + method)
             sys.exit(1)
