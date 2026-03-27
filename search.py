@@ -8,6 +8,9 @@ from test_file_lib import read_test_file
 
 from BFS import breadth_first_search
 from DFS import depth_first_search
+from A_star import a_star_search
+
+import heuristics
 
 def main():
     if len(sys.argv) < 3:
@@ -17,26 +20,34 @@ def main():
     filename = sys.argv[1]
     method = sys.argv[2].lower()
 
-    node = read_test_file(filename)
+    (origin, destinations, graph_nodes) = read_test_file(filename)
+
     #when writing your scripts, please have them return path as a list of GraphNode objects ordered from origin to destination
-    path = [None]
+    result = None
 
     match method:
         #add a case for your scripts here
         case "bfs":
-            path = breadth_first_search(node)
+            result = breadth_first_search(origin)
         case "dfs":
-            path = depth_first_search(node)
+            result = depth_first_search(origin)
+        case "a_star":
+            result = a_star_search(origin, heuristics.DistanceHeuristic(origin, destinations, graph_nodes))
         case _:
             print("no such search method: " + method)
             sys.exit(1)
+
+    path = result[0]
+
+    node_count = result[1]
 
     #prints in expected output format as per the assignment specification e.g.
     #(filename) (method)
     #(goal) (number of nodes) *note that I am not fully sure on whether or not this should be the path length or how many steps it took to complete the path (I will ask in class)
     #path
     #note that additional line breaks are acceptable for the final output
-    print(f"{filename} {method}\n{path[-1]} {len(path)}")
+    print(f"{filename} {method}\n{path[-1]} {node_count}")
+
     for location in path:
         print(location)
 

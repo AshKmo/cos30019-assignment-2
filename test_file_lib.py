@@ -63,6 +63,8 @@ class Edge:
         return f"Edge{{{(self.node_from.name, self.node_to.name)}: {self.cost}}}"
 
 def read_test_file(path):
+    destinations = []
+
     nodes = {}
     origin = None
 
@@ -113,14 +115,18 @@ def read_test_file(path):
                     for x in content.split("; "):
                         if not x: continue
 
-                        nodes[int(x)].is_destination = True
+                        dest = nodes[int(x)]
+
+                        dest.is_destination = True
+
+                        destinations.append(dest)
 
     for node in nodes.values():
         node.edges.sort(key=lambda o : o.node_to.name)
 
-    return origin
+    return (origin, destinations, nodes)
 
-def to_test_file(node):
+def to_test_file(origin):
     result = ""
 
     origin = 0
@@ -137,7 +143,7 @@ def to_test_file(node):
             edges.append(edge)
             discover(edge.node_to)
 
-    discover(node)
+    discover(origin)
 
     nodes.sort(key=lambda n : n.name)
 
