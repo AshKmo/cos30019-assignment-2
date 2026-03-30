@@ -9,6 +9,8 @@ from test_file_lib import read_test_file
 from BFS import breadth_first_search
 from DFS import depth_first_search
 from A_star import a_star_search
+from GBFS import greedy_best_first_search
+from CUS1 import uniform_cost_search
 
 import heuristics
 
@@ -31,19 +33,27 @@ def main():
             result = breadth_first_search(origin)
         case "dfs":
             result = depth_first_search(origin)
+        case "gbfs":
+            result = greedy_best_first_search(origin, heuristics.DistanceHeuristic(origin, destinations, graph_nodes))
         case "a_star":
             result = a_star_search(origin, heuristics.DistanceHeuristic(origin, destinations, graph_nodes))
+        case "cus1":
+            result = uniform_cost_search(origin)
         case _:
             print("no such search method: " + method)
             sys.exit(1)
 
     path = result[0]
-
     node_count = result[1]
+
+    # if no path was found, still print something sensible
+    if path is None:
+        print(f"{filename} {method}\nNo goal found {node_count}")
+        return
 
     #prints in expected output format as per the assignment specification e.g.
     #(filename) (method)
-    #(goal) (number of nodes) *note that I am not fully sure on whether or not this should be the path length or how many steps it took to complete the path (I will ask in class)
+    #(goal) (number of nodes)
     #path
     #note that additional line breaks are acceptable for the final output
     print(f"{filename} {method}\n{path[-1]} {node_count}")
