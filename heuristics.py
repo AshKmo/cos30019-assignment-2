@@ -60,11 +60,13 @@ class AngleHeuristic(Heuristic):
         # go through each destination to find the closest one to the parent of the current node
         min_distance = math.inf
         parent_to_dest = None
-        for dest in destinations:
+        for dest in self.destinations:
             new_parent_to_dest = Vec2(dest.x - node.parent.state.x, dest.y - node.parent.state.y);
 
-            if new_parent_to_dest.mag() < min_distance:
-                parent_to_dest = new_parent_to_child
+            new_distance = new_parent_to_dest.mag()
+
+            if new_distance < min_distance:
+                parent_to_dest = new_parent_to_dest
                 min_distance = new_distance
 
         # find the vector from the parent of the option to the option itself
