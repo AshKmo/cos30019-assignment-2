@@ -3,9 +3,6 @@ from queue import PriorityQueue
 
 from nodes import Node
 
-# creates a list of the names of the states in the path from the root node to the node containing said state
-def action_path(branch): return action_path(branch.parent) + [branch.state] if branch else []
-
 # performs A* search from a given origin vertex using a given heuristic
 def a_star_search(origin, heuristic):
     root = Node(origin)
@@ -28,7 +25,7 @@ def a_star_search(origin, heuristic):
 
         # if a goal state has been reached we can return the path to the goal and the node count
         if branch.state.is_destination:
-            return (action_path(branch), node_count)
+            return (branch.path_to(), node_count)
 
         # iterate through each edge pointing from the vertex
         for edge in branch.state.edges:

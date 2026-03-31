@@ -56,10 +56,9 @@ def main():
     #(goal) (number of nodes)
     #path
     #note that additional line breaks are acceptable for the final output
-    print(f"{filename} {method}\n{path[-1]} {node_count}")
+    print(f"{filename} {method}\n{path[-1].name} {node_count}")
 
-    for location in path:
-        print(location)
+    print(" -> ".join(str(l.name) for l in path))
 
 if __name__ == "__main__":
     main()

@@ -53,7 +53,7 @@ class Node:
 
     # run this method to obtain the full path from the origin to this node
     def path_to(self):
-        return (self.parent.path_to() if parent else []) + [self.state]
+        return (self.parent.path_to() if self.parent else []) + [self.state]
 
     # define a comparison method for sorting
     def __lt__(self, other):
