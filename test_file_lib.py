@@ -126,42 +126,21 @@ def read_test_file(path):
 
     return (origin, destinations, nodes)
 
-def to_test_file(origin):
-    result = ""
-
-    origin = 0
-    nodes = []
+def to_test_file(origin, destinations, nodes):
     edges = []
-    destinations = []
 
-    def discover(node):
-        if node in nodes: return
+    result = "Nodes:\n"
 
-        nodes.append(node)
-
-        for edge in node.edges:
-            edges.append(edge)
-            discover(edge.node_to)
-
-    discover(origin)
-
-    nodes.sort(key=lambda n : n.name)
-
-    result += "Nodes:\n"
-
-    for node in nodes:
-        if node.is_origin: origin = node.name
-        if node.is_destination: destinations.append(str(node.name))
-
-        result += f"{node.name}: ({node.x},{node.y})\n"
+    for n in nodes:
+        edges += [e for e in n.edges if e not in edges]
+        result += f"{n.name}: ({n.x},{n.y})\n"
 
     result += "Edges:\n"
 
-    for edge in edges:
-        result += f"({edge.node_from.name},{edge.node_to.name}): {edge.cost}\n"
+    for e in edges:
+        result += f"({e.node_from.name},{e.node_to.name}): {e.cost}\n"
 
-    result += f"\nOrigin:\n{str(origin)}"
-
-    result += "\nDestinations:\n" + "; ".join(destinations)
+    result += f"\nOrigin:\n{origin.name}\n"
+    result += "Destinations:\n" + "; ".join(str(d.name) for d in destinations)
 
     return result
