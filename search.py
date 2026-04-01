@@ -11,6 +11,7 @@ from DFS import depth_first_search
 from A_star import a_star_search
 from GBFS import greedy_best_first_search
 from CUS1 import uniform_cost_search
+from beam_search import beam_search
 
 import heuristics
 
@@ -39,6 +40,8 @@ def main():
             result = a_star_search(origin, heuristics.DistanceHeuristic(origin, destinations, graph_nodes))
         case "cus1":
             result = uniform_cost_search(origin)
+        case "cus2":
+            result = beam_search(origin, heuristics.DistanceHeuristic(origin, destinations, graph_nodes))
         case _:
             print("no such search method: " + method)
             sys.exit(1)
