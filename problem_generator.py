@@ -28,7 +28,7 @@ def generate_problem(width, height, node_count_range, dest_count_range, spanning
     for i in range(1, random.choice(node_count_range)):
         make_node(i)
 
-    destinations = random.sample(nodes, random.choice(dest_count_range))
+    destinations = random.sample(nodes, min(random.choice(dest_count_range), len(nodes)))
 
     for dest in destinations:
         dest.is_destination = True
@@ -70,6 +70,4 @@ def generate_problem(width, height, node_count_range, dest_count_range, spanning
 
     return (origin, destinations, nodes)
 
-for i in range(0, 1000):
-    print("\n====== TEST ======\n")
-    print(to_test_file(*generate_problem(10, 10, range(4, 13), range(1, 3), range(1, 4), range(0, 3), 4)))
+print(to_test_file(*generate_problem(10, 10, range(4, 21), range(1, 5), range(1, 4), range(0, 3), 4)))
