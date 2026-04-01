@@ -72,62 +72,70 @@ def read_test_file(path):
 
     mode = 0
 
+    lines = None
+
     with open(path) as file:
-        for line in file:
-            content = line.strip()
+        lines = list(file)
 
-            match content:
-                case "":
-                    continue
-                case "Nodes:":
-                    mode = 1
-                    continue
-                case "Edges:":
-                    mode = 2
-                    continue
-                case "Origin:":
-                    mode = 3
-                    continue
-                case "Destinations:":
-                    mode = 4
-                    continue
+    for line in lines:
+        content = line.strip()
 
-            match mode:
-                case 1:
-                    s = content.split(": ")
+        match content:
+            case "":
+                continue
+            case "Nodes:":
+                mode = 1
+                continue
+            case "Edges:":
+                mode = 2
+                continue
+            case "Origin:":
+                mode = 3
+                continue
+            case "Destinations:":
+                mode = 4
+                continue
 
-                    name = int(s[0])
-                    (x, y) = literal_eval(s[1])
+        match mode:
+            case 1:
+                s = content.split(": ")
 
-                    nodes[name] = GraphNode(name, x, y)
+                name = int(s[0])
+                (x, y) = literal_eval(s[1])
 
-                case 2:
-                    s = content.split(": ")
+                nodes[name] = GraphNode(name, x, y)
 
-                    (start, end) = literal_eval(s[0])
-                    cost = literal_eval(s[1])
+            case 2:
+                s = content.split(": ")
 
-                    start_node = nodes[start]
-                    end_node = nodes[end]
+                (start, end) = literal_eval(s[0])
+                cost = literal_eval(s[1])
 
+                start_node = nodes[start]
+                end_node = nodes[end]
+
+                for edge in start_node.edges:
+                    if edge.node_to == end_node:
+                        break
+                else:
                     if cost == ...:
                         cost = math.ceil(math.dist((start_node.x, start_node.y), (end_node.x, end_node.y)))
 
                     start_node.edges.append(Edge(start_node, end_node, cost))
 
-                case 3:
-                    origin = nodes[int(content)]
-                    origin.is_origin = True
+            case 3:
+                origin = nodes[int(content)]
+                origin.is_origin = True
 
-                case 4:
-                    for x in content.split("; "):
-                        if not x: continue
+            case 4:
+                for x in content.split("; "):
+                    if not x: continue
 
-                        dest = nodes[int(x)]
+                    dest = nodes[int(x)]
 
-                        dest.is_destination = True
+                    dest.is_destination = True
 
-                        destinations.append(dest)
+                    destinations.append(dest)
 
     for node in nodes.values():
         node.edges.sort(key=lambda o : o.node_to.name)
@@ -154,4 +162,12 @@ def to_test_file(origin, destinations, nodes):
     return result
 
 if __name__ == "__main__":
-    print(to_test_file(*read_test_file(argv[1])))
+    name_counter = 0
+
+    (origin, destinations, nodes) = read_test_file(argv[1])
+
+    for node in nodes.values():
+        name_counter += 1
+        node.name = name_counter
+
+    print(to_test_file(origin, destinations, nodes))
