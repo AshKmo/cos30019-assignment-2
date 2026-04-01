@@ -36,7 +36,9 @@ You can use Edge objects like this:
 
 '''
 
+import math
 from ast import literal_eval
+from sys import argv
 
 class GraphNode:
     def __init__(self, name, x, y, edges = None, is_origin = False, is_destination = False):
@@ -103,9 +105,15 @@ def read_test_file(path):
                     s = content.split(": ")
 
                     (start, end) = literal_eval(s[0])
-                    cost = int(s[1])
+                    cost = literal_eval(s[1])
 
-                    nodes[start].edges.append(Edge(nodes[start], nodes[end], cost))
+                    start_node = nodes[start]
+                    end_node = nodes[end]
+
+                    if cost == ...:
+                        cost = math.ceil(math.dist((start_node.x, start_node.y), (end_node.x, end_node.y)))
+
+                    start_node.edges.append(Edge(start_node, end_node, cost))
 
                 case 3:
                     origin = nodes[int(content)]
@@ -131,7 +139,7 @@ def to_test_file(origin, destinations, nodes):
 
     result = "Nodes:\n"
 
-    for n in nodes:
+    for n in nodes.values():
         edges += [e for e in n.edges if e not in edges]
         result += f"{n.name}: ({n.x},{n.y})\n"
 
@@ -144,3 +152,6 @@ def to_test_file(origin, destinations, nodes):
     result += "Destinations:\n" + "; ".join(str(d.name) for d in destinations)
 
     return result
+
+if __name__ == "__main__":
+    print(to_test_file(*read_test_file(argv[1])))

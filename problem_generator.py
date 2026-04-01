@@ -117,7 +117,12 @@ def generate_problem(width, height, node_count_range, dest_count_range, spanning
 
     spanning_tree(origin)
 
-    return (origin, destinations, nodes)
+    nodes_dict = {}
+
+    for n in nodes:
+        nodes_dict[n.name] = n
+
+    return (origin, destinations, nodes_dict)
 
 # execute the problem generation algorithm, convert it to a test file string, and print it to stdout
 print(to_test_file(*generate_problem(
