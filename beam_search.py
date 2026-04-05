@@ -14,12 +14,13 @@ def beam_search(origin: test_file_lib.GraphNode, heuristic: heuristics.Heuristic
     start = nodes.Node(origin)
     beam = [start]
     backup: list[nodes.Node] = []
+    created = 1
 
     while True:
         #check if the destination is in the beam
         for node in beam:
             if node.state.is_destination:
-                return (get_path(node), len(beam))
+                return (get_path(node), created)
 
         #make an empty list of candidates (nodes which may make it into the new beam) 
         candidates: list[nodes.Node] = []
@@ -29,6 +30,7 @@ def beam_search(origin: test_file_lib.GraphNode, heuristic: heuristics.Heuristic
             for edge in node.state.edges:
                 child = nodes.Node(edge.node_to, edge, node)
                 candidates.append(child)
+                created += 1
         
         #if no candidates were found, try to populate the beam with backup candidates
         if not candidates:
