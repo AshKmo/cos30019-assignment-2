@@ -8,23 +8,24 @@ from test_file_lib import *
 # SETTINGS:
 
 # the maximum x coordinate; the width of the space
-width = 10
+width = 100
 
 # the maximum y coordinate; the height of the space
-height = 10
+height = 100
 
 # the total number of nodes (including destinations and the origin) will be randomly drawn from this range
 # note that `range(0, x)` means "can be every value between 0 and x, EXCEPT x"
-node_count_range = range(4, 21)
+node_count_range = range(4, 41)
 
 # the number of destination nodes will be randomly drawn from this range
 # note that `range(0, x)` means "can be every value between 0 and x, EXCEPT x"
-dest_count_range = range(1, 5)
+dest_count_range = range(1, 7)
 
 # the problem generator uses a spanning tree to ensure that every node has a path to the origin
 # the number of nodes that each node will attempt to connect to when forming the spanning tree will be randomly drawn from this range
+# the lower limit for this should always be >= 1, as anything lower could result in an incomplete tree
 # note that `range(0, x)` means "can be every value between 0 and x, EXCEPT x"
-spanning_tree_selection_range = range(1, 4)
+spanning_tree_selection_range = range(1, 3)
 
 # once the problem generator creates the spanning tree, it allows each node to potentially form random connections with the other nodes
 # the number of extra connections that each node can make will be randomly drawn from this range
@@ -34,11 +35,11 @@ extra_edge_range = range(0, 3)
 # by default, the path cost of each edge is equal to the length of the edge, rounded up
 # however, the cost of each edge can be increased by a random amount up to this value
 # set this to zero to disable this feature
-max_added_distance = 4
+max_added_distance = 20
 
 
 
-def generate_problem(width, height, node_count_range, dest_count_range, spanning_tree_selection_range, extra_edge_range, max_added_distance):
+def generate_problem(width = width, height = height, node_count_range = node_count_range, dest_count_range = dest_count_range, spanning_tree_selection_range = spanning_tree_selection_range, extra_edge_range = extra_edge_range, max_added_distance = max_added_distance):
     nodes = []
 
     # function to create a new node whose coordinates have not yet been claimed by another node
@@ -84,9 +85,8 @@ def generate_problem(width, height, node_count_range, dest_count_range, spanning
         new_edge = Edge(node_from,
                         node_to,
                         math.ceil(
-                            math.dist((node_from.x, node_from.y), (node_to.x, node_to.y)) +
-                            random.randrange(max_added_distance + 1)
-                            )
+                            math.dist((node_from.x, node_from.y), (node_to.x, node_to.y))
+                            ) + random.randrange(max_added_distance + 1)
                         )
 
         node_from.edges.append(new_edge)
@@ -124,13 +124,6 @@ def generate_problem(width, height, node_count_range, dest_count_range, spanning
 
     return (origin, destinations, nodes_dict)
 
-# execute the problem generation algorithm, convert it to a test file string, and print it to stdout
-print(to_test_file(*generate_problem(
-    width,
-    height,
-    node_count_range,
-    dest_count_range,
-    spanning_tree_selection_range,
-    extra_edge_range,
-    max_added_distance
-    )))
+# if this script is executed on its own, run the problem generation algorithm with the default values, convert it to a test file string, and print it to stdout
+if __name__ == "__main__":
+    print(to_test_file(*generate_problem()))
