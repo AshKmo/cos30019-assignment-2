@@ -50,8 +50,8 @@ def main():
     node_count = result[1]
 
     # if no path was found, still print something sensible
-    if path is None:
-        print(f"{filename} {method}\nNo goal found {node_count}")
+    if path == None or len(path) == 0:
+        print(f"{filename} {method}\nNo path found")
         return
 
     #prints in expected output format as per the assignment specification e.g.
@@ -59,7 +59,7 @@ def main():
     #(goal) (number of nodes)
     #path
     #note that additional line breaks are acceptable for the final output
-    print(f"{filename} {method}\n{path[-1].name if path else None} {node_count}")
+    print(f"{filename} {method}\n{path[-1].name} {node_count}")
 
     print(" -> ".join(str(l.name) for l in path))
 
