@@ -52,7 +52,7 @@ def main():
     node_count = result[1]
 
     # if no path was found, still print something sensible
-    if path == None or len(path) == 0:
+    if path == None:
         print(f"{filename} {method}\nNo path found")
         return
 

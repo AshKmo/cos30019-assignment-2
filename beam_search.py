@@ -40,7 +40,7 @@ def beam_search(origin: test_file_lib.GraphNode, heuristic: heuristics.Heuristic
         #if no candidates were found, try to populate the beam with backup candidates
         if not candidates:
             if not backup:
-                return None
+                break
             beam = backup[:WIDTH]
             backup = backup[WIDTH:]
             continue
@@ -53,6 +53,8 @@ def beam_search(origin: test_file_lib.GraphNode, heuristic: heuristics.Heuristic
         #if the beam is empty, try to populate it with backups
         if not beam:
             if not backup:
-                return None
+                break
             beam = backup[:WIDTH]
             backup = backup[WIDTH:]
+
+    return (None, created)

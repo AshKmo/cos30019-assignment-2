@@ -1,0 +1,1954 @@
+Algorithm	Heuristic	Test	Average Time	Nodes
+BFS		tests/PathFinder-test.txt	2047.993	6
+DFS		tests/PathFinder-test.txt	2126.527	4
+A_star	Distance	tests/PathFinder-test.txt	15821.149	6
+A_star	Angle	tests/PathFinder-test.txt	22482.263	6
+GBFS	Distance	tests/PathFinder-test.txt	13009.978	5
+GBFS	Angle	tests/PathFinder-test.txt	18111.666	5
+Uniform_Cost		tests/PathFinder-test.txt	12018.539	6
+Beam	Distance	tests/PathFinder-test.txt	6824.13	6
+Beam	Angle	tests/PathFinder-test.txt	13077.537	6
+BFS		tests/dead-end-test.txt	5768.835	18
+DFS		tests/dead-end-test.txt	9155.466	18
+A_star	Distance	tests/dead-end-test.txt	43934.259	18
+A_star	Angle	tests/dead-end-test.txt	64989.31	18
+GBFS	Distance	tests/dead-end-test.txt	42870.822	18
+GBFS	Angle	tests/dead-end-test.txt	64292.678	18
+Uniform_Cost		tests/dead-end-test.txt	37458.48	18
+Beam	Distance	tests/dead-end-test.txt	18039.135	18
+Beam	Angle	tests/dead-end-test.txt	39367.564	18
+BFS		tests/deep-test.txt	9693.456	30
+DFS		tests/deep-test.txt	15178.898	30
+A_star	Distance	tests/deep-test.txt	62114.007	27
+A_star	Angle	tests/deep-test.txt	103486.37	29
+GBFS	Distance	tests/deep-test.txt	40413.27	18
+GBFS	Angle	tests/deep-test.txt	76306.086	22
+Uniform_Cost		tests/deep-test.txt	61215.405	30
+Beam	Distance	tests/deep-test.txt	24171.039	25
+Beam	Angle	tests/deep-test.txt	52280.198	25
+BFS		tests/high-cost-test.txt	4657.122	16
+DFS		tests/high-cost-test.txt	5564.798	11
+A_star	Distance	tests/high-cost-test.txt	52512.44	20
+A_star	Angle	tests/high-cost-test.txt	85777.115	22
+GBFS	Distance	tests/high-cost-test.txt	26463.965	10
+GBFS	Angle	tests/high-cost-test.txt	61544.107	16
+Uniform_Cost		tests/high-cost-test.txt	44001.439	22
+Beam	Distance	tests/high-cost-test.txt	21466.237	18
+Beam	Angle	tests/high-cost-test.txt	43712.642	18
+BFS		tests/direct-test.txt	4731.2	15
+DFS		tests/direct-test.txt	4438.209	9
+A_star	Distance	tests/direct-test.txt	18561.674	7
+A_star	Angle	tests/direct-test.txt	47388.423	12
+GBFS	Distance	tests/direct-test.txt	19003.73	7
+GBFS	Angle	tests/direct-test.txt	27183.226	7
+Uniform_Cost		tests/direct-test.txt	30567.299	16
+Beam	Distance	tests/direct-test.txt	15084.244	12
+Beam	Angle	tests/direct-test.txt	30256.297	12
+BFS		tests/false-spiral-test.txt	8478.065	26
+DFS		tests/false-spiral-test.txt	10914.725	20
+A_star	Distance	tests/false-spiral-test.txt	64033.051	26
+A_star	Angle	tests/false-spiral-test.txt	96153.125	26
+GBFS	Distance	tests/false-spiral-test.txt	58983.004	25
+GBFS	Angle	tests/false-spiral-test.txt	90061.018	25
+Uniform_Cost		tests/false-spiral-test.txt	53831.4	26
+Beam	Distance	tests/false-spiral-test.txt	21985.632	22
+Beam	Angle	tests/false-spiral-test.txt	55844.417	26
+BFS		tests/cluster-test.txt	4756.464	16
+DFS		tests/cluster-test.txt	8490.562	16
+A_star	Distance	tests/cluster-test.txt	45278.755	17
+A_star	Angle	tests/cluster-test.txt	82288.518	19
+GBFS	Distance	tests/cluster-test.txt	19940.71	8
+GBFS	Angle	tests/cluster-test.txt	35488.102	9
+Uniform_Cost		tests/cluster-test.txt	38270.283	19
+Beam	Distance	tests/cluster-test.txt	24063.976	18
+Beam	Angle	tests/cluster-test.txt	48988.753	18
+BFS		tests/shallow-test.txt	3508.226	12
+DFS		tests/shallow-test.txt	4112.119	9
+A_star	Distance	tests/shallow-test.txt	12268.007	5
+A_star	Angle	tests/shallow-test.txt	18486.256	5
+GBFS	Distance	tests/shallow-test.txt	12143.942	5
+GBFS	Angle	tests/shallow-test.txt	18268.378	5
+Uniform_Cost		tests/shallow-test.txt	18266.947	9
+Beam	Distance	tests/shallow-test.txt	7898.398	9
+Beam	Angle	tests/shallow-test.txt	19186.42	9
+BFS		tests/spiral-test.txt	5831.765	18
+DFS		tests/spiral-test.txt	10293.736	18
+A_star	Distance	tests/spiral-test.txt	44867.204	18
+A_star	Angle	tests/spiral-test.txt	70178.461	18
+GBFS	Distance	tests/spiral-test.txt	41844.161	18
+GBFS	Angle	tests/spiral-test.txt	66957.162	18
+Uniform_Cost		tests/spiral-test.txt	37412.104	18
+Beam	Distance	tests/spiral-test.txt	19002.882	18
+Beam	Angle	tests/spiral-test.txt	43463.225	18
+BFS		tests/thin-test.txt	3055.326	10
+DFS		tests/thin-test.txt	5183.696	10
+A_star	Distance	tests/thin-test.txt	23621.744	10
+A_star	Angle	tests/thin-test.txt	36942.103	10
+GBFS	Distance	tests/thin-test.txt	22860.408	10
+GBFS	Angle	tests/thin-test.txt	36826.144	10
+Uniform_Cost		tests/thin-test.txt	19314.828	10
+Beam	Distance	tests/thin-test.txt	10322.309	10
+Beam	Angle	tests/thin-test.txt	23315.147	10
+BFS		tests/unreachable-goal.txt	3046.861	9
+DFS		tests/unreachable-goal.txt	5209.998	10
+A_star	Distance	tests/unreachable-goal.txt	23775.108	9
+A_star	Angle	tests/unreachable-goal.txt	35437.424	9
+GBFS	Distance	tests/unreachable-goal.txt	23390.098	9
+GBFS	Angle	tests/unreachable-goal.txt	35451.213	9
+Uniform_Cost		tests/unreachable-goal.txt	19729.119	9
+Beam	Distance	tests/unreachable-goal.txt	8920.111	9
+Beam	Angle	tests/unreachable-goal.txt	20204.983	9
+BFS		tests/large-test.txt	8442.148	22
+DFS		tests/large-test.txt	7942.762	16
+A_star	Distance	tests/large-test.txt	57886.044	22
+A_star	Angle	tests/large-test.txt	106615.555	24
+GBFS	Distance	tests/large-test.txt	33936.706	14
+GBFS	Angle	tests/large-test.txt	69505.329	18
+Uniform_Cost		tests/large-test.txt	49802.844	24
+Beam	Distance	tests/large-test.txt	29583.149	22
+Beam	Angle	tests/large-test.txt	61110.732	22
+BFS		tests/latice-test.txt	6212.732	16
+DFS		tests/latice-test.txt	9033.588	17
+A_star	Distance	tests/latice-test.txt	40770.961	16
+A_star	Angle	tests/latice-test.txt	60548.79	16
+GBFS	Distance	tests/latice-test.txt	26156.513	12
+GBFS	Angle	tests/latice-test.txt	40706.833	12
+Uniform_Cost		tests/latice-test.txt	34895.83	16
+Beam	Distance	tests/latice-test.txt	16229.546	16
+Beam	Angle	tests/latice-test.txt	34852.629	16
+BFS		tests/lots-of-goals-test.txt	2743.933	9
+DFS		tests/lots-of-goals-test.txt	3378.144	7
+A_star	Distance	tests/lots-of-goals-test.txt	23751.765	7
+A_star	Angle	tests/lots-of-goals-test.txt	42385.343	8
+GBFS	Distance	tests/lots-of-goals-test.txt	18621.93	5
+GBFS	Angle	tests/lots-of-goals-test.txt	36151.04	7
+Uniform_Cost		tests/lots-of-goals-test.txt	17059.565	9
+Beam	Distance	tests/lots-of-goals-test.txt	12620.797	6
+Beam	Angle	tests/lots-of-goals-test.txt	22287.465	6
+BFS		tests/mesh-test.txt	5025.768	12
+DFS		tests/mesh-test.txt	6821.601	13
+A_star	Distance	tests/mesh-test.txt	24658.758	10
+A_star	Angle	tests/mesh-test.txt	48739.072	12
+GBFS	Distance	tests/mesh-test.txt	25752.31	12
+GBFS	Angle	tests/mesh-test.txt	41630.145	12
+Uniform_Cost		tests/mesh-test.txt	26234.322	12
+Beam	Distance	tests/mesh-test.txt	13690.74	12
+Beam	Angle	tests/mesh-test.txt	29039.754	12
+BFS		tests/rug-pull-test.txt	4317.827	12
+DFS		tests/rug-pull-test.txt	6028.505	12
+A_star	Distance	tests/rug-pull-test.txt	30751.552	12
+A_star	Angle	tests/rug-pull-test.txt	45139.603	12
+GBFS	Distance	tests/rug-pull-test.txt	19832.35	8
+GBFS	Angle	tests/rug-pull-test.txt	41347.579	12
+Uniform_Cost		tests/rug-pull-test.txt	24886.068	12
+Beam	Distance	tests/rug-pull-test.txt	13050.933	12
+Beam	Angle	tests/rug-pull-test.txt	26763.15	12
+BFS		tests/low-cost-test.txt	7249.504	21
+DFS		tests/low-cost-test.txt	9754.327	19
+A_star	Distance	tests/low-cost-test.txt	41563.736	18
+A_star	Angle	tests/low-cost-test.txt	67088.281	18
+GBFS	Distance	tests/low-cost-test.txt	42065.638	18
+GBFS	Angle	tests/low-cost-test.txt	79066.478	21
+Uniform_Cost		tests/low-cost-test.txt	36190.008	18
+Beam	Distance	tests/low-cost-test.txt	16578.657	16
+Beam	Angle	tests/low-cost-test.txt	37193.68	16
+BFS		tests/generated/test-generated-0.txt	1287.337	5
+DFS		tests/generated/test-generated-0.txt	2221.225	5
+A_star	Distance	tests/generated/test-generated-0.txt	13941.143	5
+A_star	Angle	tests/generated/test-generated-0.txt	21053.84	5
+GBFS	Distance	tests/generated/test-generated-0.txt	14383.699	5
+GBFS	Angle	tests/generated/test-generated-0.txt	20835.923	5
+Uniform_Cost		tests/generated/test-generated-0.txt	10177.944	5
+Beam	Distance	tests/generated/test-generated-0.txt	6875.469	5
+Beam	Angle	tests/generated/test-generated-0.txt	13936.408	5
+BFS		tests/generated/test-generated-1.txt	2243.289	8
+DFS		tests/generated/test-generated-1.txt	2773.642	6
+A_star	Distance	tests/generated/test-generated-1.txt	14728.314	5
+A_star	Angle	tests/generated/test-generated-1.txt	22717.312	5
+GBFS	Distance	tests/generated/test-generated-1.txt	15464.317	5
+GBFS	Angle	tests/generated/test-generated-1.txt	25488.348	5
+Uniform_Cost		tests/generated/test-generated-1.txt	11188.758	6
+Beam	Distance	tests/generated/test-generated-1.txt	7707.191	5
+Beam	Angle	tests/generated/test-generated-1.txt	15240.801	5
+BFS		tests/generated/test-generated-10.txt	1342.012	4
+DFS		tests/generated/test-generated-10.txt	2020.45	4
+A_star	Distance	tests/generated/test-generated-10.txt	12835.535	4
+A_star	Angle	tests/generated/test-generated-10.txt	18429.873	4
+GBFS	Distance	tests/generated/test-generated-10.txt	12385.259	4
+GBFS	Angle	tests/generated/test-generated-10.txt	36686.5	8
+Uniform_Cost		tests/generated/test-generated-10.txt	8885.523	4
+Beam	Distance	tests/generated/test-generated-10.txt	5523.747	4
+Beam	Angle	tests/generated/test-generated-10.txt	10976.713	4
+BFS		tests/generated/test-generated-100.txt	4256.668	14
+DFS		tests/generated/test-generated-100.txt	5169.222	11
+A_star	Distance	tests/generated/test-generated-100.txt	43146.567	15
+A_star	Angle	tests/generated/test-generated-100.txt	72751.684	16
+GBFS	Distance	tests/generated/test-generated-100.txt	40161.937	15
+GBFS	Angle	tests/generated/test-generated-100.txt	70627.467	16
+Uniform_Cost		tests/generated/test-generated-100.txt	35811.712	16
+Beam	Distance	tests/generated/test-generated-100.txt	16016.538	12
+Beam	Angle	tests/generated/test-generated-100.txt	46002.056	16
+BFS		tests/generated/test-generated-101.txt	969.77	2
+DFS		tests/generated/test-generated-101.txt	1284.366	2
+A_star	Distance	tests/generated/test-generated-101.txt	7680.659	2
+A_star	Angle	tests/generated/test-generated-101.txt	10474.666	2
+GBFS	Distance	tests/generated/test-generated-101.txt	9187.469	2
+GBFS	Angle	tests/generated/test-generated-101.txt	10372.754	2
+Uniform_Cost		tests/generated/test-generated-101.txt	6053.256	2
+Beam	Distance	tests/generated/test-generated-101.txt	3456.93	2
+Beam	Angle	tests/generated/test-generated-101.txt	5399.32	2
+BFS		tests/generated/test-generated-102.txt	3709.551	14
+DFS		tests/generated/test-generated-102.txt	8795.619	19
+A_star	Distance	tests/generated/test-generated-102.txt	21309.632	8
+A_star	Angle	tests/generated/test-generated-102.txt	51418.427	12
+GBFS	Distance	tests/generated/test-generated-102.txt	21041.179	8
+GBFS	Angle	tests/generated/test-generated-102.txt	36031.827	9
+Uniform_Cost		tests/generated/test-generated-102.txt	22028.786	12
+Beam	Distance	tests/generated/test-generated-102.txt	11288.057	9
+Beam	Angle	tests/generated/test-generated-102.txt	33568.832	12
+BFS		tests/generated/test-generated-103.txt	976.283	2
+DFS		tests/generated/test-generated-103.txt	1323.75	2
+A_star	Distance	tests/generated/test-generated-103.txt	7941.935	2
+A_star	Angle	tests/generated/test-generated-103.txt	10451.693	2
+GBFS	Distance	tests/generated/test-generated-103.txt	9121.737	2
+GBFS	Angle	tests/generated/test-generated-103.txt	10227.813	2
+Uniform_Cost		tests/generated/test-generated-103.txt	6121.255	2
+Beam	Distance	tests/generated/test-generated-103.txt	3313.944	2
+Beam	Angle	tests/generated/test-generated-103.txt	5386.128	2
+BFS		tests/generated/test-generated-104.txt	1351.204	4
+DFS		tests/generated/test-generated-104.txt	2177.681	4
+A_star	Distance	tests/generated/test-generated-104.txt	11853.104	4
+A_star	Angle	tests/generated/test-generated-104.txt	17287.479	4
+GBFS	Distance	tests/generated/test-generated-104.txt	12408.146	4
+GBFS	Angle	tests/generated/test-generated-104.txt	17380.617	4
+Uniform_Cost		tests/generated/test-generated-104.txt	8911.582	4
+Beam	Distance	tests/generated/test-generated-104.txt	5503.085	4
+Beam	Angle	tests/generated/test-generated-104.txt	10473.379	4
+BFS		tests/generated/test-generated-105.txt	7159.284	24
+DFS		tests/generated/test-generated-105.txt	7169.743	15
+A_star	Distance	tests/generated/test-generated-105.txt	26939.824	11
+A_star	Angle	tests/generated/test-generated-105.txt	58479.445	14
+GBFS	Distance	tests/generated/test-generated-105.txt	30274.153	12
+GBFS	Angle	tests/generated/test-generated-105.txt	68002.512	16
+Uniform_Cost		tests/generated/test-generated-105.txt	27994.479	17
+Beam	Distance	tests/generated/test-generated-105.txt	16518.792	13
+Beam	Angle	tests/generated/test-generated-105.txt	37021.094	13
+BFS		tests/generated/test-generated-106.txt	2301.779	10
+DFS		tests/generated/test-generated-106.txt	7211.535	15
+A_star	Distance	tests/generated/test-generated-106.txt	17329.964	7
+A_star	Angle	tests/generated/test-generated-106.txt	27588.777	7
+GBFS	Distance	tests/generated/test-generated-106.txt	11251.21	4
+GBFS	Angle	tests/generated/test-generated-106.txt	41007.196	10
+Uniform_Cost		tests/generated/test-generated-106.txt	15621.108	10
+Beam	Distance	tests/generated/test-generated-106.txt	4878.863	4
+Beam	Angle	tests/generated/test-generated-106.txt	9804.948	4
+BFS		tests/generated/test-generated-107.txt	4161.743	16
+DFS		tests/generated/test-generated-107.txt	14086.319	28
+A_star	Distance	tests/generated/test-generated-107.txt	23158.08	11
+A_star	Angle	tests/generated/test-generated-107.txt	43693.368	12
+GBFS	Distance	tests/generated/test-generated-107.txt	15958.931	7
+GBFS	Angle	tests/generated/test-generated-107.txt	25276.041	7
+Uniform_Cost		tests/generated/test-generated-107.txt	19062.411	12
+Beam	Distance	tests/generated/test-generated-107.txt	11068.983	11
+Beam	Angle	tests/generated/test-generated-107.txt	26073.072	11
+BFS		tests/generated/test-generated-108.txt	11356.359	34
+DFS		tests/generated/test-generated-108.txt	16756.128	35
+A_star	Distance	tests/generated/test-generated-108.txt	52172.886	23
+A_star	Angle	tests/generated/test-generated-108.txt	125680.229	32
+GBFS	Distance	tests/generated/test-generated-108.txt	71543.559	30
+GBFS	Angle	tests/generated/test-generated-108.txt	88417.736	24
+Uniform_Cost		tests/generated/test-generated-108.txt	49143.029	28
+Beam	Distance	tests/generated/test-generated-108.txt	19920.917	18
+Beam	Angle	tests/generated/test-generated-108.txt	40499.844	16
+BFS		tests/generated/test-generated-109.txt	1386.434	5
+DFS		tests/generated/test-generated-109.txt	6994.254	14
+A_star	Distance	tests/generated/test-generated-109.txt	11024.041	4
+A_star	Angle	tests/generated/test-generated-109.txt	16129.567	4
+GBFS	Distance	tests/generated/test-generated-109.txt	11439.736	4
+GBFS	Angle	tests/generated/test-generated-109.txt	16176.999	4
+Uniform_Cost		tests/generated/test-generated-109.txt	8050.909	4
+Beam	Distance	tests/generated/test-generated-109.txt	4704.366	4
+Beam	Angle	tests/generated/test-generated-109.txt	9698.011	4
+BFS		tests/generated/test-generated-11.txt	1951.641	7
+DFS		tests/generated/test-generated-11.txt	5532.293	13
+A_star	Distance	tests/generated/test-generated-11.txt	12383.394	4
+A_star	Angle	tests/generated/test-generated-11.txt	18174.499	4
+GBFS	Distance	tests/generated/test-generated-11.txt	13100.484	4
+GBFS	Angle	tests/generated/test-generated-11.txt	33445.963	7
+Uniform_Cost		tests/generated/test-generated-11.txt	8158.07	4
+Beam	Distance	tests/generated/test-generated-11.txt	6076.688	4
+Beam	Angle	tests/generated/test-generated-11.txt	11689.786	4
+BFS		tests/generated/test-generated-110.txt	4979.683	16
+DFS		tests/generated/test-generated-110.txt	5633.725	13
+A_star	Distance	tests/generated/test-generated-110.txt	21005.781	10
+A_star	Angle	tests/generated/test-generated-110.txt	39524.967	11
+GBFS	Distance	tests/generated/test-generated-110.txt	29203.924	12
+GBFS	Angle	tests/generated/test-generated-110.txt	59012.987	16
+Uniform_Cost		tests/generated/test-generated-110.txt	20660.93	11
+Beam	Distance	tests/generated/test-generated-110.txt	9837.498	11
+Beam	Angle	tests/generated/test-generated-110.txt	23581.507	11
+BFS		tests/generated/test-generated-111.txt	1148.37	4
+DFS		tests/generated/test-generated-111.txt	1860.494	4
+A_star	Distance	tests/generated/test-generated-111.txt	11015.141	4
+A_star	Angle	tests/generated/test-generated-111.txt	24216.341	6
+GBFS	Distance	tests/generated/test-generated-111.txt	11567.309	4
+GBFS	Angle	tests/generated/test-generated-111.txt	24211.489	6
+Uniform_Cost		tests/generated/test-generated-111.txt	7938.562	4
+Beam	Distance	tests/generated/test-generated-111.txt	4898.695	4
+Beam	Angle	tests/generated/test-generated-111.txt	9513.08	4
+BFS		tests/generated/test-generated-112.txt	4209.868	15
+DFS		tests/generated/test-generated-112.txt	6319.12	14
+A_star	Distance	tests/generated/test-generated-112.txt	36871.073	12
+A_star	Angle	tests/generated/test-generated-112.txt	88786.692	17
+GBFS	Distance	tests/generated/test-generated-112.txt	30887.978	10
+GBFS	Angle	tests/generated/test-generated-112.txt	70793.388	14
+Uniform_Cost		tests/generated/test-generated-112.txt	30537.688	17
+Beam	Distance	tests/generated/test-generated-112.txt	27479.523	15
+Beam	Angle	tests/generated/test-generated-112.txt	59988.592	16
+BFS		tests/generated/test-generated-113.txt	3360.417	13
+DFS		tests/generated/test-generated-113.txt	3024.665	7
+A_star	Distance	tests/generated/test-generated-113.txt	23167.679	9
+A_star	Angle	tests/generated/test-generated-113.txt	57260.506	14
+GBFS	Distance	tests/generated/test-generated-113.txt	17983.927	7
+GBFS	Angle	tests/generated/test-generated-113.txt	49703.906	12
+Uniform_Cost		tests/generated/test-generated-113.txt	18374.264	11
+Beam	Distance	tests/generated/test-generated-113.txt	13532.088	11
+Beam	Angle	tests/generated/test-generated-113.txt	29320.958	11
+BFS		tests/generated/test-generated-114.txt	1179.392	4
+DFS		tests/generated/test-generated-114.txt	1890.207	4
+A_star	Distance	tests/generated/test-generated-114.txt	14107.761	5
+A_star	Angle	tests/generated/test-generated-114.txt	21412.828	5
+GBFS	Distance	tests/generated/test-generated-114.txt	11551.686	4
+GBFS	Angle	tests/generated/test-generated-114.txt	16213.349	4
+Uniform_Cost		tests/generated/test-generated-114.txt	10105.209	5
+Beam	Distance	tests/generated/test-generated-114.txt	4943.467	4
+Beam	Angle	tests/generated/test-generated-114.txt	9880.176	4
+BFS		tests/generated/test-generated-115.txt	5645.503	20
+DFS		tests/generated/test-generated-115.txt	7498.019	16
+A_star	Distance	tests/generated/test-generated-115.txt	34497.909	12
+A_star	Angle	tests/generated/test-generated-115.txt	58892.802	12
+GBFS	Distance	tests/generated/test-generated-115.txt	41040.671	14
+GBFS	Angle	tests/generated/test-generated-115.txt	53383.471	11
+Uniform_Cost		tests/generated/test-generated-115.txt	20239.203	12
+Beam	Distance	tests/generated/test-generated-115.txt	18506.789	11
+Beam	Angle	tests/generated/test-generated-115.txt	38946.698	11
+BFS		tests/generated/test-generated-116.txt	1136.643	4
+DFS		tests/generated/test-generated-116.txt	1868.406	4
+A_star	Distance	tests/generated/test-generated-116.txt	11665.257	4
+A_star	Angle	tests/generated/test-generated-116.txt	17116.711	4
+GBFS	Distance	tests/generated/test-generated-116.txt	12283.058	4
+GBFS	Angle	tests/generated/test-generated-116.txt	17160.704	4
+Uniform_Cost		tests/generated/test-generated-116.txt	7948.154	4
+Beam	Distance	tests/generated/test-generated-116.txt	5323.044	4
+Beam	Angle	tests/generated/test-generated-116.txt	10780.785	4
+BFS		tests/generated/test-generated-117.txt	2443.142	10
+DFS		tests/generated/test-generated-117.txt	6412.352	15
+A_star	Distance	tests/generated/test-generated-117.txt	17818.235	6
+A_star	Angle	tests/generated/test-generated-117.txt	42754.515	9
+GBFS	Distance	tests/generated/test-generated-117.txt	18526.202	6
+GBFS	Angle	tests/generated/test-generated-117.txt	28014.72	6
+Uniform_Cost		tests/generated/test-generated-117.txt	15105.272	9
+Beam	Distance	tests/generated/test-generated-117.txt	9801.124	6
+Beam	Angle	tests/generated/test-generated-117.txt	19545.053	6
+BFS		tests/generated/test-generated-118.txt	3602.559	13
+DFS		tests/generated/test-generated-118.txt	10321.702	23
+A_star	Distance	tests/generated/test-generated-118.txt	29595.132	10
+A_star	Angle	tests/generated/test-generated-118.txt	67682.973	14
+GBFS	Distance	tests/generated/test-generated-118.txt	47394.146	16
+GBFS	Angle	tests/generated/test-generated-118.txt	61142.534	12
+Uniform_Cost		tests/generated/test-generated-118.txt	21237.841	12
+Beam	Distance	tests/generated/test-generated-118.txt	13355.057	8
+Beam	Angle	tests/generated/test-generated-118.txt	26503.703	8
+BFS		tests/generated/test-generated-119.txt	1744.021	5
+DFS		tests/generated/test-generated-119.txt	2483.439	5
+A_star	Distance	tests/generated/test-generated-119.txt	22019.416	8
+A_star	Angle	tests/generated/test-generated-119.txt	35710.493	8
+GBFS	Distance	tests/generated/test-generated-119.txt	15501.41	5
+GBFS	Angle	tests/generated/test-generated-119.txt	34921.074	8
+Uniform_Cost		tests/generated/test-generated-119.txt	15018.026	8
+Beam	Distance	tests/generated/test-generated-119.txt	7611.715	5
+Beam	Angle	tests/generated/test-generated-119.txt	14606.814	5
+BFS		tests/generated/test-generated-12.txt	2177.359	8
+DFS		tests/generated/test-generated-12.txt	2842.252	5
+A_star	Distance	tests/generated/test-generated-12.txt	14085.885	5
+A_star	Angle	tests/generated/test-generated-12.txt	31402.416	8
+GBFS	Distance	tests/generated/test-generated-12.txt	14085.309	5
+GBFS	Angle	tests/generated/test-generated-12.txt	41677.923	11
+Uniform_Cost		tests/generated/test-generated-12.txt	14753.764	8
+Beam	Distance	tests/generated/test-generated-12.txt	9229.054	8
+Beam	Angle	tests/generated/test-generated-12.txt	19680.234	8
+BFS		tests/generated/test-generated-120.txt	3278.796	12
+DFS		tests/generated/test-generated-120.txt	4389.935	10
+A_star	Distance	tests/generated/test-generated-120.txt	31663.551	10
+A_star	Angle	tests/generated/test-generated-120.txt	62555.818	12
+GBFS	Distance	tests/generated/test-generated-120.txt	26487.332	8
+GBFS	Angle	tests/generated/test-generated-120.txt	36172.48	7
+Uniform_Cost		tests/generated/test-generated-120.txt	22982.21	13
+Beam	Distance	tests/generated/test-generated-120.txt	15992.205	9
+Beam	Angle	tests/generated/test-generated-120.txt	34059.572	9
+BFS		tests/generated/test-generated-121.txt	5758.787	19
+DFS		tests/generated/test-generated-121.txt	8228.906	16
+A_star	Distance	tests/generated/test-generated-121.txt	30495.785	13
+A_star	Angle	tests/generated/test-generated-121.txt	60778.172	16
+GBFS	Distance	tests/generated/test-generated-121.txt	30543.117	13
+GBFS	Angle	tests/generated/test-generated-121.txt	47517.03	12
+Uniform_Cost		tests/generated/test-generated-121.txt	32187.516	19
+Beam	Distance	tests/generated/test-generated-121.txt	12859.771	12
+Beam	Angle	tests/generated/test-generated-121.txt	30030.885	12
+BFS		tests/generated/test-generated-122.txt	1799.257	8
+DFS		tests/generated/test-generated-122.txt	4684.552	11
+A_star	Distance	tests/generated/test-generated-122.txt	38079.482	12
+A_star	Angle	tests/generated/test-generated-122.txt	74198.537	14
+GBFS	Distance	tests/generated/test-generated-122.txt	13852.257	4
+GBFS	Angle	tests/generated/test-generated-122.txt	34973.712	7
+Uniform_Cost		tests/generated/test-generated-122.txt	26449.824	14
+Beam	Distance	tests/generated/test-generated-122.txt	6720.079	4
+Beam	Angle	tests/generated/test-generated-122.txt	13103.421	4
+BFS		tests/generated/test-generated-123.txt	2291.885	7
+DFS		tests/generated/test-generated-123.txt	3417.287	8
+A_star	Distance	tests/generated/test-generated-123.txt	15017.805	7
+A_star	Angle	tests/generated/test-generated-123.txt	24976.744	7
+GBFS	Distance	tests/generated/test-generated-123.txt	14610.149	7
+GBFS	Angle	tests/generated/test-generated-123.txt	23622.565	7
+Uniform_Cost		tests/generated/test-generated-123.txt	14216.825	7
+Beam	Distance	tests/generated/test-generated-123.txt	6387.501	7
+Beam	Angle	tests/generated/test-generated-123.txt	14685.733	7
+BFS		tests/generated/test-generated-124.txt	1416.09	5
+DFS		tests/generated/test-generated-124.txt	2314.202	5
+A_star	Distance	tests/generated/test-generated-124.txt	14647.817	5
+A_star	Angle	tests/generated/test-generated-124.txt	22786.931	5
+GBFS	Distance	tests/generated/test-generated-124.txt	15420.262	5
+GBFS	Angle	tests/generated/test-generated-124.txt	23602.16	5
+Uniform_Cost		tests/generated/test-generated-124.txt	9169.229	5
+Beam	Distance	tests/generated/test-generated-124.txt	7604.565	5
+Beam	Angle	tests/generated/test-generated-124.txt	15056.583	5
+BFS		tests/generated/test-generated-125.txt	2023.269	6
+DFS		tests/generated/test-generated-125.txt	3066.386	6
+A_star	Distance	tests/generated/test-generated-125.txt	19785.688	6
+A_star	Angle	tests/generated/test-generated-125.txt	31447.689	6
+GBFS	Distance	tests/generated/test-generated-125.txt	20716.469	6
+GBFS	Angle	tests/generated/test-generated-125.txt	32096.619	6
+Uniform_Cost		tests/generated/test-generated-125.txt	12087.635	6
+Beam	Distance	tests/generated/test-generated-125.txt	11556.079	6
+Beam	Angle	tests/generated/test-generated-125.txt	22628.798	6
+BFS		tests/generated/test-generated-126.txt	3511.099	14
+DFS		tests/generated/test-generated-126.txt	6761.569	15
+A_star	Distance	tests/generated/test-generated-126.txt	27737.584	11
+A_star	Angle	tests/generated/test-generated-126.txt	53153.131	13
+GBFS	Distance	tests/generated/test-generated-126.txt	18156.367	7
+GBFS	Angle	tests/generated/test-generated-126.txt	32894.486	8
+Uniform_Cost		tests/generated/test-generated-126.txt	27096.103	16
+Beam	Distance	tests/generated/test-generated-126.txt	12266.088	10
+Beam	Angle	tests/generated/test-generated-126.txt	26572.297	10
+BFS		tests/generated/test-generated-127.txt	3592.909	14
+DFS		tests/generated/test-generated-127.txt	3660.075	9
+A_star	Distance	tests/generated/test-generated-127.txt	37507.849	15
+A_star	Angle	tests/generated/test-generated-127.txt	67928.789	16
+GBFS	Distance	tests/generated/test-generated-127.txt	31652.286	13
+GBFS	Angle	tests/generated/test-generated-127.txt	45565.501	11
+Uniform_Cost		tests/generated/test-generated-127.txt	29580.395	16
+Beam	Distance	tests/generated/test-generated-127.txt	15682.88	13
+Beam	Angle	tests/generated/test-generated-127.txt	69366.269	24
+BFS		tests/generated/test-generated-128.txt	1817.125	7
+DFS		tests/generated/test-generated-128.txt	3916.964	9
+A_star	Distance	tests/generated/test-generated-128.txt	15588.248	5
+A_star	Angle	tests/generated/test-generated-128.txt	24403.433	5
+GBFS	Distance	tests/generated/test-generated-128.txt	16362.222	5
+GBFS	Angle	tests/generated/test-generated-128.txt	24247.241	5
+Uniform_Cost		tests/generated/test-generated-128.txt	11006.495	6
+Beam	Distance	tests/generated/test-generated-128.txt	8460.188	5
+Beam	Angle	tests/generated/test-generated-128.txt	17020.462	5
+BFS		tests/generated/test-generated-129.txt	3946.079	15
+DFS		tests/generated/test-generated-129.txt	4178.231	8
+A_star	Distance	tests/generated/test-generated-129.txt	33515.852	12
+A_star	Angle	tests/generated/test-generated-129.txt	62539.217	13
+GBFS	Distance	tests/generated/test-generated-129.txt	26302.606	9
+GBFS	Angle	tests/generated/test-generated-129.txt	51709.812	11
+Uniform_Cost		tests/generated/test-generated-129.txt	22574.725	13
+Beam	Distance	tests/generated/test-generated-129.txt	21447.977	13
+Beam	Angle	tests/generated/test-generated-129.txt	45149.657	13
+BFS		tests/generated/test-generated-13.txt	7024.786	22
+DFS		tests/generated/test-generated-13.txt	5871.901	12
+A_star	Distance	tests/generated/test-generated-13.txt	40976.476	15
+A_star	Angle	tests/generated/test-generated-13.txt	98057.611	21
+GBFS	Distance	tests/generated/test-generated-13.txt	42530.151	15
+GBFS	Angle	tests/generated/test-generated-13.txt	58118.614	12
+Uniform_Cost		tests/generated/test-generated-13.txt	37364.047	21
+Beam	Distance	tests/generated/test-generated-13.txt	25100.745	17
+Beam	Angle	tests/generated/test-generated-13.txt	55636.91	17
+BFS		tests/generated/test-generated-130.txt	1166.65	4
+DFS		tests/generated/test-generated-130.txt	1827.74	4
+A_star	Distance	tests/generated/test-generated-130.txt	10242.943	4
+A_star	Angle	tests/generated/test-generated-130.txt	19531.868	5
+GBFS	Distance	tests/generated/test-generated-130.txt	10414.193	4
+GBFS	Angle	tests/generated/test-generated-130.txt	19890.845	5
+Uniform_Cost		tests/generated/test-generated-130.txt	9991.66	5
+Beam	Distance	tests/generated/test-generated-130.txt	4162.959	4
+Beam	Angle	tests/generated/test-generated-130.txt	8626.789	4
+BFS		tests/generated/test-generated-131.txt	1950.98	8
+DFS		tests/generated/test-generated-131.txt	14839.639	28
+A_star	Distance	tests/generated/test-generated-131.txt	9543.153	4
+A_star	Angle	tests/generated/test-generated-131.txt	13855.585	4
+GBFS	Distance	tests/generated/test-generated-131.txt	9549.125	4
+GBFS	Angle	tests/generated/test-generated-131.txt	14078.33	4
+Uniform_Cost		tests/generated/test-generated-131.txt	9922.967	5
+Beam	Distance	tests/generated/test-generated-131.txt	3503.281	4
+Beam	Angle	tests/generated/test-generated-131.txt	7428.785	4
+BFS		tests/generated/test-generated-132.txt	1244.053	5
+DFS		tests/generated/test-generated-132.txt	2142.267	5
+A_star	Distance	tests/generated/test-generated-132.txt	25083.677	9
+A_star	Angle	tests/generated/test-generated-132.txt	45816.558	10
+GBFS	Distance	tests/generated/test-generated-132.txt	14263.056	5
+GBFS	Angle	tests/generated/test-generated-132.txt	21386.804	5
+Uniform_Cost		tests/generated/test-generated-132.txt	17849.009	10
+Beam	Distance	tests/generated/test-generated-132.txt	6886.147	5
+Beam	Angle	tests/generated/test-generated-132.txt	34613.472	11
+BFS		tests/generated/test-generated-133.txt	2659.188	9
+DFS		tests/generated/test-generated-133.txt	3871.767	8
+A_star	Distance	tests/generated/test-generated-133.txt	16183.906	7
+A_star	Angle	tests/generated/test-generated-133.txt	24635.706	7
+GBFS	Distance	tests/generated/test-generated-133.txt	15628.471	7
+GBFS	Angle	tests/generated/test-generated-133.txt	24521.396	7
+Uniform_Cost		tests/generated/test-generated-133.txt	15160.072	8
+Beam	Distance	tests/generated/test-generated-133.txt	7037.579	8
+Beam	Angle	tests/generated/test-generated-133.txt	16854.434	8
+BFS		tests/generated/test-generated-134.txt	2477.236	9
+DFS		tests/generated/test-generated-134.txt	3335.993	7
+A_star	Distance	tests/generated/test-generated-134.txt	17985.235	6
+A_star	Angle	tests/generated/test-generated-134.txt	41257.544	9
+GBFS	Distance	tests/generated/test-generated-134.txt	17324.488	6
+GBFS	Angle	tests/generated/test-generated-134.txt	32501.85	7
+Uniform_Cost		tests/generated/test-generated-134.txt	18824.055	10
+Beam	Distance	tests/generated/test-generated-134.txt	11417.195	8
+Beam	Angle	tests/generated/test-generated-134.txt	24360.18	8
+BFS		tests/generated/test-generated-135.txt	947.225	2
+DFS		tests/generated/test-generated-135.txt	1281.985	2
+A_star	Distance	tests/generated/test-generated-135.txt	7339.484	2
+A_star	Angle	tests/generated/test-generated-135.txt	9818.302	2
+GBFS	Distance	tests/generated/test-generated-135.txt	8246.173	2
+GBFS	Angle	tests/generated/test-generated-135.txt	9421.25	2
+Uniform_Cost		tests/generated/test-generated-135.txt	6149.084	2
+Beam	Distance	tests/generated/test-generated-135.txt	2827.967	2
+Beam	Angle	tests/generated/test-generated-135.txt	4639.384	2
+BFS		tests/generated/test-generated-136.txt	4076.721	15
+DFS		tests/generated/test-generated-136.txt	17657.446	34
+A_star	Distance	tests/generated/test-generated-136.txt	25663.03	12
+A_star	Angle	tests/generated/test-generated-136.txt	73222.613	21
+GBFS	Distance	tests/generated/test-generated-136.txt	80256.224	33
+GBFS	Angle	tests/generated/test-generated-136.txt	112471.543	30
+Uniform_Cost		tests/generated/test-generated-136.txt	36910.073	21
+Beam	Distance	tests/generated/test-generated-136.txt	27944.721	30
+Beam	Angle	tests/generated/test-generated-136.txt	67369.226	30
+BFS		tests/generated/test-generated-137.txt	2819.433	10
+DFS		tests/generated/test-generated-137.txt	6194.992	13
+A_star	Distance	tests/generated/test-generated-137.txt	37224.373	14
+A_star	Angle	tests/generated/test-generated-137.txt	60411.442	14
+GBFS	Distance	tests/generated/test-generated-137.txt	16101.612	6
+GBFS	Angle	tests/generated/test-generated-137.txt	29306.546	7
+Uniform_Cost		tests/generated/test-generated-137.txt	27271.114	14
+Beam	Distance	tests/generated/test-generated-137.txt	22680.164	17
+Beam	Angle	tests/generated/test-generated-137.txt	49132.981	17
+BFS		tests/generated/test-generated-138.txt	1768.317	7
+DFS		tests/generated/test-generated-138.txt	6825.24	14
+A_star	Distance	tests/generated/test-generated-138.txt	9469.413	3
+A_star	Angle	tests/generated/test-generated-138.txt	30828.988	7
+GBFS	Distance	tests/generated/test-generated-138.txt	10316.497	3
+GBFS	Angle	tests/generated/test-generated-138.txt	80780.623	17
+Uniform_Cost		tests/generated/test-generated-138.txt	12033.357	7
+Beam	Distance	tests/generated/test-generated-138.txt	4139.668	3
+Beam	Angle	tests/generated/test-generated-138.txt	7968.363	3
+BFS		tests/generated/test-generated-139.txt	1627.295	5
+DFS		tests/generated/test-generated-139.txt	2450.51	5
+A_star	Distance	tests/generated/test-generated-139.txt	16574.073	5
+A_star	Angle	tests/generated/test-generated-139.txt	25094.765	5
+GBFS	Distance	tests/generated/test-generated-139.txt	16300.362	5
+GBFS	Angle	tests/generated/test-generated-139.txt	30656.154	6
+Uniform_Cost		tests/generated/test-generated-139.txt	10930.82	5
+Beam	Distance	tests/generated/test-generated-139.txt	8618.158	5
+Beam	Angle	tests/generated/test-generated-139.txt	16718.211	5
+BFS		tests/generated/test-generated-14.txt	5205.816	21
+DFS		tests/generated/test-generated-14.txt	13507.438	26
+A_star	Distance	tests/generated/test-generated-14.txt	44140.992	17
+A_star	Angle	tests/generated/test-generated-14.txt	89717.867	20
+GBFS	Distance	tests/generated/test-generated-14.txt	27807.276	10
+GBFS	Angle	tests/generated/test-generated-14.txt	143896.721	30
+Uniform_Cost		tests/generated/test-generated-14.txt	30441.905	19
+Beam	Distance	tests/generated/test-generated-14.txt	16192.013	11
+Beam	Angle	tests/generated/test-generated-14.txt	92758.999	28
+BFS		tests/generated/test-generated-140.txt	1623.924	4
+DFS		tests/generated/test-generated-140.txt	2934.034	5
+A_star	Distance	tests/generated/test-generated-140.txt	12279.459	4
+A_star	Angle	tests/generated/test-generated-140.txt	16954.488	4
+GBFS	Distance	tests/generated/test-generated-140.txt	11319.297	4
+GBFS	Angle	tests/generated/test-generated-140.txt	16067.045	4
+Uniform_Cost		tests/generated/test-generated-140.txt	9839.361	4
+Beam	Distance	tests/generated/test-generated-140.txt	4919.364	4
+Beam	Angle	tests/generated/test-generated-140.txt	9439.097	4
+BFS		tests/generated/test-generated-141.txt	3700.6	15
+DFS		tests/generated/test-generated-141.txt	16698.0	33
+A_star	Distance	tests/generated/test-generated-141.txt	25411.812	9
+A_star	Angle	tests/generated/test-generated-141.txt	61018.954	13
+GBFS	Distance	tests/generated/test-generated-141.txt	18520.256	6
+GBFS	Angle	tests/generated/test-generated-141.txt	28680.36	6
+Uniform_Cost		tests/generated/test-generated-141.txt	21123.817	13
+Beam	Distance	tests/generated/test-generated-141.txt	14508.027	9
+Beam	Angle	tests/generated/test-generated-141.txt	31237.51	9
+BFS		tests/generated/test-generated-142.txt	1633.381	6
+DFS		tests/generated/test-generated-142.txt	2742.525	6
+A_star	Distance	tests/generated/test-generated-142.txt	19098.446	6
+A_star	Angle	tests/generated/test-generated-142.txt	30518.915	6
+GBFS	Distance	tests/generated/test-generated-142.txt	19771.73	6
+GBFS	Angle	tests/generated/test-generated-142.txt	30454.913	6
+Uniform_Cost		tests/generated/test-generated-142.txt	11055.063	6
+Beam	Distance	tests/generated/test-generated-142.txt	10939.673	6
+Beam	Angle	tests/generated/test-generated-142.txt	21775.286	6
+BFS		tests/generated/test-generated-143.txt	3672.21	13
+DFS		tests/generated/test-generated-143.txt	5060.205	11
+A_star	Distance	tests/generated/test-generated-143.txt	39207.773	12
+A_star	Angle	tests/generated/test-generated-143.txt	80976.938	15
+GBFS	Distance	tests/generated/test-generated-143.txt	27364.14	8
+GBFS	Angle	tests/generated/test-generated-143.txt	68901.424	13
+Uniform_Cost		tests/generated/test-generated-143.txt	24366.887	13
+Beam	Distance	tests/generated/test-generated-143.txt	21247.833	11
+Beam	Angle	tests/generated/test-generated-143.txt	43478.491	11
+BFS		tests/generated/test-generated-144.txt	5736.958	21
+DFS		tests/generated/test-generated-144.txt	10479.734	22
+A_star	Distance	tests/generated/test-generated-144.txt	45315.428	19
+A_star	Angle	tests/generated/test-generated-144.txt	92072.346	23
+GBFS	Distance	tests/generated/test-generated-144.txt	29171.523	13
+GBFS	Angle	tests/generated/test-generated-144.txt	68757.334	17
+Uniform_Cost		tests/generated/test-generated-144.txt	43963.828	23
+Beam	Distance	tests/generated/test-generated-144.txt	18983.884	18
+Beam	Angle	tests/generated/test-generated-144.txt	44907.192	18
+BFS		tests/generated/test-generated-145.txt	1846.817	7
+DFS		tests/generated/test-generated-145.txt	9531.528	20
+A_star	Distance	tests/generated/test-generated-145.txt	18805.238	7
+A_star	Angle	tests/generated/test-generated-145.txt	30263.339	7
+GBFS	Distance	tests/generated/test-generated-145.txt	14468.127	5
+GBFS	Angle	tests/generated/test-generated-145.txt	21627.162	5
+Uniform_Cost		tests/generated/test-generated-145.txt	12010.037	7
+Beam	Distance	tests/generated/test-generated-145.txt	6887.529	5
+Beam	Angle	tests/generated/test-generated-145.txt	14436.922	5
+BFS		tests/generated/test-generated-146.txt	1427.015	5
+DFS		tests/generated/test-generated-146.txt	6674.914	15
+A_star	Distance	tests/generated/test-generated-146.txt	16314.184	5
+A_star	Angle	tests/generated/test-generated-146.txt	25102.986	5
+GBFS	Distance	tests/generated/test-generated-146.txt	13848.72	4
+GBFS	Angle	tests/generated/test-generated-146.txt	25670.038	5
+Uniform_Cost		tests/generated/test-generated-146.txt	9931.323	5
+Beam	Distance	tests/generated/test-generated-146.txt	6821.617	4
+Beam	Angle	tests/generated/test-generated-146.txt	12540.492	4
+BFS		tests/generated/test-generated-147.txt	1195.371	4
+DFS		tests/generated/test-generated-147.txt	1836.536	4
+A_star	Distance	tests/generated/test-generated-147.txt	16790.15	6
+A_star	Angle	tests/generated/test-generated-147.txt	26877.186	6
+GBFS	Distance	tests/generated/test-generated-147.txt	12445.956	4
+GBFS	Angle	tests/generated/test-generated-147.txt	71625.769	15
+Uniform_Cost		tests/generated/test-generated-147.txt	10963.813	6
+Beam	Distance	tests/generated/test-generated-147.txt	5467.843	4
+Beam	Angle	tests/generated/test-generated-147.txt	10755.426	4
+BFS		tests/generated/test-generated-148.txt	1215.975	4
+DFS		tests/generated/test-generated-148.txt	1934.455	4
+A_star	Distance	tests/generated/test-generated-148.txt	11733.506	4
+A_star	Angle	tests/generated/test-generated-148.txt	18297.279	4
+GBFS	Distance	tests/generated/test-generated-148.txt	12143.861	4
+GBFS	Angle	tests/generated/test-generated-148.txt	18258.148	4
+Uniform_Cost		tests/generated/test-generated-148.txt	9008.527	4
+Beam	Distance	tests/generated/test-generated-148.txt	5434.52	4
+Beam	Angle	tests/generated/test-generated-148.txt	10759.229	4
+BFS		tests/generated/test-generated-149.txt	1393.524	4
+DFS		tests/generated/test-generated-149.txt	2062.517	4
+A_star	Distance	tests/generated/test-generated-149.txt	10619.358	4
+A_star	Angle	tests/generated/test-generated-149.txt	14909.571	4
+GBFS	Distance	tests/generated/test-generated-149.txt	9636.838	4
+GBFS	Angle	tests/generated/test-generated-149.txt	13531.612	4
+Uniform_Cost		tests/generated/test-generated-149.txt	9331.141	4
+Beam	Distance	tests/generated/test-generated-149.txt	3634.17	4
+Beam	Angle	tests/generated/test-generated-149.txt	7413.813	4
+BFS		tests/generated/test-generated-15.txt	3380.429	12
+DFS		tests/generated/test-generated-15.txt	3526.054	8
+A_star	Distance	tests/generated/test-generated-15.txt	45638.864	15
+A_star	Angle	tests/generated/test-generated-15.txt	82653.498	16
+GBFS	Distance	tests/generated/test-generated-15.txt	22175.708	7
+GBFS	Angle	tests/generated/test-generated-15.txt	52042.772	10
+Uniform_Cost		tests/generated/test-generated-15.txt	30034.14	17
+Beam	Distance	tests/generated/test-generated-15.txt	29021.381	16
+Beam	Angle	tests/generated/test-generated-15.txt	61347.285	16
+BFS		tests/generated/test-generated-150.txt	1207.965	3
+DFS		tests/generated/test-generated-150.txt	1707.016	3
+A_star	Distance	tests/generated/test-generated-150.txt	10325.358	3
+A_star	Angle	tests/generated/test-generated-150.txt	14853.36	3
+GBFS	Distance	tests/generated/test-generated-150.txt	11577.717	3
+GBFS	Angle	tests/generated/test-generated-150.txt	15896.304	3
+Uniform_Cost		tests/generated/test-generated-150.txt	6992.632	3
+Beam	Distance	tests/generated/test-generated-150.txt	4990.192	3
+Beam	Angle	tests/generated/test-generated-150.txt	9020.232	3
+BFS		tests/generated/test-generated-151.txt	1150.317	4
+DFS		tests/generated/test-generated-151.txt	1834.098	4
+A_star	Distance	tests/generated/test-generated-151.txt	11019.341	4
+A_star	Angle	tests/generated/test-generated-151.txt	16058.758	4
+GBFS	Distance	tests/generated/test-generated-151.txt	11272.286	4
+GBFS	Angle	tests/generated/test-generated-151.txt	16039.882	4
+Uniform_Cost		tests/generated/test-generated-151.txt	7935.624	4
+Beam	Distance	tests/generated/test-generated-151.txt	4739.935	4
+Beam	Angle	tests/generated/test-generated-151.txt	9664.589	4
+BFS		tests/generated/test-generated-152.txt	8375.206	26
+DFS		tests/generated/test-generated-152.txt	7347.383	15
+A_star	Distance	tests/generated/test-generated-152.txt	73372.221	23
+A_star	Angle	tests/generated/test-generated-152.txt	144029.4	26
+GBFS	Distance	tests/generated/test-generated-152.txt	23891.851	7
+GBFS	Angle	tests/generated/test-generated-152.txt	89945.421	17
+Uniform_Cost		tests/generated/test-generated-152.txt	47335.929	26
+Beam	Distance	tests/generated/test-generated-152.txt	35923.353	19
+Beam	Angle	tests/generated/test-generated-152.txt	82883.466	21
+BFS		tests/generated/test-generated-153.txt	6941.327	20
+DFS		tests/generated/test-generated-153.txt	8563.011	16
+A_star	Distance	tests/generated/test-generated-153.txt	50668.193	20
+A_star	Angle	tests/generated/test-generated-153.txt	78821.371	20
+GBFS	Distance	tests/generated/test-generated-153.txt	42729.842	18
+GBFS	Angle	tests/generated/test-generated-153.txt	73579.759	19
+Uniform_Cost		tests/generated/test-generated-153.txt	44117.501	20
+Beam	Distance	tests/generated/test-generated-153.txt	21835.28	20
+Beam	Angle	tests/generated/test-generated-153.txt	48120.374	20
+BFS		tests/generated/test-generated-154.txt	1952.52	7
+DFS		tests/generated/test-generated-154.txt	2506.129	5
+A_star	Distance	tests/generated/test-generated-154.txt	29002.181	10
+A_star	Angle	tests/generated/test-generated-154.txt	47944.438	10
+GBFS	Distance	tests/generated/test-generated-154.txt	16303.733	5
+GBFS	Angle	tests/generated/test-generated-154.txt	73774.57	15
+Uniform_Cost		tests/generated/test-generated-154.txt	16992.853	10
+Beam	Distance	tests/generated/test-generated-154.txt	11352.249	7
+Beam	Angle	tests/generated/test-generated-154.txt	23959.29	7
+BFS		tests/generated/test-generated-155.txt	3446.685	14
+DFS		tests/generated/test-generated-155.txt	15117.221	29
+A_star	Distance	tests/generated/test-generated-155.txt	20106.524	8
+A_star	Angle	tests/generated/test-generated-155.txt	37772.476	9
+GBFS	Distance	tests/generated/test-generated-155.txt	15990.58	6
+GBFS	Angle	tests/generated/test-generated-155.txt	41656.469	10
+Uniform_Cost		tests/generated/test-generated-155.txt	16074.594	9
+Beam	Distance	tests/generated/test-generated-155.txt	15413.788	12
+Beam	Angle	tests/generated/test-generated-155.txt	34138.966	12
+BFS		tests/generated/test-generated-156.txt	1162.312	3
+DFS		tests/generated/test-generated-156.txt	1610.106	3
+A_star	Distance	tests/generated/test-generated-156.txt	9576.393	3
+A_star	Angle	tests/generated/test-generated-156.txt	13703.963	3
+GBFS	Distance	tests/generated/test-generated-156.txt	10292.465	3
+GBFS	Angle	tests/generated/test-generated-156.txt	13620.673	3
+Uniform_Cost		tests/generated/test-generated-156.txt	7047.749	3
+Beam	Distance	tests/generated/test-generated-156.txt	4133.988	3
+Beam	Angle	tests/generated/test-generated-156.txt	8031.506	3
+BFS		tests/generated/test-generated-157.txt	5158.273	19
+DFS		tests/generated/test-generated-157.txt	5723.314	12
+A_star	Distance	tests/generated/test-generated-157.txt	46020.926	17
+A_star	Angle	tests/generated/test-generated-157.txt	76659.587	17
+GBFS	Distance	tests/generated/test-generated-157.txt	32469.416	12
+GBFS	Angle	tests/generated/test-generated-157.txt	102762.955	21
+Uniform_Cost		tests/generated/test-generated-157.txt	36106.585	19
+Beam	Distance	tests/generated/test-generated-157.txt	22900.387	17
+Beam	Angle	tests/generated/test-generated-157.txt	59840.529	20
+BFS		tests/generated/test-generated-158.txt	2865.518	11
+DFS		tests/generated/test-generated-158.txt	5470.36	11
+A_star	Distance	tests/generated/test-generated-158.txt	14733.525	6
+A_star	Angle	tests/generated/test-generated-158.txt	41479.351	11
+GBFS	Distance	tests/generated/test-generated-158.txt	15551.743	6
+GBFS	Angle	tests/generated/test-generated-158.txt	45801.23	11
+Uniform_Cost		tests/generated/test-generated-158.txt	12170.423	6
+Beam	Distance	tests/generated/test-generated-158.txt	6764.778	6
+Beam	Angle	tests/generated/test-generated-158.txt	14522.379	6
+BFS		tests/generated/test-generated-159.txt	1918.155	6
+DFS		tests/generated/test-generated-159.txt	3667.604	8
+A_star	Distance	tests/generated/test-generated-159.txt	12973.515	5
+A_star	Angle	tests/generated/test-generated-159.txt	20004.896	5
+GBFS	Distance	tests/generated/test-generated-159.txt	13337.286	5
+GBFS	Angle	tests/generated/test-generated-159.txt	24804.98	6
+Uniform_Cost		tests/generated/test-generated-159.txt	9166.923	5
+Beam	Distance	tests/generated/test-generated-159.txt	5873.073	5
+Beam	Angle	tests/generated/test-generated-159.txt	12721.225	5
+BFS		tests/generated/test-generated-16.txt	2092.483	6
+DFS		tests/generated/test-generated-16.txt	3475.139	7
+A_star	Distance	tests/generated/test-generated-16.txt	12604.043	5
+A_star	Angle	tests/generated/test-generated-16.txt	18801.988	5
+GBFS	Distance	tests/generated/test-generated-16.txt	11952.833	5
+GBFS	Angle	tests/generated/test-generated-16.txt	18308.804	5
+Uniform_Cost		tests/generated/test-generated-16.txt	11125.978	5
+Beam	Distance	tests/generated/test-generated-16.txt	4989.575	5
+Beam	Angle	tests/generated/test-generated-16.txt	10516.177	5
+BFS		tests/generated/test-generated-160.txt	10004.703	27
+DFS		tests/generated/test-generated-160.txt	12800.054	26
+A_star	Distance	tests/generated/test-generated-160.txt	67667.78	27
+A_star	Angle	tests/generated/test-generated-160.txt	106427.748	27
+GBFS	Distance	tests/generated/test-generated-160.txt	63769.175	26
+GBFS	Angle	tests/generated/test-generated-160.txt	106053.846	27
+Uniform_Cost		tests/generated/test-generated-160.txt	58741.788	27
+Beam	Distance	tests/generated/test-generated-160.txt	17084.492	19
+Beam	Angle	tests/generated/test-generated-160.txt	59125.496	26
+BFS		tests/generated/test-generated-161.txt	7022.198	25
+DFS		tests/generated/test-generated-161.txt	8167.596	17
+A_star	Distance	tests/generated/test-generated-161.txt	75363.256	28
+A_star	Angle	tests/generated/test-generated-161.txt	126971.596	28
+GBFS	Distance	tests/generated/test-generated-161.txt	58131.332	21
+GBFS	Angle	tests/generated/test-generated-161.txt	61994.637	14
+Uniform_Cost		tests/generated/test-generated-161.txt	57693.761	29
+Beam	Distance	tests/generated/test-generated-161.txt	38335.967	29
+Beam	Angle	tests/generated/test-generated-161.txt	88126.839	29
+BFS		tests/generated/test-generated-162.txt	2286.912	9
+DFS		tests/generated/test-generated-162.txt	6372.634	13
+A_star	Distance	tests/generated/test-generated-162.txt	14427.139	5
+A_star	Angle	tests/generated/test-generated-162.txt	48400.948	10
+GBFS	Distance	tests/generated/test-generated-162.txt	15343.783	5
+GBFS	Angle	tests/generated/test-generated-162.txt	72796.939	15
+Uniform_Cost		tests/generated/test-generated-162.txt	15931.713	9
+Beam	Distance	tests/generated/test-generated-162.txt	7730.49	5
+Beam	Angle	tests/generated/test-generated-162.txt	29810.541	9
+BFS		tests/generated/test-generated-163.txt	1970.412	7
+DFS		tests/generated/test-generated-163.txt	3001.278	7
+A_star	Distance	tests/generated/test-generated-163.txt	13876.427	6
+A_star	Angle	tests/generated/test-generated-163.txt	20646.432	6
+GBFS	Distance	tests/generated/test-generated-163.txt	13267.291	6
+GBFS	Angle	tests/generated/test-generated-163.txt	20434.381	6
+Uniform_Cost		tests/generated/test-generated-163.txt	11176.008	6
+Beam	Distance	tests/generated/test-generated-163.txt	6230.463	7
+Beam	Angle	tests/generated/test-generated-163.txt	14806.076	7
+BFS		tests/generated/test-generated-164.txt	969.049	2
+DFS		tests/generated/test-generated-164.txt	1306.918	2
+A_star	Distance	tests/generated/test-generated-164.txt	7340.436	2
+A_star	Angle	tests/generated/test-generated-164.txt	9156.295	2
+GBFS	Distance	tests/generated/test-generated-164.txt	7779.564	2
+GBFS	Angle	tests/generated/test-generated-164.txt	8988.673	2
+Uniform_Cost		tests/generated/test-generated-164.txt	6082.31	2
+Beam	Distance	tests/generated/test-generated-164.txt	2661.687	2
+Beam	Angle	tests/generated/test-generated-164.txt	4316.424	2
+BFS		tests/generated/test-generated-165.txt	1316.624	4
+DFS		tests/generated/test-generated-165.txt	2840.681	5
+A_star	Distance	tests/generated/test-generated-165.txt	10337.941	3
+A_star	Angle	tests/generated/test-generated-165.txt	19524.769	4
+GBFS	Distance	tests/generated/test-generated-165.txt	11019.338	3
+GBFS	Angle	tests/generated/test-generated-165.txt	19559.304	4
+Uniform_Cost		tests/generated/test-generated-165.txt	9002.793	4
+Beam	Distance	tests/generated/test-generated-165.txt	4601.696	3
+Beam	Angle	tests/generated/test-generated-165.txt	8368.543	3
+BFS		tests/generated/test-generated-166.txt	984.664	2
+DFS		tests/generated/test-generated-166.txt	1432.861	2
+A_star	Distance	tests/generated/test-generated-166.txt	7715.658	2
+A_star	Angle	tests/generated/test-generated-166.txt	11274.184	2
+GBFS	Distance	tests/generated/test-generated-166.txt	9140.703	2
+GBFS	Angle	tests/generated/test-generated-166.txt	10019.284	2
+Uniform_Cost		tests/generated/test-generated-166.txt	6064.576	2
+Beam	Distance	tests/generated/test-generated-166.txt	3087.917	2
+Beam	Angle	tests/generated/test-generated-166.txt	5133.097	2
+BFS		tests/generated/test-generated-167.txt	1277.591	4
+DFS		tests/generated/test-generated-167.txt	1988.745	4
+A_star	Distance	tests/generated/test-generated-167.txt	12268.452	4
+A_star	Angle	tests/generated/test-generated-167.txt	27829.22	6
+GBFS	Distance	tests/generated/test-generated-167.txt	12992.973	4
+GBFS	Angle	tests/generated/test-generated-167.txt	118427.66	24
+Uniform_Cost		tests/generated/test-generated-167.txt	8120.011	4
+Beam	Distance	tests/generated/test-generated-167.txt	6017.28	4
+Beam	Angle	tests/generated/test-generated-167.txt	11668.572	4
+BFS		tests/generated/test-generated-168.txt	1059.475	3
+DFS		tests/generated/test-generated-168.txt	1569.665	3
+A_star	Distance	tests/generated/test-generated-168.txt	8745.86	3
+A_star	Angle	tests/generated/test-generated-168.txt	11827.532	3
+GBFS	Distance	tests/generated/test-generated-168.txt	8795.016	3
+GBFS	Angle	tests/generated/test-generated-168.txt	11839.794	3
+Uniform_Cost		tests/generated/test-generated-168.txt	7031.502	3
+Beam	Distance	tests/generated/test-generated-168.txt	3354.03	3
+Beam	Angle	tests/generated/test-generated-168.txt	6511.754	3
+BFS		tests/generated/test-generated-169.txt	1711.591	6
+DFS		tests/generated/test-generated-169.txt	2761.569	6
+A_star	Distance	tests/generated/test-generated-169.txt	12289.623	4
+A_star	Angle	tests/generated/test-generated-169.txt	18595.842	4
+GBFS	Distance	tests/generated/test-generated-169.txt	13482.395	4
+GBFS	Angle	tests/generated/test-generated-169.txt	28541.237	6
+Uniform_Cost		tests/generated/test-generated-169.txt	8010.108	4
+Beam	Distance	tests/generated/test-generated-169.txt	6130.514	4
+Beam	Angle	tests/generated/test-generated-169.txt	11915.063	4
+BFS		tests/generated/test-generated-17.txt	1868.129	8
+DFS		tests/generated/test-generated-17.txt	4730.804	11
+A_star	Distance	tests/generated/test-generated-17.txt	25878.362	10
+A_star	Angle	tests/generated/test-generated-17.txt	42729.936	10
+GBFS	Distance	tests/generated/test-generated-17.txt	14269.047	5
+GBFS	Angle	tests/generated/test-generated-17.txt	55371.054	12
+Uniform_Cost		tests/generated/test-generated-17.txt	15883.66	10
+Beam	Distance	tests/generated/test-generated-17.txt	6819.208	5
+Beam	Angle	tests/generated/test-generated-17.txt	14410.148	5
+BFS		tests/generated/test-generated-170.txt	1134.546	4
+DFS		tests/generated/test-generated-170.txt	1790.828	4
+A_star	Distance	tests/generated/test-generated-170.txt	12122.372	4
+A_star	Angle	tests/generated/test-generated-170.txt	18439.287	4
+GBFS	Distance	tests/generated/test-generated-170.txt	12924.584	4
+GBFS	Angle	tests/generated/test-generated-170.txt	18646.6	4
+Uniform_Cost		tests/generated/test-generated-170.txt	8103.395	4
+Beam	Distance	tests/generated/test-generated-170.txt	6013.28	4
+Beam	Angle	tests/generated/test-generated-170.txt	11988.378	4
+BFS		tests/generated/test-generated-171.txt	2847.547	10
+DFS		tests/generated/test-generated-171.txt	3963.016	9
+A_star	Distance	tests/generated/test-generated-171.txt	23588.121	8
+A_star	Angle	tests/generated/test-generated-171.txt	38194.516	8
+GBFS	Distance	tests/generated/test-generated-171.txt	21062.648	7
+GBFS	Angle	tests/generated/test-generated-171.txt	93772.294	18
+Uniform_Cost		tests/generated/test-generated-171.txt	14600.16	8
+Beam	Distance	tests/generated/test-generated-171.txt	14710.629	9
+Beam	Angle	tests/generated/test-generated-171.txt	30497.346	9
+BFS		tests/generated/test-generated-172.txt	8621.241	27
+DFS		tests/generated/test-generated-172.txt	17040.074	34
+A_star	Distance	tests/generated/test-generated-172.txt	56805.953	23
+A_star	Angle	tests/generated/test-generated-172.txt	120298.976	30
+GBFS	Distance	tests/generated/test-generated-172.txt	45294.917	19
+GBFS	Angle	tests/generated/test-generated-172.txt	112528.828	29
+Uniform_Cost		tests/generated/test-generated-172.txt	57756.04	30
+Beam	Distance	tests/generated/test-generated-172.txt	31363.238	28
+Beam	Angle	tests/generated/test-generated-172.txt	72245.128	28
+BFS		tests/generated/test-generated-173.txt	1619.891	6
+DFS		tests/generated/test-generated-173.txt	3829.209	8
+A_star	Distance	tests/generated/test-generated-173.txt	12367.668	4
+A_star	Angle	tests/generated/test-generated-173.txt	18787.795	4
+GBFS	Distance	tests/generated/test-generated-173.txt	13070.521	4
+GBFS	Angle	tests/generated/test-generated-173.txt	18695.249	4
+Uniform_Cost		tests/generated/test-generated-173.txt	8054.098	4
+Beam	Distance	tests/generated/test-generated-173.txt	6003.989	4
+Beam	Angle	tests/generated/test-generated-173.txt	12156.396	4
+BFS		tests/generated/test-generated-174.txt	2548.21	8
+DFS		tests/generated/test-generated-174.txt	3359.415	7
+A_star	Distance	tests/generated/test-generated-174.txt	24804.775	9
+A_star	Angle	tests/generated/test-generated-174.txt	38900.32	9
+GBFS	Distance	tests/generated/test-generated-174.txt	18844.504	7
+GBFS	Angle	tests/generated/test-generated-174.txt	28243.977	7
+Uniform_Cost		tests/generated/test-generated-174.txt	17971.258	9
+Beam	Distance	tests/generated/test-generated-174.txt	8916.196	7
+Beam	Angle	tests/generated/test-generated-174.txt	18854.398	7
+BFS		tests/generated/test-generated-175.txt	1374.284	5
+DFS		tests/generated/test-generated-175.txt	2474.072	5
+A_star	Distance	tests/generated/test-generated-175.txt	15812.873	5
+A_star	Angle	tests/generated/test-generated-175.txt	24081.743	5
+GBFS	Distance	tests/generated/test-generated-175.txt	10794.022	3
+GBFS	Angle	tests/generated/test-generated-175.txt	24286.564	5
+Uniform_Cost		tests/generated/test-generated-175.txt	9985.168	5
+Beam	Distance	tests/generated/test-generated-175.txt	4618.07	3
+Beam	Angle	tests/generated/test-generated-175.txt	8718.748	3
+BFS		tests/generated/test-generated-176.txt	1863.3	6
+DFS		tests/generated/test-generated-176.txt	7750.973	16
+A_star	Distance	tests/generated/test-generated-176.txt	16924.025	5
+A_star	Angle	tests/generated/test-generated-176.txt	29801.463	6
+GBFS	Distance	tests/generated/test-generated-176.txt	17467.994	5
+GBFS	Angle	tests/generated/test-generated-176.txt	77337.93	15
+Uniform_Cost		tests/generated/test-generated-176.txt	10946.143	5
+Beam	Distance	tests/generated/test-generated-176.txt	8467.473	5
+Beam	Angle	tests/generated/test-generated-176.txt	16252.022	5
+BFS		tests/generated/test-generated-177.txt	1618.32	5
+DFS		tests/generated/test-generated-177.txt	2731.948	5
+A_star	Distance	tests/generated/test-generated-177.txt	22883.157	7
+A_star	Angle	tests/generated/test-generated-177.txt	35238.938	7
+GBFS	Distance	tests/generated/test-generated-177.txt	16436.417	5
+GBFS	Angle	tests/generated/test-generated-177.txt	50104.851	10
+Uniform_Cost		tests/generated/test-generated-177.txt	14752.214	7
+Beam	Distance	tests/generated/test-generated-177.txt	8471.767	5
+Beam	Angle	tests/generated/test-generated-177.txt	16296.681	5
+BFS		tests/generated/test-generated-178.txt	1046.979	3
+DFS		tests/generated/test-generated-178.txt	1556.532	3
+A_star	Distance	tests/generated/test-generated-178.txt	10419.477	3
+A_star	Angle	tests/generated/test-generated-178.txt	15345.321	3
+GBFS	Distance	tests/generated/test-generated-178.txt	11486.985	3
+GBFS	Angle	tests/generated/test-generated-178.txt	15089.05	3
+Uniform_Cost		tests/generated/test-generated-178.txt	6970.737	3
+Beam	Distance	tests/generated/test-generated-178.txt	4908.278	3
+Beam	Angle	tests/generated/test-generated-178.txt	9518.693	3
+BFS		tests/generated/test-generated-179.txt	1260.825	5
+DFS		tests/generated/test-generated-179.txt	2106.287	5
+A_star	Distance	tests/generated/test-generated-179.txt	13732.858	5
+A_star	Angle	tests/generated/test-generated-179.txt	21214.45	5
+GBFS	Distance	tests/generated/test-generated-179.txt	14330.859	5
+GBFS	Angle	tests/generated/test-generated-179.txt	20991.973	5
+Uniform_Cost		tests/generated/test-generated-179.txt	8939.915	5
+Beam	Distance	tests/generated/test-generated-179.txt	6775.09	5
+Beam	Angle	tests/generated/test-generated-179.txt	13923.395	5
+BFS		tests/generated/test-generated-18.txt	12832.885	35
+DFS		tests/generated/test-generated-18.txt	8597.828	18
+A_star	Distance	tests/generated/test-generated-18.txt	75732.005	32
+A_star	Angle	tests/generated/test-generated-18.txt	121502.771	32
+GBFS	Distance	tests/generated/test-generated-18.txt	72906.197	33
+GBFS	Angle	tests/generated/test-generated-18.txt	135816.706	35
+Uniform_Cost		tests/generated/test-generated-18.txt	72739.479	35
+Beam	Distance	tests/generated/test-generated-18.txt	26010.316	29
+Beam	Angle	tests/generated/test-generated-18.txt	69888.749	30
+BFS		tests/generated/test-generated-180.txt	1326.459	3
+DFS		tests/generated/test-generated-180.txt	1880.057	3
+A_star	Distance	tests/generated/test-generated-180.txt	10281.842	3
+A_star	Angle	tests/generated/test-generated-180.txt	13819.719	3
+GBFS	Distance	tests/generated/test-generated-180.txt	10671.328	3
+GBFS	Angle	tests/generated/test-generated-180.txt	14049.602	3
+Uniform_Cost		tests/generated/test-generated-180.txt	8350.83	3
+Beam	Distance	tests/generated/test-generated-180.txt	4423.334	3
+Beam	Angle	tests/generated/test-generated-180.txt	8096.889	3
+BFS		tests/generated/test-generated-181.txt	2247.367	6
+DFS		tests/generated/test-generated-181.txt	2877.71	6
+A_star	Distance	tests/generated/test-generated-181.txt	13782.045	6
+A_star	Angle	tests/generated/test-generated-181.txt	20945.991	6
+GBFS	Distance	tests/generated/test-generated-181.txt	14277.121	6
+GBFS	Angle	tests/generated/test-generated-181.txt	21485.384	6
+Uniform_Cost		tests/generated/test-generated-181.txt	11307.543	6
+Beam	Distance	tests/generated/test-generated-181.txt	5797.874	6
+Beam	Angle	tests/generated/test-generated-181.txt	12596.778	6
+BFS		tests/generated/test-generated-182.txt	1294.753	4
+DFS		tests/generated/test-generated-182.txt	1963.766	4
+A_star	Distance	tests/generated/test-generated-182.txt	12548.781	4
+A_star	Angle	tests/generated/test-generated-182.txt	19377.218	4
+GBFS	Distance	tests/generated/test-generated-182.txt	14265.931	4
+GBFS	Angle	tests/generated/test-generated-182.txt	18476.342	4
+Uniform_Cost		tests/generated/test-generated-182.txt	8022.994	4
+Beam	Distance	tests/generated/test-generated-182.txt	6047.765	4
+Beam	Angle	tests/generated/test-generated-182.txt	12192.53	4
+BFS		tests/generated/test-generated-183.txt	10305.376	31
+DFS		tests/generated/test-generated-183.txt	9085.956	18
+A_star	Distance	tests/generated/test-generated-183.txt	88706.141	34
+A_star	Angle	tests/generated/test-generated-183.txt	148892.017	35
+GBFS	Distance	tests/generated/test-generated-183.txt	59087.558	24
+GBFS	Angle	tests/generated/test-generated-183.txt	95586.184	23
+Uniform_Cost		tests/generated/test-generated-183.txt	72768.698	35
+Beam	Distance	tests/generated/test-generated-183.txt	34148.103	29
+Beam	Angle	tests/generated/test-generated-183.txt	84234.072	31
+BFS		tests/generated/test-generated-184.txt	1068.495	3
+DFS		tests/generated/test-generated-184.txt	1620.855	3
+A_star	Distance	tests/generated/test-generated-184.txt	11287.165	3
+A_star	Angle	tests/generated/test-generated-184.txt	28288.197	6
+GBFS	Distance	tests/generated/test-generated-184.txt	10943.166	3
+GBFS	Angle	tests/generated/test-generated-184.txt	14119.485	3
+Uniform_Cost		tests/generated/test-generated-184.txt	15133.874	9
+Beam	Distance	tests/generated/test-generated-184.txt	4545.953	3
+Beam	Angle	tests/generated/test-generated-184.txt	8253.862	3
+BFS		tests/generated/test-generated-185.txt	14196.835	39
+DFS		tests/generated/test-generated-185.txt	7454.381	17
+A_star	Distance	tests/generated/test-generated-185.txt	62352.43	30
+A_star	Angle	tests/generated/test-generated-185.txt	118582.103	32
+GBFS	Distance	tests/generated/test-generated-185.txt	36970.865	18
+GBFS	Angle	tests/generated/test-generated-185.txt	94104.811	26
+Uniform_Cost		tests/generated/test-generated-185.txt	67713.135	35
+Beam	Distance	tests/generated/test-generated-185.txt	27067.478	31
+Beam	Angle	tests/generated/test-generated-185.txt	64480.327	29
+BFS		tests/generated/test-generated-186.txt	1726.148	5
+DFS		tests/generated/test-generated-186.txt	3147.469	6
+A_star	Distance	tests/generated/test-generated-186.txt	12181.366	5
+A_star	Angle	tests/generated/test-generated-186.txt	19837.733	5
+GBFS	Distance	tests/generated/test-generated-186.txt	10961.911	5
+GBFS	Angle	tests/generated/test-generated-186.txt	16741.778	5
+Uniform_Cost		tests/generated/test-generated-186.txt	12314.019	5
+Beam	Distance	tests/generated/test-generated-186.txt	4312.963	5
+Beam	Angle	tests/generated/test-generated-186.txt	10230.554	5
+BFS		tests/generated/test-generated-187.txt	930.816	2
+DFS		tests/generated/test-generated-187.txt	1323.795	2
+A_star	Distance	tests/generated/test-generated-187.txt	7121.008	2
+A_star	Angle	tests/generated/test-generated-187.txt	9441.812	2
+GBFS	Distance	tests/generated/test-generated-187.txt	7804.308	2
+GBFS	Angle	tests/generated/test-generated-187.txt	9116.721	2
+Uniform_Cost		tests/generated/test-generated-187.txt	6009.111	2
+Beam	Distance	tests/generated/test-generated-187.txt	2626.581	2
+Beam	Angle	tests/generated/test-generated-187.txt	4373.944	2
+BFS		tests/generated/test-generated-188.txt	1475.781	5
+DFS		tests/generated/test-generated-188.txt	2497.584	5
+A_star	Distance	tests/generated/test-generated-188.txt	12977.953	4
+A_star	Angle	tests/generated/test-generated-188.txt	19112.281	4
+GBFS	Distance	tests/generated/test-generated-188.txt	13964.54	4
+GBFS	Angle	tests/generated/test-generated-188.txt	19204.633	4
+Uniform_Cost		tests/generated/test-generated-188.txt	8064.799	4
+Beam	Distance	tests/generated/test-generated-188.txt	6636.356	4
+Beam	Angle	tests/generated/test-generated-188.txt	12635.347	4
+BFS		tests/generated/test-generated-189.txt	1169.885	4
+DFS		tests/generated/test-generated-189.txt	1849.127	4
+A_star	Distance	tests/generated/test-generated-189.txt	11080.685	4
+A_star	Angle	tests/generated/test-generated-189.txt	16230.291	4
+GBFS	Distance	tests/generated/test-generated-189.txt	11390.232	4
+GBFS	Angle	tests/generated/test-generated-189.txt	16208.211	4
+Uniform_Cost		tests/generated/test-generated-189.txt	7970.134	4
+Beam	Distance	tests/generated/test-generated-189.txt	4766.813	4
+Beam	Angle	tests/generated/test-generated-189.txt	10078.963	4
+BFS		tests/generated/test-generated-19.txt	1259.236	5
+DFS		tests/generated/test-generated-19.txt	2209.87	5
+A_star	Distance	tests/generated/test-generated-19.txt	15725.073	5
+A_star	Angle	tests/generated/test-generated-19.txt	29845.124	6
+GBFS	Distance	tests/generated/test-generated-19.txt	16482.419	5
+GBFS	Angle	tests/generated/test-generated-19.txt	59248.67	11
+Uniform_Cost		tests/generated/test-generated-19.txt	11160.514	6
+Beam	Distance	tests/generated/test-generated-19.txt	8511.129	5
+Beam	Angle	tests/generated/test-generated-19.txt	16351.531	5
+BFS		tests/generated/test-generated-190.txt	1319.737	5
+DFS		tests/generated/test-generated-190.txt	2158.333	5
+A_star	Distance	tests/generated/test-generated-190.txt	14000.483	5
+A_star	Angle	tests/generated/test-generated-190.txt	20974.706	5
+GBFS	Distance	tests/generated/test-generated-190.txt	14098.353	5
+GBFS	Angle	tests/generated/test-generated-190.txt	21053.788	5
+Uniform_Cost		tests/generated/test-generated-190.txt	9159.077	5
+Beam	Distance	tests/generated/test-generated-190.txt	6849.861	5
+Beam	Angle	tests/generated/test-generated-190.txt	13786.238	5
+BFS		tests/generated/test-generated-191.txt	1320.137	5
+DFS		tests/generated/test-generated-191.txt	2216.559	5
+A_star	Distance	tests/generated/test-generated-191.txt	14315.562	5
+A_star	Angle	tests/generated/test-generated-191.txt	32370.352	7
+GBFS	Distance	tests/generated/test-generated-191.txt	14260.576	5
+GBFS	Angle	tests/generated/test-generated-191.txt	21117.611	5
+Uniform_Cost		tests/generated/test-generated-191.txt	13895.402	7
+Beam	Distance	tests/generated/test-generated-191.txt	7005.292	5
+Beam	Angle	tests/generated/test-generated-191.txt	21350.009	7
+BFS		tests/generated/test-generated-192.txt	3861.077	15
+DFS		tests/generated/test-generated-192.txt	6960.031	14
+A_star	Distance	tests/generated/test-generated-192.txt	31144.755	11
+A_star	Angle	tests/generated/test-generated-192.txt	53052.293	11
+GBFS	Distance	tests/generated/test-generated-192.txt	37569.863	13
+GBFS	Angle	tests/generated/test-generated-192.txt	86392.226	17
+Uniform_Cost		tests/generated/test-generated-192.txt	21831.76	13
+Beam	Distance	tests/generated/test-generated-192.txt	14395.316	9
+Beam	Angle	tests/generated/test-generated-192.txt	30236.044	9
+BFS		tests/generated/test-generated-193.txt	6415.105	21
+DFS		tests/generated/test-generated-193.txt	11325.187	23
+A_star	Distance	tests/generated/test-generated-193.txt	53944.494	23
+A_star	Angle	tests/generated/test-generated-193.txt	94524.223	24
+GBFS	Distance	tests/generated/test-generated-193.txt	51371.239	22
+GBFS	Angle	tests/generated/test-generated-193.txt	54198.082	15
+Uniform_Cost		tests/generated/test-generated-193.txt	51307.406	24
+Beam	Distance	tests/generated/test-generated-193.txt	23537.224	24
+Beam	Angle	tests/generated/test-generated-193.txt	55260.356	24
+BFS		tests/generated/test-generated-194.txt	2671.155	8
+DFS		tests/generated/test-generated-194.txt	3440.657	7
+A_star	Distance	tests/generated/test-generated-194.txt	21902.49	8
+A_star	Angle	tests/generated/test-generated-194.txt	46462.739	11
+GBFS	Distance	tests/generated/test-generated-194.txt	17892.251	7
+GBFS	Angle	tests/generated/test-generated-194.txt	33581.454	8
+Uniform_Cost		tests/generated/test-generated-194.txt	20381.559	11
+Beam	Distance	tests/generated/test-generated-194.txt	10059.618	8
+Beam	Angle	tests/generated/test-generated-194.txt	22150.236	8
+BFS		tests/generated/test-generated-195.txt	1862.062	8
+DFS		tests/generated/test-generated-195.txt	8238.173	17
+A_star	Distance	tests/generated/test-generated-195.txt	12687.648	5
+A_star	Angle	tests/generated/test-generated-195.txt	19268.835	5
+GBFS	Distance	tests/generated/test-generated-195.txt	13204.816	5
+GBFS	Angle	tests/generated/test-generated-195.txt	19611.703	5
+Uniform_Cost		tests/generated/test-generated-195.txt	9270.708	5
+Beam	Distance	tests/generated/test-generated-195.txt	6001.731	5
+Beam	Angle	tests/generated/test-generated-195.txt	12299.699	5
+BFS		tests/generated/test-generated-196.txt	5515.263	19
+DFS		tests/generated/test-generated-196.txt	5044.721	11
+A_star	Distance	tests/generated/test-generated-196.txt	31858.521	14
+A_star	Angle	tests/generated/test-generated-196.txt	53605.236	14
+GBFS	Distance	tests/generated/test-generated-196.txt	58593.861	23
+GBFS	Angle	tests/generated/test-generated-196.txt	94936.217	23
+Uniform_Cost		tests/generated/test-generated-196.txt	28662.312	17
+Beam	Distance	tests/generated/test-generated-196.txt	17499.862	16
+Beam	Angle	tests/generated/test-generated-196.txt	40147.685	16
+BFS		tests/generated/test-generated-197.txt	3838.526	14
+DFS		tests/generated/test-generated-197.txt	6527.716	14
+A_star	Distance	tests/generated/test-generated-197.txt	21163.535	9
+A_star	Angle	tests/generated/test-generated-197.txt	33991.718	9
+GBFS	Distance	tests/generated/test-generated-197.txt	58937.802	23
+GBFS	Angle	tests/generated/test-generated-197.txt	133680.229	32
+Uniform_Cost		tests/generated/test-generated-197.txt	16165.275	9
+Beam	Distance	tests/generated/test-generated-197.txt	9397.402	9
+Beam	Angle	tests/generated/test-generated-197.txt	21714.017	9
+BFS		tests/generated/test-generated-198.txt	7563.039	22
+DFS		tests/generated/test-generated-198.txt	14231.058	29
+A_star	Distance	tests/generated/test-generated-198.txt	42928.624	17
+A_star	Angle	tests/generated/test-generated-198.txt	81355.429	20
+GBFS	Distance	tests/generated/test-generated-198.txt	27702.237	11
+GBFS	Angle	tests/generated/test-generated-198.txt	135488.071	32
+Uniform_Cost		tests/generated/test-generated-198.txt	38445.252	20
+Beam	Distance	tests/generated/test-generated-198.txt	16574.665	15
+Beam	Angle	tests/generated/test-generated-198.txt	37955.394	15
+BFS		tests/generated/test-generated-199.txt	2453.619	9
+DFS		tests/generated/test-generated-199.txt	8625.91	17
+A_star	Distance	tests/generated/test-generated-199.txt	13751.616	5
+A_star	Angle	tests/generated/test-generated-199.txt	38535.342	9
+GBFS	Distance	tests/generated/test-generated-199.txt	14472.868	5
+GBFS	Angle	tests/generated/test-generated-199.txt	93525.085	21
+Uniform_Cost		tests/generated/test-generated-199.txt	16189.67	9
+Beam	Distance	tests/generated/test-generated-199.txt	6741.812	5
+Beam	Angle	tests/generated/test-generated-199.txt	13274.311	5
+BFS		tests/generated/test-generated-2.txt	2005.609	7
+DFS		tests/generated/test-generated-2.txt	2691.057	6
+A_star	Distance	tests/generated/test-generated-2.txt	17244.66	7
+A_star	Angle	tests/generated/test-generated-2.txt	27307.083	7
+GBFS	Distance	tests/generated/test-generated-2.txt	18295.694	7
+GBFS	Angle	tests/generated/test-generated-2.txt	22747.908	6
+Uniform_Cost		tests/generated/test-generated-2.txt	14938.737	8
+Beam	Distance	tests/generated/test-generated-2.txt	7693.558	7
+Beam	Angle	tests/generated/test-generated-2.txt	17394.337	7
+BFS		tests/generated/test-generated-20.txt	3282.197	10
+DFS		tests/generated/test-generated-20.txt	6717.079	13
+A_star	Distance	tests/generated/test-generated-20.txt	24777.27	9
+A_star	Angle	tests/generated/test-generated-20.txt	43509.137	10
+GBFS	Distance	tests/generated/test-generated-20.txt	33870.668	13
+GBFS	Angle	tests/generated/test-generated-20.txt	51041.074	12
+Uniform_Cost		tests/generated/test-generated-20.txt	19218.187	10
+Beam	Distance	tests/generated/test-generated-20.txt	11309.073	9
+Beam	Angle	tests/generated/test-generated-20.txt	25179.359	9
+BFS		tests/generated/test-generated-21.txt	1044.827	3
+DFS		tests/generated/test-generated-21.txt	1570.578	3
+A_star	Distance	tests/generated/test-generated-21.txt	8479.613	3
+A_star	Angle	tests/generated/test-generated-21.txt	12226.197	3
+GBFS	Distance	tests/generated/test-generated-21.txt	9020.452	3
+GBFS	Angle	tests/generated/test-generated-21.txt	11860.366	3
+Uniform_Cost		tests/generated/test-generated-21.txt	7111.634	3
+Beam	Distance	tests/generated/test-generated-21.txt	3313.751	3
+Beam	Angle	tests/generated/test-generated-21.txt	6303.999	3
+BFS		tests/generated/test-generated-22.txt	1141.385	3
+DFS		tests/generated/test-generated-22.txt	1681.645	3
+A_star	Distance	tests/generated/test-generated-22.txt	8944.519	3
+A_star	Angle	tests/generated/test-generated-22.txt	12803.554	3
+GBFS	Distance	tests/generated/test-generated-22.txt	9587.225	3
+GBFS	Angle	tests/generated/test-generated-22.txt	12811.591	3
+Uniform_Cost		tests/generated/test-generated-22.txt	7051.519	3
+Beam	Distance	tests/generated/test-generated-22.txt	3780.739	3
+Beam	Angle	tests/generated/test-generated-22.txt	6895.922	3
+BFS		tests/generated/test-generated-23.txt	1856.0	6
+DFS		tests/generated/test-generated-23.txt	4646.711	10
+A_star	Distance	tests/generated/test-generated-23.txt	13708.894	5
+A_star	Angle	tests/generated/test-generated-23.txt	25751.596	6
+GBFS	Distance	tests/generated/test-generated-23.txt	11512.302	4
+GBFS	Angle	tests/generated/test-generated-23.txt	15978.414	4
+Uniform_Cost		tests/generated/test-generated-23.txt	11896.461	6
+Beam	Distance	tests/generated/test-generated-23.txt	4955.383	4
+Beam	Angle	tests/generated/test-generated-23.txt	9876.26	4
+BFS		tests/generated/test-generated-24.txt	1208.619	4
+DFS		tests/generated/test-generated-24.txt	1859.757	4
+A_star	Distance	tests/generated/test-generated-24.txt	18675.239	6
+A_star	Angle	tests/generated/test-generated-24.txt	29234.783	6
+GBFS	Distance	tests/generated/test-generated-24.txt	13992.996	4
+GBFS	Angle	tests/generated/test-generated-24.txt	29023.444	6
+Uniform_Cost		tests/generated/test-generated-24.txt	10985.902	6
+Beam	Distance	tests/generated/test-generated-24.txt	6796.734	4
+Beam	Angle	tests/generated/test-generated-24.txt	12521.748	4
+BFS		tests/generated/test-generated-25.txt	1273.737	4
+DFS		tests/generated/test-generated-25.txt	1842.603	4
+A_star	Distance	tests/generated/test-generated-25.txt	11753.373	4
+A_star	Angle	tests/generated/test-generated-25.txt	17839.007	4
+GBFS	Distance	tests/generated/test-generated-25.txt	12315.84	4
+GBFS	Angle	tests/generated/test-generated-25.txt	17527.013	4
+Uniform_Cost		tests/generated/test-generated-25.txt	7959.952	4
+Beam	Distance	tests/generated/test-generated-25.txt	5404.171	4
+Beam	Angle	tests/generated/test-generated-25.txt	11022.454	4
+BFS		tests/generated/test-generated-26.txt	2349.139	9
+DFS		tests/generated/test-generated-26.txt	3045.958	6
+A_star	Distance	tests/generated/test-generated-26.txt	27999.624	11
+A_star	Angle	tests/generated/test-generated-26.txt	58974.437	14
+GBFS	Distance	tests/generated/test-generated-26.txt	17817.534	7
+GBFS	Angle	tests/generated/test-generated-26.txt	82609.068	19
+Uniform_Cost		tests/generated/test-generated-26.txt	25409.241	14
+Beam	Distance	tests/generated/test-generated-26.txt	10075.365	8
+Beam	Angle	tests/generated/test-generated-26.txt	30788.104	11
+BFS		tests/generated/test-generated-27.txt	1029.78	3
+DFS		tests/generated/test-generated-27.txt	1578.988	3
+A_star	Distance	tests/generated/test-generated-27.txt	9070.037	3
+A_star	Angle	tests/generated/test-generated-27.txt	12647.581	3
+GBFS	Distance	tests/generated/test-generated-27.txt	9718.001	3
+GBFS	Angle	tests/generated/test-generated-27.txt	12605.361	3
+Uniform_Cost		tests/generated/test-generated-27.txt	7150.92	3
+Beam	Distance	tests/generated/test-generated-27.txt	3731.141	3
+Beam	Angle	tests/generated/test-generated-27.txt	7172.667	3
+BFS		tests/generated/test-generated-28.txt	3303.048	12
+DFS		tests/generated/test-generated-28.txt	4545.476	11
+A_star	Distance	tests/generated/test-generated-28.txt	33390.352	16
+A_star	Angle	tests/generated/test-generated-28.txt	67910.028	19
+GBFS	Distance	tests/generated/test-generated-28.txt	57435.883	25
+GBFS	Angle	tests/generated/test-generated-28.txt	111078.787	29
+Uniform_Cost		tests/generated/test-generated-28.txt	40199.211	22
+Beam	Distance	tests/generated/test-generated-28.txt	16790.391	19
+Beam	Angle	tests/generated/test-generated-28.txt	67980.077	30
+BFS		tests/generated/test-generated-29.txt	1291.063	4
+DFS		tests/generated/test-generated-29.txt	1996.005	4
+A_star	Distance	tests/generated/test-generated-29.txt	12938.152	4
+A_star	Angle	tests/generated/test-generated-29.txt	19323.817	4
+GBFS	Distance	tests/generated/test-generated-29.txt	13978.975	4
+GBFS	Angle	tests/generated/test-generated-29.txt	19305.544	4
+Uniform_Cost		tests/generated/test-generated-29.txt	7964.166	4
+Beam	Distance	tests/generated/test-generated-29.txt	6637.957	4
+Beam	Angle	tests/generated/test-generated-29.txt	12343.184	4
+BFS		tests/generated/test-generated-3.txt	14334.984	39
+DFS		tests/generated/test-generated-3.txt	16140.504	32
+A_star	Distance	tests/generated/test-generated-3.txt	81657.104	36
+A_star	Angle	tests/generated/test-generated-3.txt	138094.015	37
+GBFS	Distance	tests/generated/test-generated-3.txt	39956.334	19
+GBFS	Angle	tests/generated/test-generated-3.txt	154419.872	40
+Uniform_Cost		tests/generated/test-generated-3.txt	82001.837	40
+Beam	Distance	tests/generated/test-generated-3.txt	29017.99	32
+Beam	Angle	tests/generated/test-generated-3.txt	76292.171	34
+BFS		tests/generated/test-generated-30.txt	2451.554	8
+DFS		tests/generated/test-generated-30.txt	3244.715	6
+A_star	Distance	tests/generated/test-generated-30.txt	18938.452	8
+A_star	Angle	tests/generated/test-generated-30.txt	30709.831	8
+GBFS	Distance	tests/generated/test-generated-30.txt	19049.127	8
+GBFS	Angle	tests/generated/test-generated-30.txt	29828.133	8
+Uniform_Cost		tests/generated/test-generated-30.txt	18061.582	8
+Beam	Distance	tests/generated/test-generated-30.txt	7757.827	8
+Beam	Angle	tests/generated/test-generated-30.txt	17694.763	8
+BFS		tests/generated/test-generated-31.txt	2487.912	11
+DFS		tests/generated/test-generated-31.txt	6822.0	14
+A_star	Distance	tests/generated/test-generated-31.txt	20939.972	8
+A_star	Angle	tests/generated/test-generated-31.txt	33866.116	8
+GBFS	Distance	tests/generated/test-generated-31.txt	12285.366	4
+GBFS	Angle	tests/generated/test-generated-31.txt	34085.116	8
+Uniform_Cost		tests/generated/test-generated-31.txt	13180.238	8
+Beam	Distance	tests/generated/test-generated-31.txt	5480.367	4
+Beam	Angle	tests/generated/test-generated-31.txt	10951.057	4
+BFS		tests/generated/test-generated-32.txt	4200.008	12
+DFS		tests/generated/test-generated-32.txt	5685.483	12
+A_star	Distance	tests/generated/test-generated-32.txt	28812.107	12
+A_star	Angle	tests/generated/test-generated-32.txt	45119.97	12
+GBFS	Distance	tests/generated/test-generated-32.txt	19817.098	9
+GBFS	Angle	tests/generated/test-generated-32.txt	33379.668	9
+Uniform_Cost		tests/generated/test-generated-32.txt	25209.414	12
+Beam	Distance	tests/generated/test-generated-32.txt	11671.316	12
+Beam	Angle	tests/generated/test-generated-32.txt	27269.343	12
+BFS		tests/generated/test-generated-33.txt	966.473	2
+DFS		tests/generated/test-generated-33.txt	1337.803	2
+A_star	Distance	tests/generated/test-generated-33.txt	7390.741	2
+A_star	Angle	tests/generated/test-generated-33.txt	9719.917	2
+GBFS	Distance	tests/generated/test-generated-33.txt	8289.633	2
+GBFS	Angle	tests/generated/test-generated-33.txt	9615.303	2
+Uniform_Cost		tests/generated/test-generated-33.txt	6120.239	2
+Beam	Distance	tests/generated/test-generated-33.txt	2906.186	2
+Beam	Angle	tests/generated/test-generated-33.txt	4760.406	2
+BFS		tests/generated/test-generated-34.txt	1925.204	7
+DFS		tests/generated/test-generated-34.txt	9719.115	21
+A_star	Distance	tests/generated/test-generated-34.txt	14471.684	5
+A_star	Angle	tests/generated/test-generated-34.txt	22529.863	5
+GBFS	Distance	tests/generated/test-generated-34.txt	15256.494	5
+GBFS	Angle	tests/generated/test-generated-34.txt	48558.993	11
+Uniform_Cost		tests/generated/test-generated-34.txt	10032.98	5
+Beam	Distance	tests/generated/test-generated-34.txt	7677.027	5
+Beam	Angle	tests/generated/test-generated-34.txt	14783.009	5
+BFS		tests/generated/test-generated-35.txt	6322.033	22
+DFS		tests/generated/test-generated-35.txt	5509.586	11
+A_star	Distance	tests/generated/test-generated-35.txt	44054.862	15
+A_star	Angle	tests/generated/test-generated-35.txt	95858.555	19
+GBFS	Distance	tests/generated/test-generated-35.txt	30686.495	10
+GBFS	Angle	tests/generated/test-generated-35.txt	63782.634	13
+Uniform_Cost		tests/generated/test-generated-35.txt	34716.956	19
+Beam	Distance	tests/generated/test-generated-35.txt	25905.391	15
+Beam	Angle	tests/generated/test-generated-35.txt	53164.853	15
+BFS		tests/generated/test-generated-36.txt	1067.483	3
+DFS		tests/generated/test-generated-36.txt	1591.244	3
+A_star	Distance	tests/generated/test-generated-36.txt	13154.947	4
+A_star	Angle	tests/generated/test-generated-36.txt	20482.903	4
+GBFS	Distance	tests/generated/test-generated-36.txt	10817.043	3
+GBFS	Angle	tests/generated/test-generated-36.txt	19554.481	4
+Uniform_Cost		tests/generated/test-generated-36.txt	9958.977	4
+Beam	Distance	tests/generated/test-generated-36.txt	4617.035	3
+Beam	Angle	tests/generated/test-generated-36.txt	8442.651	3
+BFS		tests/generated/test-generated-37.txt	10611.866	31
+DFS		tests/generated/test-generated-37.txt	13106.837	26
+A_star	Distance	tests/generated/test-generated-37.txt	75594.626	31
+A_star	Angle	tests/generated/test-generated-37.txt	130721.361	34
+GBFS	Distance	tests/generated/test-generated-37.txt	61648.656	26
+GBFS	Angle	tests/generated/test-generated-37.txt	79051.489	21
+Uniform_Cost		tests/generated/test-generated-37.txt	70030.054	34
+Beam	Distance	tests/generated/test-generated-37.txt	23773.521	26
+Beam	Angle	tests/generated/test-generated-37.txt	58377.202	26
+BFS		tests/generated/test-generated-38.txt	3580.637	13
+DFS		tests/generated/test-generated-38.txt	3634.499	8
+A_star	Distance	tests/generated/test-generated-38.txt	32800.632	11
+A_star	Angle	tests/generated/test-generated-38.txt	66283.33	14
+GBFS	Distance	tests/generated/test-generated-38.txt	30660.015	11
+GBFS	Angle	tests/generated/test-generated-38.txt	58179.83	12
+Uniform_Cost		tests/generated/test-generated-38.txt	26445.782	14
+Beam	Distance	tests/generated/test-generated-38.txt	13063.838	9
+Beam	Angle	tests/generated/test-generated-38.txt	38506.554	12
+BFS		tests/generated/test-generated-39.txt	2840.917	10
+DFS		tests/generated/test-generated-39.txt	5736.477	12
+A_star	Distance	tests/generated/test-generated-39.txt	21947.678	7
+A_star	Angle	tests/generated/test-generated-39.txt	33566.954	7
+GBFS	Distance	tests/generated/test-generated-39.txt	21381.193	7
+GBFS	Angle	tests/generated/test-generated-39.txt	27595.763	6
+Uniform_Cost		tests/generated/test-generated-39.txt	14676.255	7
+Beam	Distance	tests/generated/test-generated-39.txt	10878.832	7
+Beam	Angle	tests/generated/test-generated-39.txt	22173.183	7
+BFS		tests/generated/test-generated-4.txt	2635.213	7
+DFS		tests/generated/test-generated-4.txt	4308.987	8
+A_star	Distance	tests/generated/test-generated-4.txt	15703.927	6
+A_star	Angle	tests/generated/test-generated-4.txt	27685.364	7
+GBFS	Distance	tests/generated/test-generated-4.txt	13408.846	6
+GBFS	Angle	tests/generated/test-generated-4.txt	21863.779	6
+Uniform_Cost		tests/generated/test-generated-4.txt	16140.634	7
+Beam	Distance	tests/generated/test-generated-4.txt	5759.695	6
+Beam	Angle	tests/generated/test-generated-4.txt	12741.551	6
+BFS		tests/generated/test-generated-40.txt	5090.286	20
+DFS		tests/generated/test-generated-40.txt	4218.282	8
+A_star	Distance	tests/generated/test-generated-40.txt	39390.171	13
+A_star	Angle	tests/generated/test-generated-40.txt	66982.178	13
+GBFS	Distance	tests/generated/test-generated-40.txt	34979.848	11
+GBFS	Angle	tests/generated/test-generated-40.txt	50325.174	10
+Uniform_Cost		tests/generated/test-generated-40.txt	22321.447	13
+Beam	Distance	tests/generated/test-generated-40.txt	29116.297	16
+Beam	Angle	tests/generated/test-generated-40.txt	60225.856	16
+BFS		tests/generated/test-generated-41.txt	1345.263	4
+DFS		tests/generated/test-generated-41.txt	3631.801	8
+A_star	Distance	tests/generated/test-generated-41.txt	10771.097	3
+A_star	Angle	tests/generated/test-generated-41.txt	20338.259	4
+GBFS	Distance	tests/generated/test-generated-41.txt	11643.861	3
+GBFS	Angle	tests/generated/test-generated-41.txt	14943.565	3
+Uniform_Cost		tests/generated/test-generated-41.txt	8805.115	4
+Beam	Distance	tests/generated/test-generated-41.txt	4953.906	3
+Beam	Angle	tests/generated/test-generated-41.txt	9216.23	3
+BFS		tests/generated/test-generated-42.txt	2412.863	9
+DFS		tests/generated/test-generated-42.txt	2761.04	6
+A_star	Distance	tests/generated/test-generated-42.txt	25160.641	9
+A_star	Angle	tests/generated/test-generated-42.txt	46366.153	10
+GBFS	Distance	tests/generated/test-generated-42.txt	19595.551	7
+GBFS	Angle	tests/generated/test-generated-42.txt	31481.416	7
+Uniform_Cost		tests/generated/test-generated-42.txt	19361.697	10
+Beam	Distance	tests/generated/test-generated-42.txt	13173.694	9
+Beam	Angle	tests/generated/test-generated-42.txt	27922.215	9
+BFS		tests/generated/test-generated-43.txt	2365.04	8
+DFS		tests/generated/test-generated-43.txt	4585.644	9
+A_star	Distance	tests/generated/test-generated-43.txt	16732.612	6
+A_star	Angle	tests/generated/test-generated-43.txt	39959.377	9
+GBFS	Distance	tests/generated/test-generated-43.txt	16603.819	6
+GBFS	Angle	tests/generated/test-generated-43.txt	25769.566	6
+Uniform_Cost		tests/generated/test-generated-43.txt	18047.549	9
+Beam	Distance	tests/generated/test-generated-43.txt	8313.778	6
+Beam	Angle	tests/generated/test-generated-43.txt	17446.18	6
+BFS		tests/generated/test-generated-44.txt	1144.596	4
+DFS		tests/generated/test-generated-44.txt	1836.609	4
+A_star	Distance	tests/generated/test-generated-44.txt	12209.773	4
+A_star	Angle	tests/generated/test-generated-44.txt	18400.893	4
+GBFS	Distance	tests/generated/test-generated-44.txt	12926.402	4
+GBFS	Angle	tests/generated/test-generated-44.txt	18290.553	4
+Uniform_Cost		tests/generated/test-generated-44.txt	8169.753	4
+Beam	Distance	tests/generated/test-generated-44.txt	5962.567	4
+Beam	Angle	tests/generated/test-generated-44.txt	11872.618	4
+BFS		tests/generated/test-generated-45.txt	2316.691	9
+DFS		tests/generated/test-generated-45.txt	2775.09	6
+A_star	Distance	tests/generated/test-generated-45.txt	27131.545	10
+A_star	Angle	tests/generated/test-generated-45.txt	50987.361	12
+GBFS	Distance	tests/generated/test-generated-45.txt	16854.295	6
+GBFS	Angle	tests/generated/test-generated-45.txt	77962.173	18
+Uniform_Cost		tests/generated/test-generated-45.txt	19093.271	10
+Beam	Distance	tests/generated/test-generated-45.txt	11352.645	9
+Beam	Angle	tests/generated/test-generated-45.txt	101173.648	33
+BFS		tests/generated/test-generated-46.txt	1140.279	4
+DFS		tests/generated/test-generated-46.txt	1885.685	4
+A_star	Distance	tests/generated/test-generated-46.txt	10984.246	4
+A_star	Angle	tests/generated/test-generated-46.txt	16546.058	4
+GBFS	Distance	tests/generated/test-generated-46.txt	11473.926	4
+GBFS	Angle	tests/generated/test-generated-46.txt	16542.161	4
+Uniform_Cost		tests/generated/test-generated-46.txt	8162.752	4
+Beam	Distance	tests/generated/test-generated-46.txt	4818.054	4
+Beam	Angle	tests/generated/test-generated-46.txt	10199.263	4
+BFS		tests/generated/test-generated-47.txt	3538.911	10
+DFS		tests/generated/test-generated-47.txt	5661.989	11
+A_star	Distance	tests/generated/test-generated-47.txt	26555.304	10
+A_star	Angle	tests/generated/test-generated-47.txt	39487.54	10
+GBFS	Distance	tests/generated/test-generated-47.txt	22264.704	10
+GBFS	Angle	tests/generated/test-generated-47.txt	38133.998	10
+Uniform_Cost		tests/generated/test-generated-47.txt	22359.306	10
+Beam	Distance	tests/generated/test-generated-47.txt	10602.873	10
+Beam	Angle	tests/generated/test-generated-47.txt	23216.138	10
+BFS		tests/generated/test-generated-48.txt	10621.16	32
+DFS		tests/generated/test-generated-48.txt	10145.174	22
+A_star	Distance	tests/generated/test-generated-48.txt	33806.031	15
+A_star	Angle	tests/generated/test-generated-48.txt	72017.319	19
+GBFS	Distance	tests/generated/test-generated-48.txt	20465.863	9
+GBFS	Angle	tests/generated/test-generated-48.txt	41973.768	11
+Uniform_Cost		tests/generated/test-generated-48.txt	32592.757	20
+Beam	Distance	tests/generated/test-generated-48.txt	15832.693	15
+Beam	Angle	tests/generated/test-generated-48.txt	36794.794	15
+BFS		tests/generated/test-generated-49.txt	8497.696	27
+DFS		tests/generated/test-generated-49.txt	14354.497	28
+A_star	Distance	tests/generated/test-generated-49.txt	48563.703	21
+A_star	Angle	tests/generated/test-generated-49.txt	87023.738	22
+GBFS	Distance	tests/generated/test-generated-49.txt	35614.769	16
+GBFS	Angle	tests/generated/test-generated-49.txt	93184.719	23
+Uniform_Cost		tests/generated/test-generated-49.txt	45005.618	24
+Beam	Distance	tests/generated/test-generated-49.txt	23833.714	22
+Beam	Angle	tests/generated/test-generated-49.txt	55561.668	22
+BFS		tests/generated/test-generated-5.txt	6709.63	22
+DFS		tests/generated/test-generated-5.txt	11929.372	23
+A_star	Distance	tests/generated/test-generated-5.txt	46668.717	20
+A_star	Angle	tests/generated/test-generated-5.txt	83870.816	22
+GBFS	Distance	tests/generated/test-generated-5.txt	31887.493	15
+GBFS	Angle	tests/generated/test-generated-5.txt	45030.849	13
+Uniform_Cost		tests/generated/test-generated-5.txt	47199.786	22
+Beam	Distance	tests/generated/test-generated-5.txt	22895.517	22
+Beam	Angle	tests/generated/test-generated-5.txt	52562.596	22
+BFS		tests/generated/test-generated-50.txt	987.796	2
+DFS		tests/generated/test-generated-50.txt	1336.44	2
+A_star	Distance	tests/generated/test-generated-50.txt	6800.376	2
+A_star	Angle	tests/generated/test-generated-50.txt	9211.179	2
+GBFS	Distance	tests/generated/test-generated-50.txt	7445.494	2
+GBFS	Angle	tests/generated/test-generated-50.txt	9320.738	2
+Uniform_Cost		tests/generated/test-generated-50.txt	6191.875	2
+Beam	Distance	tests/generated/test-generated-50.txt	2520.229	2
+Beam	Angle	tests/generated/test-generated-50.txt	4079.703	2
+BFS		tests/generated/test-generated-51.txt	2098.882	8
+DFS		tests/generated/test-generated-51.txt	7804.629	17
+A_star	Distance	tests/generated/test-generated-51.txt	15305.875	5
+A_star	Angle	tests/generated/test-generated-51.txt	23523.864	5
+GBFS	Distance	tests/generated/test-generated-51.txt	16329.515	5
+GBFS	Angle	tests/generated/test-generated-51.txt	23506.692	5
+Uniform_Cost		tests/generated/test-generated-51.txt	9274.386	5
+Beam	Distance	tests/generated/test-generated-51.txt	8592.661	5
+Beam	Angle	tests/generated/test-generated-51.txt	16535.245	5
+BFS		tests/generated/test-generated-52.txt	1137.732	4
+DFS		tests/generated/test-generated-52.txt	1795.504	4
+A_star	Distance	tests/generated/test-generated-52.txt	10154.037	4
+A_star	Angle	tests/generated/test-generated-52.txt	14989.049	4
+GBFS	Distance	tests/generated/test-generated-52.txt	10479.875	4
+GBFS	Angle	tests/generated/test-generated-52.txt	14568.326	4
+Uniform_Cost		tests/generated/test-generated-52.txt	7949.659	4
+Beam	Distance	tests/generated/test-generated-52.txt	4115.874	4
+Beam	Angle	tests/generated/test-generated-52.txt	8364.229	4
+BFS		tests/generated/test-generated-53.txt	2764.444	10
+DFS		tests/generated/test-generated-53.txt	4856.375	10
+A_star	Distance	tests/generated/test-generated-53.txt	36620.164	12
+A_star	Angle	tests/generated/test-generated-53.txt	49295.489	10
+GBFS	Distance	tests/generated/test-generated-53.txt	18673.396	6
+GBFS	Angle	tests/generated/test-generated-53.txt	28089.662	6
+Uniform_Cost		tests/generated/test-generated-53.txt	23872.475	13
+Beam	Distance	tests/generated/test-generated-53.txt	11576.351	7
+Beam	Angle	tests/generated/test-generated-53.txt	23086.447	7
+BFS		tests/generated/test-generated-54.txt	2286.502	7
+DFS		tests/generated/test-generated-54.txt	3818.745	7
+A_star	Distance	tests/generated/test-generated-54.txt	17615.868	6
+A_star	Angle	tests/generated/test-generated-54.txt	31766.119	7
+GBFS	Distance	tests/generated/test-generated-54.txt	17639.256	6
+GBFS	Angle	tests/generated/test-generated-54.txt	27132.112	6
+Uniform_Cost		tests/generated/test-generated-54.txt	14760.027	7
+Beam	Distance	tests/generated/test-generated-54.txt	8507.702	6
+Beam	Angle	tests/generated/test-generated-54.txt	17281.019	6
+BFS		tests/generated/test-generated-55.txt	6263.922	20
+DFS		tests/generated/test-generated-55.txt	8599.966	18
+A_star	Distance	tests/generated/test-generated-55.txt	33087.216	15
+A_star	Angle	tests/generated/test-generated-55.txt	78444.808	20
+GBFS	Distance	tests/generated/test-generated-55.txt	22053.242	10
+GBFS	Angle	tests/generated/test-generated-55.txt	41159.979	11
+Uniform_Cost		tests/generated/test-generated-55.txt	34736.108	20
+Beam	Distance	tests/generated/test-generated-55.txt	17196.465	17
+Beam	Angle	tests/generated/test-generated-55.txt	37014.713	15
+BFS		tests/generated/test-generated-56.txt	1318.986	5
+DFS		tests/generated/test-generated-56.txt	2147.856	5
+A_star	Distance	tests/generated/test-generated-56.txt	17718.932	8
+A_star	Angle	tests/generated/test-generated-56.txt	40449.745	11
+GBFS	Distance	tests/generated/test-generated-56.txt	12076.045	5
+GBFS	Angle	tests/generated/test-generated-56.txt	97035.346	23
+Uniform_Cost		tests/generated/test-generated-56.txt	18164.869	11
+Beam	Distance	tests/generated/test-generated-56.txt	5132.652	5
+Beam	Angle	tests/generated/test-generated-56.txt	40147.494	16
+BFS		tests/generated/test-generated-57.txt	1694.095	5
+DFS		tests/generated/test-generated-57.txt	2651.965	5
+A_star	Distance	tests/generated/test-generated-57.txt	12958.047	5
+A_star	Angle	tests/generated/test-generated-57.txt	20636.216	5
+GBFS	Distance	tests/generated/test-generated-57.txt	12951.843	5
+GBFS	Angle	tests/generated/test-generated-57.txt	19588.22	5
+Uniform_Cost		tests/generated/test-generated-57.txt	10955.249	5
+Beam	Distance	tests/generated/test-generated-57.txt	5782.822	5
+Beam	Angle	tests/generated/test-generated-57.txt	12018.262	5
+BFS		tests/generated/test-generated-58.txt	1965.623	6
+DFS		tests/generated/test-generated-58.txt	2957.18	6
+A_star	Distance	tests/generated/test-generated-58.txt	20929.113	6
+A_star	Angle	tests/generated/test-generated-58.txt	47787.053	9
+GBFS	Distance	tests/generated/test-generated-58.txt	21417.474	6
+GBFS	Angle	tests/generated/test-generated-58.txt	57874.197	11
+Uniform_Cost		tests/generated/test-generated-58.txt	12821.295	6
+Beam	Distance	tests/generated/test-generated-58.txt	11504.978	6
+Beam	Angle	tests/generated/test-generated-58.txt	22983.72	6
+BFS		tests/generated/test-generated-59.txt	1591.838	6
+DFS		tests/generated/test-generated-59.txt	2848.729	6
+A_star	Distance	tests/generated/test-generated-59.txt	15928.993	6
+A_star	Angle	tests/generated/test-generated-59.txt	24055.701	6
+GBFS	Distance	tests/generated/test-generated-59.txt	13263.962	5
+GBFS	Angle	tests/generated/test-generated-59.txt	19761.308	5
+Uniform_Cost		tests/generated/test-generated-59.txt	13138.136	7
+Beam	Distance	tests/generated/test-generated-59.txt	5999.665	5
+Beam	Angle	tests/generated/test-generated-59.txt	12564.975	5
+BFS		tests/generated/test-generated-6.txt	2389.832	9
+DFS		tests/generated/test-generated-6.txt	2963.729	7
+A_star	Distance	tests/generated/test-generated-6.txt	23080.785	8
+A_star	Angle	tests/generated/test-generated-6.txt	41136.894	9
+GBFS	Distance	tests/generated/test-generated-6.txt	22403.045	8
+GBFS	Angle	tests/generated/test-generated-6.txt	34767.911	8
+Uniform_Cost		tests/generated/test-generated-6.txt	16986.547	9
+Beam	Distance	tests/generated/test-generated-6.txt	13011.435	9
+Beam	Angle	tests/generated/test-generated-6.txt	26856.855	9
+BFS		tests/generated/test-generated-60.txt	9239.999	27
+DFS		tests/generated/test-generated-60.txt	12861.592	25
+A_star	Distance	tests/generated/test-generated-60.txt	34156.076	16
+A_star	Angle	tests/generated/test-generated-60.txt	61556.105	17
+GBFS	Distance	tests/generated/test-generated-60.txt	28787.653	13
+GBFS	Angle	tests/generated/test-generated-60.txt	60285.86	17
+Uniform_Cost		tests/generated/test-generated-60.txt	37143.321	19
+Beam	Distance	tests/generated/test-generated-60.txt	16863.488	17
+Beam	Angle	tests/generated/test-generated-60.txt	39288.902	17
+BFS		tests/generated/test-generated-61.txt	1778.093	7
+DFS		tests/generated/test-generated-61.txt	5805.426	13
+A_star	Distance	tests/generated/test-generated-61.txt	13095.288	4
+A_star	Angle	tests/generated/test-generated-61.txt	19761.917	4
+GBFS	Distance	tests/generated/test-generated-61.txt	13892.997	4
+GBFS	Angle	tests/generated/test-generated-61.txt	19835.638	4
+Uniform_Cost		tests/generated/test-generated-61.txt	8128.717	4
+Beam	Distance	tests/generated/test-generated-61.txt	6757.429	4
+Beam	Angle	tests/generated/test-generated-61.txt	13059.295	4
+BFS		tests/generated/test-generated-62.txt	4569.221	17
+DFS		tests/generated/test-generated-62.txt	4357.629	10
+A_star	Distance	tests/generated/test-generated-62.txt	32615.324	13
+A_star	Angle	tests/generated/test-generated-62.txt	83663.509	20
+GBFS	Distance	tests/generated/test-generated-62.txt	32862.688	13
+GBFS	Angle	tests/generated/test-generated-62.txt	40499.372	10
+Uniform_Cost		tests/generated/test-generated-62.txt	38562.357	23
+Beam	Distance	tests/generated/test-generated-62.txt	16413.511	13
+Beam	Angle	tests/generated/test-generated-62.txt	35661.631	13
+BFS		tests/generated/test-generated-63.txt	4423.713	17
+DFS		tests/generated/test-generated-63.txt	8922.758	18
+A_star	Distance	tests/generated/test-generated-63.txt	56913.274	19
+A_star	Angle	tests/generated/test-generated-63.txt	96779.081	19
+GBFS	Distance	tests/generated/test-generated-63.txt	22575.655	7
+GBFS	Angle	tests/generated/test-generated-63.txt	34425.235	7
+Uniform_Cost		tests/generated/test-generated-63.txt	35966.442	22
+Beam	Distance	tests/generated/test-generated-63.txt	29327.585	16
+Beam	Angle	tests/generated/test-generated-63.txt	60118.14	16
+BFS		tests/generated/test-generated-64.txt	1486.78	5
+DFS		tests/generated/test-generated-64.txt	2593.676	5
+A_star	Distance	tests/generated/test-generated-64.txt	13675.043	5
+A_star	Angle	tests/generated/test-generated-64.txt	21088.637	5
+GBFS	Distance	tests/generated/test-generated-64.txt	14229.098	5
+GBFS	Angle	tests/generated/test-generated-64.txt	21109.349	5
+Uniform_Cost		tests/generated/test-generated-64.txt	10183.173	5
+Beam	Distance	tests/generated/test-generated-64.txt	7007.005	5
+Beam	Angle	tests/generated/test-generated-64.txt	13645.453	5
+BFS		tests/generated/test-generated-65.txt	2482.058	8
+DFS		tests/generated/test-generated-65.txt	9581.39	19
+A_star	Distance	tests/generated/test-generated-65.txt	25689.645	8
+A_star	Angle	tests/generated/test-generated-65.txt	52230.663	10
+GBFS	Distance	tests/generated/test-generated-65.txt	23135.556	7
+GBFS	Angle	tests/generated/test-generated-65.txt	82665.223	15
+Uniform_Cost		tests/generated/test-generated-65.txt	18360.12	10
+Beam	Distance	tests/generated/test-generated-65.txt	13276.087	7
+Beam	Angle	tests/generated/test-generated-65.txt	25964.106	7
+BFS		tests/generated/test-generated-66.txt	3755.659	13
+DFS		tests/generated/test-generated-66.txt	8132.355	19
+A_star	Distance	tests/generated/test-generated-66.txt	32296.634	10
+A_star	Angle	tests/generated/test-generated-66.txt	68293.787	13
+GBFS	Distance	tests/generated/test-generated-66.txt	26159.253	8
+GBFS	Angle	tests/generated/test-generated-66.txt	119936.978	22
+Uniform_Cost		tests/generated/test-generated-66.txt	22592.314	13
+Beam	Distance	tests/generated/test-generated-66.txt	16429.444	9
+Beam	Angle	tests/generated/test-generated-66.txt	33630.228	9
+BFS		tests/generated/test-generated-67.txt	1084.429	3
+DFS		tests/generated/test-generated-67.txt	1593.119	3
+A_star	Distance	tests/generated/test-generated-67.txt	8524.122	3
+A_star	Angle	tests/generated/test-generated-67.txt	12093.517	3
+GBFS	Distance	tests/generated/test-generated-67.txt	8885.543	3
+GBFS	Angle	tests/generated/test-generated-67.txt	12180.487	3
+Uniform_Cost		tests/generated/test-generated-67.txt	7077.563	3
+Beam	Distance	tests/generated/test-generated-67.txt	3337.161	3
+Beam	Angle	tests/generated/test-generated-67.txt	6512.417	3
+BFS		tests/generated/test-generated-68.txt	4128.537	15
+DFS		tests/generated/test-generated-68.txt	7797.142	17
+A_star	Distance	tests/generated/test-generated-68.txt	37060.719	15
+A_star	Angle	tests/generated/test-generated-68.txt	71285.753	17
+GBFS	Distance	tests/generated/test-generated-68.txt	24238.89	10
+GBFS	Angle	tests/generated/test-generated-68.txt	41544.355	10
+Uniform_Cost		tests/generated/test-generated-68.txt	29445.152	17
+Beam	Distance	tests/generated/test-generated-68.txt	16643.989	13
+Beam	Angle	tests/generated/test-generated-68.txt	36828.038	13
+BFS		tests/generated/test-generated-69.txt	1766.984	6
+DFS		tests/generated/test-generated-69.txt	15299.971	28
+A_star	Distance	tests/generated/test-generated-69.txt	11274.549	4
+A_star	Angle	tests/generated/test-generated-69.txt	16544.269	4
+GBFS	Distance	tests/generated/test-generated-69.txt	11487.712	4
+GBFS	Angle	tests/generated/test-generated-69.txt	43654.4	11
+Uniform_Cost		tests/generated/test-generated-69.txt	8864.177	4
+Beam	Distance	tests/generated/test-generated-69.txt	4955.416	4
+Beam	Angle	tests/generated/test-generated-69.txt	9507.997	4
+BFS		tests/generated/test-generated-7.txt	1795.56	7
+DFS		tests/generated/test-generated-7.txt	6097.466	14
+A_star	Distance	tests/generated/test-generated-7.txt	13092.485	4
+A_star	Angle	tests/generated/test-generated-7.txt	19596.669	4
+GBFS	Distance	tests/generated/test-generated-7.txt	13128.266	4
+GBFS	Angle	tests/generated/test-generated-7.txt	18734.3	4
+Uniform_Cost		tests/generated/test-generated-7.txt	9001.117	4
+Beam	Distance	tests/generated/test-generated-7.txt	6147.888	4
+Beam	Angle	tests/generated/test-generated-7.txt	12275.98	4
+BFS		tests/generated/test-generated-70.txt	5507.06	19
+DFS		tests/generated/test-generated-70.txt	9723.192	19
+A_star	Distance	tests/generated/test-generated-70.txt	44987.184	15
+A_star	Angle	tests/generated/test-generated-70.txt	73606.481	15
+GBFS	Distance	tests/generated/test-generated-70.txt	36666.352	13
+GBFS	Angle	tests/generated/test-generated-70.txt	85816.927	18
+Uniform_Cost		tests/generated/test-generated-70.txt	30800.878	15
+Beam	Distance	tests/generated/test-generated-70.txt	23577.877	15
+Beam	Angle	tests/generated/test-generated-70.txt	49617.544	15
+BFS		tests/generated/test-generated-71.txt	950.007	2
+DFS		tests/generated/test-generated-71.txt	1312.769	2
+A_star	Distance	tests/generated/test-generated-71.txt	7028.193	2
+A_star	Angle	tests/generated/test-generated-71.txt	9112.007	2
+GBFS	Distance	tests/generated/test-generated-71.txt	7948.185	2
+GBFS	Angle	tests/generated/test-generated-71.txt	9079.977	2
+Uniform_Cost		tests/generated/test-generated-71.txt	6081.249	2
+Beam	Distance	tests/generated/test-generated-71.txt	2719.163	2
+Beam	Angle	tests/generated/test-generated-71.txt	4299.066	2
+BFS		tests/generated/test-generated-72.txt	4380.442	17
+DFS		tests/generated/test-generated-72.txt	10716.587	21
+A_star	Distance	tests/generated/test-generated-72.txt	44381.299	14
+A_star	Angle	tests/generated/test-generated-72.txt	74347.46	14
+GBFS	Distance	tests/generated/test-generated-72.txt	29162.878	9
+GBFS	Angle	tests/generated/test-generated-72.txt	47296.908	9
+Uniform_Cost		tests/generated/test-generated-72.txt	25370.932	14
+Beam	Distance	tests/generated/test-generated-72.txt	24008.073	13
+Beam	Angle	tests/generated/test-generated-72.txt	50048.998	13
+BFS		tests/generated/test-generated-73.txt	2090.748	8
+DFS		tests/generated/test-generated-73.txt	4171.374	8
+A_star	Distance	tests/generated/test-generated-73.txt	19614.094	7
+A_star	Angle	tests/generated/test-generated-73.txt	36752.501	8
+GBFS	Distance	tests/generated/test-generated-73.txt	26895.633	9
+GBFS	Angle	tests/generated/test-generated-73.txt	36575.301	8
+Uniform_Cost		tests/generated/test-generated-73.txt	14951.221	8
+Beam	Distance	tests/generated/test-generated-73.txt	10222.539	7
+Beam	Angle	tests/generated/test-generated-73.txt	21626.876	7
+BFS		tests/generated/test-generated-74.txt	1855.657	7
+DFS		tests/generated/test-generated-74.txt	19077.967	35
+A_star	Distance	tests/generated/test-generated-74.txt	10328.075	4
+A_star	Angle	tests/generated/test-generated-74.txt	14876.489	4
+GBFS	Distance	tests/generated/test-generated-74.txt	10483.087	4
+GBFS	Angle	tests/generated/test-generated-74.txt	15183.727	4
+Uniform_Cost		tests/generated/test-generated-74.txt	12910.02	7
+Beam	Distance	tests/generated/test-generated-74.txt	4167.014	4
+Beam	Angle	tests/generated/test-generated-74.txt	8608.025	4
+BFS		tests/generated/test-generated-75.txt	1485.975	5
+DFS		tests/generated/test-generated-75.txt	2347.987	5
+A_star	Distance	tests/generated/test-generated-75.txt	13032.204	5
+A_star	Angle	tests/generated/test-generated-75.txt	20234.85	5
+GBFS	Distance	tests/generated/test-generated-75.txt	14170.198	5
+GBFS	Angle	tests/generated/test-generated-75.txt	20283.936	5
+Uniform_Cost		tests/generated/test-generated-75.txt	10229.905	5
+Beam	Distance	tests/generated/test-generated-75.txt	6114.193	5
+Beam	Angle	tests/generated/test-generated-75.txt	12759.928	5
+BFS		tests/generated/test-generated-76.txt	2278.93	9
+DFS		tests/generated/test-generated-76.txt	6396.669	13
+A_star	Distance	tests/generated/test-generated-76.txt	18412.729	7
+A_star	Angle	tests/generated/test-generated-76.txt	39694.807	9
+GBFS	Distance	tests/generated/test-generated-76.txt	14240.692	5
+GBFS	Angle	tests/generated/test-generated-76.txt	21446.324	5
+Uniform_Cost		tests/generated/test-generated-76.txt	17826.445	9
+Beam	Distance	tests/generated/test-generated-76.txt	8911.041	7
+Beam	Angle	tests/generated/test-generated-76.txt	37906.432	13
+BFS		tests/generated/test-generated-77.txt	4770.08	18
+DFS		tests/generated/test-generated-77.txt	12195.798	24
+A_star	Distance	tests/generated/test-generated-77.txt	30454.671	14
+A_star	Angle	tests/generated/test-generated-77.txt	64276.923	18
+GBFS	Distance	tests/generated/test-generated-77.txt	47402.396	22
+GBFS	Angle	tests/generated/test-generated-77.txt	94084.42	26
+Uniform_Cost		tests/generated/test-generated-77.txt	32512.768	18
+Beam	Distance	tests/generated/test-generated-77.txt	14962.214	16
+Beam	Angle	tests/generated/test-generated-77.txt	35821.007	16
+BFS		tests/generated/test-generated-78.txt	5438.403	19
+DFS		tests/generated/test-generated-78.txt	8595.921	17
+A_star	Distance	tests/generated/test-generated-78.txt	45018.105	18
+A_star	Angle	tests/generated/test-generated-78.txt	92207.344	21
+GBFS	Distance	tests/generated/test-generated-78.txt	33446.188	14
+GBFS	Angle	tests/generated/test-generated-78.txt	51992.696	13
+Uniform_Cost		tests/generated/test-generated-78.txt	39863.71	21
+Beam	Distance	tests/generated/test-generated-78.txt	29335.756	22
+Beam	Angle	tests/generated/test-generated-78.txt	66407.475	22
+BFS		tests/generated/test-generated-79.txt	1075.967	3
+DFS		tests/generated/test-generated-79.txt	1593.823	3
+A_star	Distance	tests/generated/test-generated-79.txt	9980.046	3
+A_star	Angle	tests/generated/test-generated-79.txt	14220.885	3
+GBFS	Distance	tests/generated/test-generated-79.txt	11055.013	3
+GBFS	Angle	tests/generated/test-generated-79.txt	14202.634	3
+Uniform_Cost		tests/generated/test-generated-79.txt	7074.483	3
+Beam	Distance	tests/generated/test-generated-79.txt	4630.921	3
+Beam	Angle	tests/generated/test-generated-79.txt	8404.672	3
+BFS		tests/generated/test-generated-8.txt	5065.693	16
+DFS		tests/generated/test-generated-8.txt	10352.965	22
+A_star	Distance	tests/generated/test-generated-8.txt	36869.785	11
+A_star	Angle	tests/generated/test-generated-8.txt	60427.787	11
+GBFS	Distance	tests/generated/test-generated-8.txt	39907.071	12
+GBFS	Angle	tests/generated/test-generated-8.txt	97533.074	18
+Uniform_Cost		tests/generated/test-generated-8.txt	22461.293	11
+Beam	Distance	tests/generated/test-generated-8.txt	25805.261	13
+Beam	Angle	tests/generated/test-generated-8.txt	50990.465	13
+BFS		tests/generated/test-generated-80.txt	963.172	2
+DFS		tests/generated/test-generated-80.txt	1331.404	2
+A_star	Distance	tests/generated/test-generated-80.txt	7086.621	2
+A_star	Angle	tests/generated/test-generated-80.txt	9378.908	2
+GBFS	Distance	tests/generated/test-generated-80.txt	7950.981	2
+GBFS	Angle	tests/generated/test-generated-80.txt	9156.683	2
+Uniform_Cost		tests/generated/test-generated-80.txt	6161.053	2
+Beam	Distance	tests/generated/test-generated-80.txt	2632.185	2
+Beam	Angle	tests/generated/test-generated-80.txt	4518.771	2
+BFS		tests/generated/test-generated-81.txt	2392.912	9
+DFS		tests/generated/test-generated-81.txt	3086.073	7
+A_star	Distance	tests/generated/test-generated-81.txt	25020.27	9
+A_star	Angle	tests/generated/test-generated-81.txt	46317.024	10
+GBFS	Distance	tests/generated/test-generated-81.txt	19768.49	7
+GBFS	Angle	tests/generated/test-generated-81.txt	30934.253	7
+Uniform_Cost		tests/generated/test-generated-81.txt	18323.219	10
+Beam	Distance	tests/generated/test-generated-81.txt	13081.152	9
+Beam	Angle	tests/generated/test-generated-81.txt	28306.435	9
+BFS		tests/generated/test-generated-82.txt	5052.042	17
+DFS		tests/generated/test-generated-82.txt	5120.227	11
+A_star	Distance	tests/generated/test-generated-82.txt	35899.317	14
+A_star	Angle	tests/generated/test-generated-82.txt	67936.476	16
+GBFS	Distance	tests/generated/test-generated-82.txt	30037.169	12
+GBFS	Angle	tests/generated/test-generated-82.txt	75103.67	17
+Uniform_Cost		tests/generated/test-generated-82.txt	29540.752	16
+Beam	Distance	tests/generated/test-generated-82.txt	17997.656	14
+Beam	Angle	tests/generated/test-generated-82.txt	39209.756	14
+BFS		tests/generated/test-generated-83.txt	3844.351	16
+DFS		tests/generated/test-generated-83.txt	5639.17	13
+A_star	Distance	tests/generated/test-generated-83.txt	35658.066	12
+A_star	Angle	tests/generated/test-generated-83.txt	93422.198	18
+GBFS	Distance	tests/generated/test-generated-83.txt	28573.34	9
+GBFS	Angle	tests/generated/test-generated-83.txt	90394.129	17
+Uniform_Cost		tests/generated/test-generated-83.txt	27021.169	16
+Beam	Distance	tests/generated/test-generated-83.txt	21369.278	12
+Beam	Angle	tests/generated/test-generated-83.txt	60688.292	16
+BFS		tests/generated/test-generated-84.txt	1820.366	7
+DFS		tests/generated/test-generated-84.txt	4549.317	10
+A_star	Distance	tests/generated/test-generated-84.txt	11988.389	5
+A_star	Angle	tests/generated/test-generated-84.txt	22838.825	6
+GBFS	Distance	tests/generated/test-generated-84.txt	12169.846	5
+GBFS	Angle	tests/generated/test-generated-84.txt	18258.864	5
+Uniform_Cost		tests/generated/test-generated-84.txt	11356.398	6
+Beam	Distance	tests/generated/test-generated-84.txt	5029.982	5
+Beam	Angle	tests/generated/test-generated-84.txt	10965.403	5
+BFS		tests/generated/test-generated-85.txt	2103.374	9
+DFS		tests/generated/test-generated-85.txt	7654.586	17
+A_star	Distance	tests/generated/test-generated-85.txt	22273.72	8
+A_star	Angle	tests/generated/test-generated-85.txt	42579.233	9
+GBFS	Distance	tests/generated/test-generated-85.txt	13127.39	4
+GBFS	Angle	tests/generated/test-generated-85.txt	58082.996	12
+Uniform_Cost		tests/generated/test-generated-85.txt	15035.373	9
+Beam	Distance	tests/generated/test-generated-85.txt	6307.968	4
+Beam	Angle	tests/generated/test-generated-85.txt	12576.934	4
+BFS		tests/generated/test-generated-86.txt	5478.41	21
+DFS		tests/generated/test-generated-86.txt	4146.468	8
+A_star	Distance	tests/generated/test-generated-86.txt	52931.859	18
+A_star	Angle	tests/generated/test-generated-86.txt	109282.643	22
+GBFS	Distance	tests/generated/test-generated-86.txt	30260.283	10
+GBFS	Angle	tests/generated/test-generated-86.txt	157190.158	30
+Uniform_Cost		tests/generated/test-generated-86.txt	39028.82	22
+Beam	Distance	tests/generated/test-generated-86.txt	23728.64	14
+Beam	Angle	tests/generated/test-generated-86.txt	49907.604	14
+BFS		tests/generated/test-generated-87.txt	1492.564	5
+DFS		tests/generated/test-generated-87.txt	2487.195	5
+A_star	Distance	tests/generated/test-generated-87.txt	14008.645	5
+A_star	Angle	tests/generated/test-generated-87.txt	20846.421	5
+GBFS	Distance	tests/generated/test-generated-87.txt	14190.79	5
+GBFS	Angle	tests/generated/test-generated-87.txt	50354.679	12
+Uniform_Cost		tests/generated/test-generated-87.txt	10020.377	5
+Beam	Distance	tests/generated/test-generated-87.txt	6665.048	5
+Beam	Angle	tests/generated/test-generated-87.txt	13221.639	5
+BFS		tests/generated/test-generated-88.txt	3687.652	13
+DFS		tests/generated/test-generated-88.txt	16733.447	31
+A_star	Distance	tests/generated/test-generated-88.txt	14729.991	7
+A_star	Angle	tests/generated/test-generated-88.txt	39351.463	11
+GBFS	Distance	tests/generated/test-generated-88.txt	14841.511	7
+GBFS	Angle	tests/generated/test-generated-88.txt	23923.371	7
+Uniform_Cost		tests/generated/test-generated-88.txt	22298.488	12
+Beam	Distance	tests/generated/test-generated-88.txt	8347.605	9
+Beam	Angle	tests/generated/test-generated-88.txt	18747.506	9
+BFS		tests/generated/test-generated-89.txt	5213.101	19
+DFS		tests/generated/test-generated-89.txt	5695.638	13
+A_star	Distance	tests/generated/test-generated-89.txt	33835.849	15
+A_star	Angle	tests/generated/test-generated-89.txt	58147.083	15
+GBFS	Distance	tests/generated/test-generated-89.txt	24062.125	10
+GBFS	Angle	tests/generated/test-generated-89.txt	116875.949	28
+Uniform_Cost		tests/generated/test-generated-89.txt	27931.148	15
+Beam	Distance	tests/generated/test-generated-89.txt	18203.846	17
+Beam	Angle	tests/generated/test-generated-89.txt	43540.725	17
+BFS		tests/generated/test-generated-9.txt	3861.627	12
+DFS		tests/generated/test-generated-9.txt	6406.839	13
+A_star	Distance	tests/generated/test-generated-9.txt	21937.347	10
+A_star	Angle	tests/generated/test-generated-9.txt	37189.458	10
+GBFS	Distance	tests/generated/test-generated-9.txt	17090.325	8
+GBFS	Angle	tests/generated/test-generated-9.txt	27906.055	8
+Uniform_Cost		tests/generated/test-generated-9.txt	22116.194	12
+Beam	Distance	tests/generated/test-generated-9.txt	9300.671	10
+Beam	Angle	tests/generated/test-generated-9.txt	22090.612	10
+BFS		tests/generated/test-generated-90.txt	2072.505	8
+DFS		tests/generated/test-generated-90.txt	7864.202	15
+A_star	Distance	tests/generated/test-generated-90.txt	9624.142	4
+A_star	Angle	tests/generated/test-generated-90.txt	13946.559	4
+GBFS	Distance	tests/generated/test-generated-90.txt	9550.138	4
+GBFS	Angle	tests/generated/test-generated-90.txt	13739.394	4
+Uniform_Cost		tests/generated/test-generated-90.txt	11075.638	6
+Beam	Distance	tests/generated/test-generated-90.txt	3662.045	4
+Beam	Angle	tests/generated/test-generated-90.txt	7516.07	4
+BFS		tests/generated/test-generated-91.txt	4109.611	16
+DFS		tests/generated/test-generated-91.txt	10633.253	24
+A_star	Distance	tests/generated/test-generated-91.txt	24808.962	10
+A_star	Angle	tests/generated/test-generated-91.txt	24360.315	6
+GBFS	Distance	tests/generated/test-generated-91.txt	22616.609	9
+GBFS	Angle	tests/generated/test-generated-91.txt	153081.859	33
+Uniform_Cost		tests/generated/test-generated-91.txt	17336.007	10
+Beam	Distance	tests/generated/test-generated-91.txt	12330.377	10
+Beam	Angle	tests/generated/test-generated-91.txt	26998.711	10
+BFS		tests/generated/test-generated-92.txt	1244.027	4
+DFS		tests/generated/test-generated-92.txt	1840.641	4
+A_star	Distance	tests/generated/test-generated-92.txt	11716.282	4
+A_star	Angle	tests/generated/test-generated-92.txt	17424.183	4
+GBFS	Distance	tests/generated/test-generated-92.txt	12419.836	4
+GBFS	Angle	tests/generated/test-generated-92.txt	17191.609	4
+Uniform_Cost		tests/generated/test-generated-92.txt	8162.792	4
+Beam	Distance	tests/generated/test-generated-92.txt	5446.096	4
+Beam	Angle	tests/generated/test-generated-92.txt	10621.878	4
+BFS		tests/generated/test-generated-93.txt	7124.155	23
+DFS		tests/generated/test-generated-93.txt	8726.318	17
+A_star	Distance	tests/generated/test-generated-93.txt	50167.021	21
+A_star	Angle	tests/generated/test-generated-93.txt	96065.034	23
+GBFS	Distance	tests/generated/test-generated-93.txt	46397.553	19
+GBFS	Angle	tests/generated/test-generated-93.txt	76273.949	19
+Uniform_Cost		tests/generated/test-generated-93.txt	47754.241	23
+Beam	Distance	tests/generated/test-generated-93.txt	25853.242	22
+Beam	Angle	tests/generated/test-generated-93.txt	58247.062	22
+BFS		tests/generated/test-generated-94.txt	1880.756	6
+DFS		tests/generated/test-generated-94.txt	3007.741	6
+A_star	Distance	tests/generated/test-generated-94.txt	19990.772	6
+A_star	Angle	tests/generated/test-generated-94.txt	31611.27	6
+GBFS	Distance	tests/generated/test-generated-94.txt	20773.26	6
+GBFS	Angle	tests/generated/test-generated-94.txt	30668.213	6
+Uniform_Cost		tests/generated/test-generated-94.txt	12183.133	6
+Beam	Distance	tests/generated/test-generated-94.txt	10831.416	6
+Beam	Angle	tests/generated/test-generated-94.txt	22132.721	6
+BFS		tests/generated/test-generated-95.txt	2019.69	6
+DFS		tests/generated/test-generated-95.txt	2848.319	5
+A_star	Distance	tests/generated/test-generated-95.txt	15385.95	6
+A_star	Angle	tests/generated/test-generated-95.txt	26598.902	7
+GBFS	Distance	tests/generated/test-generated-95.txt	17434.995	7
+GBFS	Angle	tests/generated/test-generated-95.txt	39879.087	11
+Uniform_Cost		tests/generated/test-generated-95.txt	14695.497	7
+Beam	Distance	tests/generated/test-generated-95.txt	6382.001	6
+Beam	Angle	tests/generated/test-generated-95.txt	13326.473	6
+BFS		tests/generated/test-generated-96.txt	2911.583	11
+DFS		tests/generated/test-generated-96.txt	6915.952	15
+A_star	Distance	tests/generated/test-generated-96.txt	25486.108	10
+A_star	Angle	tests/generated/test-generated-96.txt	42284.582	10
+GBFS	Distance	tests/generated/test-generated-96.txt	14349.215	5
+GBFS	Angle	tests/generated/test-generated-96.txt	73135.259	17
+Uniform_Cost		tests/generated/test-generated-96.txt	18054.701	10
+Beam	Distance	tests/generated/test-generated-96.txt	12322.049	10
+Beam	Angle	tests/generated/test-generated-96.txt	27566.547	10
+BFS		tests/generated/test-generated-97.txt	5108.403	20
+DFS		tests/generated/test-generated-97.txt	16552.792	32
+A_star	Distance	tests/generated/test-generated-97.txt	27177.961	14
+A_star	Angle	tests/generated/test-generated-97.txt	49809.116	15
+GBFS	Distance	tests/generated/test-generated-97.txt	23372.751	12
+GBFS	Angle	tests/generated/test-generated-97.txt	40022.143	12
+Uniform_Cost		tests/generated/test-generated-97.txt	26521.896	16
+Beam	Distance	tests/generated/test-generated-97.txt	10518.704	13
+Beam	Angle	tests/generated/test-generated-97.txt	26706.572	13
+BFS		tests/generated/test-generated-98.txt	4743.115	17
+DFS		tests/generated/test-generated-98.txt	12960.614	27
+A_star	Distance	tests/generated/test-generated-98.txt	36144.043	14
+A_star	Angle	tests/generated/test-generated-98.txt	68841.699	16
+GBFS	Distance	tests/generated/test-generated-98.txt	20996.873	8
+GBFS	Angle	tests/generated/test-generated-98.txt	46659.184	11
+Uniform_Cost		tests/generated/test-generated-98.txt	32287.269	17
+Beam	Distance	tests/generated/test-generated-98.txt	17885.265	14
+Beam	Angle	tests/generated/test-generated-98.txt	67236.568	23
+BFS		tests/generated/test-generated-99.txt	3234.278	12
+DFS		tests/generated/test-generated-99.txt	3017.756	7
+A_star	Distance	tests/generated/test-generated-99.txt	33415.268	12
+A_star	Angle	tests/generated/test-generated-99.txt	64468.737	14
+GBFS	Distance	tests/generated/test-generated-99.txt	25660.474	9
+GBFS	Angle	tests/generated/test-generated-99.txt	30114.804	7
+Uniform_Cost		tests/generated/test-generated-99.txt	25861.9	14
+Beam	Distance	tests/generated/test-generated-99.txt	14259.242	10
+Beam	Angle	tests/generated/test-generated-99.txt	41302.713	13
