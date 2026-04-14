@@ -15,7 +15,7 @@ from beam_search import beam_search
 
 import heuristics
 
-heuristic = heuristics.DistanceHeuristic
+heuristic = heuristics.AngleHeuristic
 
 def main():
     if len(sys.argv) < 3:

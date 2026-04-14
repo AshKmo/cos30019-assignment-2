@@ -48,3 +48,5 @@ for test in listdir(test_path):
                 end = perf_counter_ns()
 
             print(f"\t{end - start}\t{test_result[1]}", end='')
+
+print()

@@ -12,6 +12,7 @@ def beam_search(origin: test_file_lib.GraphNode, heuristic: heuristics.Heuristic
 
     #beam is a list of max length WIDTH, backup is all of the nodes which do not make it into beam
     start = nodes.Node(origin)
+    seen = set([origin])
     beam = [start]
     backup: list[nodes.Node] = []
     created = 1
@@ -28,9 +29,13 @@ def beam_search(origin: test_file_lib.GraphNode, heuristic: heuristics.Heuristic
         #create new child nodes as candidates to account for multiple possible paths to the same node
         for node in beam:
             for edge in node.state.edges:
+                if edge.node_to in seen: continue
+
                 child = nodes.Node(edge.node_to, edge, node)
                 candidates.append(child)
                 created += 1
+
+                seen.add(edge.node_to)
         
         #if no candidates were found, try to populate the beam with backup candidates
         if not candidates:
