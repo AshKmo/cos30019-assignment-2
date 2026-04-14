@@ -15,6 +15,8 @@ from beam_search import beam_search
 
 import heuristics
 
+heuristic = heuristics.DistanceHeuristic
+
 def main():
     if len(sys.argv) < 3:
         print("usage: python search.py <data-file> <search-method>")
@@ -35,13 +37,13 @@ def main():
         case "dfs":
             result = depth_first_search(origin)
         case "gbfs":
-            result = greedy_best_first_search(origin, heuristics.DistanceHeuristic(origin, destinations, graph_nodes))
+            result = greedy_best_first_search(origin, heuristic(origin, destinations, graph_nodes))
         case "a_star":
-            result = a_star_search(origin, heuristics.DistanceHeuristic(origin, destinations, graph_nodes))
+            result = a_star_search(origin, heuristic(origin, destinations, graph_nodes))
         case "cus1":
             result = uniform_cost_search(origin)
         case "cus2":
-            result = beam_search(origin, heuristics.DistanceHeuristic(origin, destinations, graph_nodes))
+            result = beam_search(origin, heuristic(origin, destinations, graph_nodes))
         case _:
             print("no such search method: " + method)
             sys.exit(1)
