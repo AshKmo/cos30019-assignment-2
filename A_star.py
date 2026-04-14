@@ -19,7 +19,7 @@ def a_star_search(origin, heuristic):
     node_count = 1
 
     # explore all nodes in the frontier until it is emptied
-    while frontier:
+    while not frontier.empty():
         # consider the last node in the frontier
         branch = frontier.get()
 
@@ -34,7 +34,6 @@ def a_star_search(origin, heuristic):
 
             # create a new node for this state and add it to the frontier for exploration
             new_node = Node(edge.node_to, edge, branch)
-
             new_node.value = heuristic.judge(new_node) + new_node.root_cost
 
             frontier.put(new_node)

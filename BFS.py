@@ -36,3 +36,5 @@ def breadth_first_search(node: test_file_lib.GraphNode):
                     #mark the parent node of each newly discovered neighbor so that it can be re-traced at the end of the function
                     parent[neighbor.node_to] = location
                     to_visit.append(neighbor.node_to)
+
+    return (None, len(parent))
