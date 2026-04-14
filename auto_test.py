@@ -15,8 +15,12 @@ from beam_search import beam_search
 
 import heuristics
 
+# the number of tests to perform for each algorithm under each set of conditions
+# more tests, in theory, means a more accurate timing average
 tests_per_algorithm = 1000
 
+# each algorithm to test
+# for each algorithm, a tuple is stored containing the name of the algorithm, whether or not heuristics are applicable to this algorithm, and the algorithm itself
 all_algorithms = [
         ("BFS", False, breadth_first_search),
         ("DFS", False, depth_first_search),
@@ -26,38 +30,48 @@ all_algorithms = [
         ("Beam", True, beam_search)
         ]
 
+# each heuristic and its name
 all_heuristics = [
         ("Distance", heuristics.DistanceHeuristic),
         ("Angle", heuristics.AngleHeuristic)
         ]
 
-test_file_paths = [
+# the paths to the directories where the desired test case files are located
+test_case_file_paths = [
         "tests/",
         "tests/generated/"
         ]
 
-test_files = []
+test_case_files = []
 
-for path in test_file_paths:
+# find all the test case files from all the test directories
+for path in test_case_file_paths:
     for file in [f for f in Path(path).iterdir() if f.is_file()]:
-        test_files.append(path + file.name)
+        test_case_files.append(path + file.name)
 
-print("Algorithm\tHeuristic\tTest\tAverage Time\tNodes")
+# print the TSV header
+print("Algorithm\tHeuristic\tTest\tNodes in Test\tAverage Time\tNodes")
 
-for test_i, test in enumerate(test_files):
-    stderr.write(f"{test} ({test_i + 1} of {len(test_files)}; {test_i * 100 // len(test_files)}%)\n")
+# iterate through each combination of algorithm, heuristic, and test case, printing the results along the way
+for test_i, test in enumerate(test_case_files):
+    # show a progress report to the user each time a new test case is being worked on
+    stderr.write(f"{test} ({test_i + 1} of {len(test_case_files)}; {test_i * 100 // len(test_case_files)}%)\n")
 
     for algorithm in all_algorithms:
         for heuristic in (all_heuristics if algorithm[1] else [None]):
+            # read the test case file
             test_data = read_test_file(test)
 
+            # the cumulative difference between the start and end times of each test
             total_diff = 0
 
             start = None
             end = None
             test_result = None
 
+            # test the algorithm against each test case some number of times
             for i in range(tests_per_algorithm):
+                # if heuristics are involved, call the algorithm with the heuristic
                 if algorithm[1]:
                     heuristic_object = heuristic[1](*test_data)
 
@@ -71,4 +85,5 @@ for test_i, test in enumerate(test_files):
 
                 total_diff += end - start
 
-            print(f"{algorithm[0]}\t{heuristic[0] if heuristic else ""}\t{test}\t{total_diff / tests_per_algorithm}\t{test_result[1]}")
+            # print the algorithm name, the heuristic used (if applicable), the test case used, the number of nodes in this test case, the average amount of time this algorithm took to complete the test case, and the number of nodes created
+            print(f"{algorithm[0]}\t{heuristic[0] if heuristic else ""}\t{test}\t{len(test_data[2])}\t{total_diff / tests_per_algorithm}\t{test_result[1]}")
