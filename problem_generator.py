@@ -60,15 +60,15 @@ def generate_problem(width = width, height = height, node_count_range = node_cou
     for i in range(1, random.choice(node_count_range)):
         make_node(i)
 
-    # create an origin node
-    origin = make_node(len(nodes) + 1)
-    origin.is_origin = True
-
     # select a few nodes as destination nodes, according to the range of destination node counts
     destinations = random.sample(nodes, min(random.choice(dest_count_range), len(nodes)))
 
     for dest in destinations:
         dest.is_destination = True
+
+    # create an origin node
+    origin = make_node(len(nodes) + 1)
+    origin.is_origin = True
 
     # create a new array to keep track of the nodes that have not been added to the spanning tree
     not_in_tree = nodes.copy()
