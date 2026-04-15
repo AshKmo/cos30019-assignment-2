@@ -1,6 +1,6 @@
 # This script automatically tests each algorithm, using each heuristic (where applicable), against each test case
 
-from sys import stderr
+from sys import stderr, argv
 from pathlib import Path
 from time import perf_counter_ns
 
@@ -41,6 +41,14 @@ test_case_file_paths = [
         "tests/",
         "tests/generated/"
         ]
+
+# add the option to perform a validation test whereby no actual test data is produced
+# this is useful for quickly testing that all algorithms and test cases are valid
+# this can be triggered by adding "val" as a command-line argument
+validate_only = len(argv) > 1 and argv[1] == "val"
+
+if validate_only:
+    tests_per_algorithm = 1
 
 test_case_files = []
 
@@ -85,5 +93,6 @@ for test_i, test in enumerate(test_case_files):
 
                 total_diff += end - start
 
-            # print the algorithm name, the heuristic used (if applicable), the test case used, the number of nodes in this test case, the average amount of time this algorithm took to complete the test case, and the number of nodes created
-            print(f"{algorithm[0]}\t{heuristic[0] if heuristic else ""}\t{test}\t{len(test_data[2])}\t{total_diff / tests_per_algorithm}\t{test_result[1]}")
+            if not validate_only:
+                # print the algorithm name, the heuristic used (if applicable), the test case used, the number of nodes in this test case, the average amount of time this algorithm took to complete the test case, and the number of nodes created
+                print(f"{algorithm[0]}\t{heuristic[0] if heuristic else ""}\t{test}\t{len(test_data[2])}\t{total_diff / tests_per_algorithm}\t{test_result[1]}")

@@ -40,6 +40,7 @@ import math
 from ast import literal_eval
 from sys import argv
 
+# a class representing a node on the graph
 class GraphNode:
     def __init__(self, name, x, y, edges = None, is_origin = False, is_destination = False):
         # the node's name, aka its number
@@ -69,6 +70,7 @@ class GraphNode:
     def __repr__(self):
         return f"GraphNode{{{self.name}: {(self.x, self.y)}}}"
 
+# a class representing an edge from one node to another
 class Edge:
     def __init__(self, node_from, node_to, cost):
         # the node from which this edge points
@@ -84,7 +86,7 @@ class Edge:
     def __repr__(self):
         return f"Edge{{{(self.node_from.name, self.node_to.name)}: {self.cost}}}"
 
-# function to retrieve a test file indicated by `path` and parse it into a graph of GraphNode and Edge objects
+# retrieves a test file indicated by `path` and parses it into a graph of GraphNode and Edge objects
 def read_test_file(path):
     # a list that will be populated with the destination nodes
     destinations = []
@@ -114,7 +116,7 @@ def read_test_file(path):
     for line in lines:
         content = line.strip()
 
-        # ignore comments within the test file
+        # ignore comment lines, which start with a '#' symbol
         if content == "" or content[0] == "#":
             continue
 
@@ -212,7 +214,7 @@ def read_test_file(path):
     # return the origin node, the list of destination nodes, and the complete dictionary of nodes
     return (origin, destinations, nodes)
 
-# function to convert a test back to its text representation
+# converts a test back to its text representation
 def to_test_file(origin, destinations, nodes):
     # maintain a list of all edges
     edges = []
