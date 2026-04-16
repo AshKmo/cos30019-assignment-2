@@ -177,3 +177,20 @@ class SearchUI:
 
         # apply initial control visibility
         self.on_method_change()
+
+    def on_method_change(self, event=None):
+        method = self.method_var.get()
+
+        # show beam width only for Beam Search
+        if method == "CUS2 - Beam Search":
+            self.beam_label.pack(side=tk.LEFT, padx=(0, 5))
+            self.beam_width_entry.pack(side=tk.LEFT, padx=(0, 15))
+        else:
+            self.beam_label.pack_forget()
+            self.beam_width_entry.pack_forget()
+
+        # show heuristic only for informed methods
+        if method in ["GBFS", "A*", "CUS2 - Beam Search"]:
+            self.heuristic_box.config(state="readonly")
+        else:
+            self.heuristic_box.config(state="disabled")
