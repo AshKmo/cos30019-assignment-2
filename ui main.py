@@ -310,3 +310,164 @@ class SearchUI:
                     break
 
         return total
+    
+
+    def reset_path(self):
+        self.current_path = None
+        self.output_text.delete("1.0", tk.END)
+        self.info_text.delete("1.0", tk.END)
+        self.draw_graph()
+
+    def write_info(self, message):
+        self.info_text.delete("1.0", tk.END)
+        self.info_text.insert(tk.END, message)
+
+    def on_canvas_resize(self, event):
+        if self.graph_nodes is not None:
+            self.draw_graph()
+
+    def draw_graph(self):
+        self.canvas.delete("all")
+        self.node_positions.clear()
+
+        if self.graph_nodes is None:
+            return
+
+        width = max(self.canvas.winfo_width(), 700)
+        height = max(self.canvas.winfo_height(), 500)
+
+        margin = 80
+        node_radius = 22
+
+        # get coordinate range for scaling
+        xs = [node.x for node in self.graph_nodes.values()]
+        ys = [node.y for node in self.graph_nodes.values()]
+
+        min_x, max_x = min(xs), max(xs)
+        min_y, max_y = min(ys), max(ys)
+
+        x_range = max(max_x - min_x, 1)
+        y_range = max(max_y - min_y, 1)
+
+        # work out where each node goes on the canvas
+        for node in self.graph_nodes.values():
+            canvas_x = margin + ((node.x - min_x) / x_range) * (width - 2 * margin)
+            canvas_y = height - (margin + ((node.y - min_y) / y_range) * (height - 2 * margin))
+            self.node_positions[node.name] = (canvas_x, canvas_y)
+
+        # draw background grid
+        for i in range(0, width, 50):
+            self.canvas.create_line(i, 0, i, height, fill="#f1f3f5")
+        for j in range(0, height, 50):
+            self.canvas.create_line(0, j, width, j, fill="#f1f3f5")
+
+        # draw edges first
+        for node in self.graph_nodes.values():
+            x1, y1 = self.node_positions[node.name]
+
+            for edge in node.edges:
+                x2, y2 = self.node_positions[edge.node_to.name]
+
+                dx = x2 - x1
+                dy = y2 - y1
+                dist = math.sqrt(dx * dx + dy * dy)
+
+                if dist == 0:
+                    continue
+
+                ux = dx / dist
+                uy = dy / dist
+
+                start_x = x1 + ux * node_radius
+                start_y = y1 + uy * node_radius
+                end_x = x2 - ux * node_radius
+                end_y = y2 - uy * node_radius
+
+                edge_colour = "#7f8c8d"
+                edge_width = 2
+
+                # highlight edges that are part of the final path
+                if self.edge_in_current_path(node, edge.node_to):
+                    edge_colour = "#e53935"
+                    edge_width = 4
+
+                self.canvas.create_line(
+                    start_x, start_y, end_x, end_y,
+                    arrow=tk.LAST,
+                    arrowshape=(12, 14, 5),
+                    width=edge_width,
+                    fill=edge_colour,
+                    smooth=True
+                )
+
+                # draw edge cost near the middle
+                mid_x = (start_x + end_x) / 2
+                mid_y = (start_y + end_y) / 2
+
+                self.canvas.create_text(
+                    mid_x + 10, mid_y - 12,
+                    text=str(edge.cost),
+                    fill="#1565c0",
+                    font=("Segoe UI", 9, "bold")
+                )
+
+        # draw nodes after edges so they appear on top
+        for node in self.graph_nodes.values():
+            x, y = self.node_positions[node.name]
+
+            fill_colour = "#dfe6e9"
+            outline_colour = "#2d3436"
+            line_width = 2
+
+            if node.is_origin:
+                fill_colour = "#a5d6a7"
+                outline_colour = "#2e7d32"
+
+            if node.is_destination:
+                fill_colour = "#fff59d"
+                outline_colour = "#f9a825"
+
+            if self.node_in_current_path(node):
+                fill_colour = "#ef9a9a"
+                outline_colour = "#c62828"
+                line_width = 3
+
+            if node.is_origin and self.node_in_current_path(node):
+                fill_colour = "#81c784"
+            if node.is_destination and self.node_in_current_path(node):
+                fill_colour = "#ffcc80"
+
+            self.canvas.create_oval(
+                x - node_radius, y - node_radius,
+                x + node_radius, y + node_radius,
+                fill=fill_colour,
+                outline=outline_colour,
+                width=line_width
+            )
+
+            self.canvas.create_text(
+                x, y - 1,
+                text=str(node.name),
+                font=("Segoe UI", 10, "bold"),
+                fill="#212121"
+            )
+
+            self.canvas.create_text(
+                x, y + 32,
+                text=f"({node.x},{node.y})",
+                font=("Segoe UI", 8),
+                fill="#616161"
+            )
+
+    def node_in_current_path(self, node):
+        return self.current_path is not None and node in self.current_path
+
+    def edge_in_current_path(self, node_from, node_to):
+        if self.current_path is None or len(self.current_path) < 2:
+            return False
+
+        for i in range(len(self.current_path) - 1):
+            if self.current_path[i] == node_from and self.current_path[i + 1] == node_to:
+                return True
+
+        return False
