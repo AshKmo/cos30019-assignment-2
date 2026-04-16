@@ -30,3 +30,150 @@ class SearchUI:
 
         self.setup_style()
         self.setup_ui()
+
+
+
+    def setup_style(self):
+        style = ttk.Style()
+        style.theme_use("clam")
+
+        style.configure("TFrame", background="#f4f6f8")
+        style.configure("TLabel", background="#f4f6f8", font=("Segoe UI", 10))
+        style.configure("Header.TLabel", background="#f4f6f8", font=("Segoe UI", 12, "bold"))
+        style.configure("TButton", font=("Segoe UI", 10), padding=6)
+        style.configure("TCombobox", padding=4)
+
+    def setup_ui(self):
+        # main layout
+        main = ttk.Frame(self.root, padding=12)
+        main.pack(fill=tk.BOTH, expand=True)
+
+        top = ttk.Frame(main)
+        top.pack(fill=tk.X, pady=(0, 10))
+
+        middle = ttk.Frame(main)
+        middle.pack(fill=tk.BOTH, expand=True)
+
+        bottom = ttk.Frame(main)
+        bottom.pack(fill=tk.X, pady=(10, 0))
+
+        # top controls
+        ttk.Button(top, text="Load Test File", command=self.load_file).pack(side=tk.LEFT, padx=(0, 10))
+
+        self.file_label = ttk.Label(top, text="No file loaded")
+        self.file_label.pack(side=tk.LEFT, padx=(0, 20))
+
+        ttk.Label(top, text="Algorithm:").pack(side=tk.LEFT, padx=(0, 5))
+        self.method_var = tk.StringVar(value="BFS")
+        self.method_box = ttk.Combobox(
+            top,
+            textvariable=self.method_var,
+            state="readonly",
+            width=28,
+            values=[
+                "BFS",
+                "DFS",
+                "GBFS",
+                "A*",
+                "CUS1 - Uniform Cost Search",
+                "CUS2 - Beam Search"
+            ]
+        )
+        self.method_box.pack(side=tk.LEFT, padx=(0, 15))
+        self.method_box.bind("<<ComboboxSelected>>", self.on_method_change)
+
+        ttk.Label(top, text="Heuristic:").pack(side=tk.LEFT, padx=(0, 5))
+        self.heuristic_var = tk.StringVar(value="distance")
+        self.heuristic_box = ttk.Combobox(
+            top,
+            textvariable=self.heuristic_var,
+            state="readonly",
+            width=12,
+            values=["distance", "angle"]
+        )
+        self.heuristic_box.pack(side=tk.LEFT, padx=(0, 15))
+
+        self.beam_label = ttk.Label(top, text="Beam Width:")
+        self.beam_width_var = tk.StringVar(value="2")
+        self.beam_width_entry = ttk.Entry(top, textvariable=self.beam_width_var, width=6)
+
+        ttk.Button(top, text="Run Search", command=self.run_search).pack(side=tk.LEFT, padx=(0, 10))
+        ttk.Button(top, text="Reset", command=self.reset_path).pack(side=tk.LEFT)
+
+        # graph panel
+        graph_card = ttk.Frame(middle, padding=10)
+        graph_card.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+        ttk.Label(graph_card, text="Graph View", style="Header.TLabel").pack(anchor="w", pady=(0, 8))
+
+        self.canvas = tk.Canvas(
+            graph_card,
+            bg="white",
+            highlightthickness=1,
+            highlightbackground="#cfd8dc"
+        )
+        self.canvas.pack(fill=tk.BOTH, expand=True)
+
+        # redraw graph automatically when window size changes
+        self.canvas.bind("<Configure>", self.on_canvas_resize)
+
+        # right info panel
+        side = ttk.Frame(middle, padding=(12, 10))
+        side.pack(side=tk.RIGHT, fill=tk.Y)
+
+        ttk.Label(side, text="Run Information", style="Header.TLabel").pack(anchor="w", pady=(0, 8))
+
+        self.info_text = tk.Text(
+            side,
+            width=34,
+            height=20,
+            wrap=tk.WORD,
+            font=("Consolas", 10),
+            bg="#ffffff",
+            relief=tk.FLAT,
+            highlightthickness=1,
+            highlightbackground="#cfd8dc"
+        )
+        self.info_text.pack(fill=tk.BOTH, expand=False)
+
+        ttk.Label(side, text="Legend", style="Header.TLabel").pack(anchor="w", pady=(15, 8))
+
+        legend = tk.Text(
+            side,
+            width=34,
+            height=8,
+            wrap=tk.WORD,
+            font=("Segoe UI", 10),
+            bg="#ffffff",
+            relief=tk.FLAT,
+            highlightthickness=1,
+            highlightbackground="#cfd8dc"
+        )
+        legend.pack(fill=tk.X)
+        legend.insert(
+            tk.END,
+            "Green   = Origin\n"
+            "Yellow  = Destination\n"
+            "Red     = Path node\n"
+            "Red edge = Final path\n"
+            "Blue    = Edge cost\n"
+        )
+        legend.config(state=tk.DISABLED)
+
+        # bottom output panel
+        ttk.Label(bottom, text="Program Output", style="Header.TLabel").pack(anchor="w", pady=(0, 8))
+
+        self.output_text = tk.Text(
+            bottom,
+            height=10,
+            wrap=tk.WORD,
+            font=("Consolas", 10),
+            bg="#ffffff",
+            relief=tk.FLAT,
+            highlightthickness=1,
+            highlightbackground="#cfd8dc"
+        )
+        self.output_text.pack(fill=tk.X)
+
+        # apply initial control visibility
+        self.on_method_change()
