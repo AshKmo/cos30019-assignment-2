@@ -31,7 +31,8 @@ class Vec2:
 
     def unit(self):
         m = self.mag()
-        if m == 0: return Vec2(1, 0)
+        if m == 0:
+            return Vec2(1, 0)
         return Vec2(self.x / m, self.y / m)
 
 class Heuristic:
@@ -45,35 +46,48 @@ class Heuristic:
 
 class DistanceHeuristic(Heuristic):
     def judge(self, node):
+        # keep track of the smallest straight-line distance to any destination node
         min_distance = math.inf
 
+        # compare the current node to every destination node
         for dest in self.destinations:
-            min_distance = min(min_distance, math.dist((node.state.x, node.state.y), (dest.x, dest.y)))
+            min_distance = min(
+                min_distance,
+                math.dist((node.state.x, node.state.y), (dest.x, dest.y))
+            )
 
         return min_distance
 
 class AngleHeuristic(Heuristic):
     def judge(self, node):
-        # if this is the root node, then this is always going to be the right node to search first
-        if not node.parent: return 0
+        # if this is the root node, it should always be expanded first
+        if not node.parent:
+            return 0
 
-        # go through each destination to find the closest one to the parent of the current node
+        # find the closest destination relative to the parent node
         min_distance = math.inf
         parent_to_dest = None
+
         for dest in self.destinations:
-            new_parent_to_dest = Vec2(dest.x - node.parent.state.x, dest.y - node.parent.state.y);
+            candidate = Vec2(
+                dest.x - node.parent.state.x,
+                dest.y - node.parent.state.y
+            )
 
-            new_distance = new_parent_to_dest.mag()
+            candidate_distance = candidate.mag()
 
-            if new_distance < min_distance:
-                parent_to_dest = new_parent_to_dest
-                min_distance = new_distance
+            if candidate_distance < min_distance:
+                min_distance = candidate_distance
+                parent_to_dest = candidate
 
-        # find the vector from the parent of the option to the option itself
-        parent_to_child = Vec2(node.state.x - node.parent.state.x, node.state.y - node.parent.state.y)
+        # vector from parent node to current node
+        parent_to_child = Vec2(
+            node.state.x - node.parent.state.x,
+            node.state.y - node.parent.state.y
+        )
 
-        # determine how similar the angle from the parent to the child is to the angle from the parent to the closest destination
+        # compare direction of travel to direction of nearest destination
         angle_similarity = parent_to_child.unit().dot(parent_to_dest.unit())
 
-        # return the full distance from parent to child if the angle is in the opposite direction, and zero distance if the angle is in the correct direction
+        # lower value means the move is more aligned with the goal direction
         return min_distance * (1 - angle_similarity) / 2
