@@ -58,7 +58,7 @@ for path in test_case_file_paths:
         test_case_files.append(path + file.name)
 
 # print the TSV header
-print("Algorithm\tHeuristic\tTest\tNodes in Test\tAverage Time\tNodes")
+print("Algorithm\tHeuristic\tTest\tNumber of Nodes in Test\tNumber of Destination Nodes\tAverage Time\tNodes")
 
 # iterate through each combination of algorithm, heuristic, and test case, printing the results along the way
 for test_i, test in enumerate(test_case_files):
@@ -93,6 +93,5 @@ for test_i, test in enumerate(test_case_files):
 
                 total_diff += end - start
 
-            if not validate_only:
-                # print the algorithm name, the heuristic used (if applicable), the test case used, the number of nodes in this test case, the average amount of time this algorithm took to complete the test case, and the number of nodes created
-                print(f"{algorithm[0]}\t{heuristic[0] if heuristic else ""}\t{test}\t{len(test_data[2])}\t{total_diff / tests_per_algorithm}\t{test_result[1]}")
+            # print the algorithm name, the heuristic used (if applicable), the test case used, the number of nodes in this test case, the number of destination nodes in this test case, the average amount of time this algorithm took to complete the test case, and the number of nodes created
+            print(f"{algorithm[0]}\t{heuristic[0] if heuristic else ""}\t{test}\t{len(test_data[2])}\t{len(test_data[1])}\t{total_diff / tests_per_algorithm}\t{test_result[1]}")
