@@ -471,3 +471,17 @@ class SearchUI:
                 return True
 
         return False
+    def reset_path(self):
+        self.current_path = None
+        self.output_text.delete("1.0", tk.END)
+        self.draw_graph()
+
+    def on_canvas_resize(self, event):
+        if self.graph_nodes:
+            self.draw_graph()
+
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = SearchUI(root)
+    root.mainloop()
