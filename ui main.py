@@ -194,3 +194,119 @@ class SearchUI:
             self.heuristic_box.config(state="readonly")
         else:
             self.heuristic_box.config(state="disabled")
+
+
+    def load_file(self):
+        filename = filedialog.askopenfilename(
+            title="Select Test File",
+            filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")]
+        )
+
+        if not filename:
+            return
+
+        try:
+            self.origin, self.destinations, self.graph_nodes = read_test_file(filename)
+            self.filename = filename
+            self.file_label.config(text=filename)
+            self.current_path = None
+            self.draw_graph()
+            self.write_info("File loaded successfully.\n")
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to load file:\n{e}")
+
+    def get_heuristic(self):
+        if self.heuristic_var.get() == "angle":
+            return heuristics.AngleHeuristic(self.origin, self.destinations, self.graph_nodes)
+        return heuristics.DistanceHeuristic(self.origin, self.destinations, self.graph_nodes)
+
+    def run_search(self):
+        if self.graph_nodes is None:
+            messagebox.showwarning("No File", "Please load a test file first.")
+            return
+
+        method = self.method_var.get()
+        result = None
+
+        try:
+            if method == "BFS":
+                result = breadth_first_search(self.origin)
+
+            elif method == "DFS":
+                result = depth_first_search(self.origin)
+
+            elif method == "GBFS":
+                result = greedy_best_first_search(self.origin, self.get_heuristic())
+
+            elif method == "A*":
+                result = a_star_search(self.origin, self.get_heuristic())
+
+            elif method == "CUS1 - Uniform Cost Search":
+                result = uniform_cost_search(self.origin)
+
+            elif method == "CUS2 - Beam Search":
+                beam_width = int(self.beam_width_var.get())
+                if beam_width < 1:
+                    raise ValueError("Beam width must be at least 1.")
+                result = beam_search(self.origin, self.get_heuristic(), beam_width)
+
+            else:
+                messagebox.showerror("Error", f"Unknown method: {method}")
+                return
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Search failed:\n{e}")
+            return
+
+        path = result[0]
+        node_count = result[1]
+
+        self.current_path = path
+        self.draw_graph()
+
+        self.output_text.delete("1.0", tk.END)
+        self.info_text.delete("1.0", tk.END)
+
+        if path is None:
+            self.output_text.insert(tk.END, f"{self.filename} {method}\nNo goal found {node_count}\n")
+            self.info_text.insert(tk.END, f"Method: {method}\n")
+            self.info_text.insert(tk.END, f"Nodes created: {node_count}\n")
+            self.info_text.insert(tk.END, "No path found.\n")
+            return
+
+        # show output in assignment-style format
+        self.output_text.insert(tk.END, f"{self.filename} {method}\n")
+        self.output_text.insert(tk.END, f"{path[-1]} {node_count}\n")
+        for location in path:
+            self.output_text.insert(tk.END, f"{location}\n")
+
+        path_cost = self.calculate_path_cost(path)
+
+        self.info_text.insert(tk.END, f"Method: {method}\n")
+        if method in ["GBFS", "A*", "CUS2 - Beam Search"]:
+            self.info_text.insert(tk.END, f"Heuristic: {self.heuristic_var.get()}\n")
+        if method == "CUS2 - Beam Search":
+            self.info_text.insert(tk.END, f"Beam Width: {self.beam_width_var.get()}\n")
+        self.info_text.insert(tk.END, f"Goal reached: {path[-1].name}\n")
+        self.info_text.insert(tk.END, f"Nodes created: {node_count}\n")
+        self.info_text.insert(tk.END, f"Moves: {len(path) - 1}\n")
+        self.info_text.insert(tk.END, f"Path cost: {path_cost}\n\n")
+        self.info_text.insert(tk.END, "Path:\n")
+        self.info_text.insert(tk.END, " -> ".join(str(node.name) for node in path))
+
+    def calculate_path_cost(self, path):
+        if path is None or len(path) < 2:
+            return 0
+
+        total = 0
+
+        for i in range(len(path) - 1):
+            current_node = path[i]
+            next_node = path[i + 1]
+
+            for edge in current_node.edges:
+                if edge.node_to == next_node:
+                    total += edge.cost
+                    break
+
+        return total
