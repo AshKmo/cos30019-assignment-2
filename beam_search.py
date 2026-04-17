@@ -54,4 +54,5 @@ def beam_search(origin: test_file_lib.GraphNode, heuristic: heuristics.Heuristic
             beam = backup[:beam_width]
             backup = backup[beam_width:]
 
+    # return a None path if no valid path was found
     return (None, created)
