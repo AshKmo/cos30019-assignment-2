@@ -2,12 +2,11 @@ import test_file_lib
 import heuristics
 import nodes
 
-# creates a list of the names of the states in the path from the root node to the node containing said state
 def get_path(branch): return get_path(branch.parent) + [branch.state] if branch else []
 
 def beam_search(origin: test_file_lib.GraphNode, heuristic: heuristics.Heuristic, beam_width = 3):
     "Performs beam search algorithm. This only keeps track of a set number of options, and chooses the one which looks the best. The beam width is 3 nodes in this example."
-    
+
     #beam is a list of max length beam_width, backup is all of the nodes which do not make it into beam
     start = nodes.Node(origin)
     seen = set([origin])
@@ -15,17 +14,16 @@ def beam_search(origin: test_file_lib.GraphNode, heuristic: heuristics.Heuristic
     backup: list[nodes.Node] = []
     created = 1
 
-    # explore until a solution is found or all options are exhausted
     while True:
-        # check if the destination is in the beam
+        #check if the destination is in the beam
         for node in beam:
             if node.state.is_destination:
                 return (get_path(node), created)
 
-        # make an empty list of candidates (nodes which may make it into the new beam)
+        #make an empty list of candidates (nodes which may make it into the new beam) 
         candidates: list[nodes.Node] = []
 
-        # create new child nodes as candidates to account for multiple possible paths to the same node
+        #create new child nodes as candidates to account for multiple possible paths to the same node
         for node in beam:
             for edge in node.state.edges:
                 if edge.node_to in seen: continue
@@ -33,11 +31,13 @@ def beam_search(origin: test_file_lib.GraphNode, heuristic: heuristics.Heuristic
                 child = nodes.Node(edge.node_to, edge, node)
                 candidates.append(child)
                 created += 1
+
+                seen.add(edge.node_to)
         
         #if no candidates were found, try to populate the beam with backup candidates
         if not candidates:
             if not backup:
-                return None
+                break
             beam = backup[:beam_width]
             backup = backup[beam_width:]
             continue
@@ -47,9 +47,11 @@ def beam_search(origin: test_file_lib.GraphNode, heuristic: heuristics.Heuristic
         beam = candidates[:beam_width]
         backup.extend(candidates[beam_width:])
 
-        # if the beam is empty, try to populate it with backups
+        #if the beam is empty, try to populate it with backups
         if not beam:
             if not backup:
-                return None
+                break
             beam = backup[:beam_width]
             backup = backup[beam_width:]
+
+    return (None, created)

@@ -94,7 +94,7 @@ class SearchUI:
         self.heuristic_box.pack(side=tk.LEFT, padx=(0, 15))
 
         self.beam_label = ttk.Label(top, text="Beam Width:")
-        self.beam_width_var = tk.StringVar(value="2")
+        self.beam_width_var = tk.StringVar(value="3")
         self.beam_width_entry = ttk.Entry(top, textvariable=self.beam_width_var, width=6)
 
         ttk.Button(top, text="Run Search", command=self.run_search).pack(side=tk.LEFT, padx=(0, 10))
