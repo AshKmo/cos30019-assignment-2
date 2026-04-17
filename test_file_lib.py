@@ -121,19 +121,18 @@ def read_test_file(path):
             continue
 
         # set the current reading state if a heading is found
-        match content:
-            case "Nodes:":
-                mode = 1
-                continue
-            case "Edges:":
-                mode = 2
-                continue
-            case "Origin:":
-                mode = 3
-                continue
-            case "Destinations:":
-                mode = 4
-                continue
+        if "Nodes:" in content:
+            mode = 1
+            continue
+        elif "Edges:" in content:
+            mode = 2
+            continue
+        elif "Origin:" in content:
+            mode = 3
+            continue
+        elif "Destinations:" in content:
+            mode = 4
+            continue
 
         match mode:
             # "Nodes" section
