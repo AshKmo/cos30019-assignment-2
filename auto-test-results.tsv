@@ -1,0 +1,238 @@
+Algorithm	Heuristic	Test	Number of Nodes in Test	Number of Destination Nodes	Average Time	Nodes
+BFS		tests/PathFinder-test.txt	6	2	1876.314	6
+DFS		tests/PathFinder-test.txt	6	2	2317.426	4
+A_star	Distance	tests/PathFinder-test.txt	6	2	15861.649	6
+A_star	Angle	tests/PathFinder-test.txt	6	2	22801.742	6
+GBFS	Distance	tests/PathFinder-test.txt	6	2	13259.463	5
+GBFS	Angle	tests/PathFinder-test.txt	6	2	18649.403	5
+Uniform_Cost		tests/PathFinder-test.txt	6	2	12228.976	6
+Beam	Distance	tests/PathFinder-test.txt	6	2	6830.399	6
+Beam	Angle	tests/PathFinder-test.txt	6	2	13507.921	6
+BFS		tests/dead-end-test.txt	18	1	6209.441	18
+DFS		tests/dead-end-test.txt	18	1	9426.869	18
+A_star	Distance	tests/dead-end-test.txt	18	1	57335.799	18
+A_star	Angle	tests/dead-end-test.txt	18	1	66697.98	18
+GBFS	Distance	tests/dead-end-test.txt	18	1	43135.453	18
+GBFS	Angle	tests/dead-end-test.txt	18	1	64671.601	18
+Uniform_Cost		tests/dead-end-test.txt	18	1	37187.22	18
+Beam	Distance	tests/dead-end-test.txt	18	1	18962.838	18
+Beam	Angle	tests/dead-end-test.txt	18	1	40155.241	18
+BFS		tests/deep-test.txt	30	1	10133.179	30
+DFS		tests/deep-test.txt	30	1	15287.761	30
+A_star	Distance	tests/deep-test.txt	30	1	62669.048	27
+A_star	Angle	tests/deep-test.txt	30	1	105979.41	29
+GBFS	Distance	tests/deep-test.txt	30	1	42303.708	18
+GBFS	Angle	tests/deep-test.txt	30	1	75979.755	22
+Uniform_Cost		tests/deep-test.txt	30	1	61620.686	30
+Beam	Distance	tests/deep-test.txt	30	1	24962.179	25
+Beam	Angle	tests/deep-test.txt	30	1	60570.989	25
+BFS		tests/high-cost-test.txt	23	2	5382.243	16
+DFS		tests/high-cost-test.txt	23	2	6755.138	11
+A_star	Distance	tests/high-cost-test.txt	23	2	64429.139	20
+A_star	Angle	tests/high-cost-test.txt	23	2	105163.694	22
+GBFS	Distance	tests/high-cost-test.txt	23	2	33206.369	10
+GBFS	Angle	tests/high-cost-test.txt	23	2	72159.573	16
+Uniform_Cost		tests/high-cost-test.txt	23	2	49748.899	22
+Beam	Distance	tests/high-cost-test.txt	23	2	24504.869	18
+Beam	Angle	tests/high-cost-test.txt	23	2	49475.094	18
+BFS		tests/direct-test.txt	18	3	5188.677	15
+DFS		tests/direct-test.txt	18	3	6969.426	9
+A_star	Distance	tests/direct-test.txt	18	3	23863.531	7
+A_star	Angle	tests/direct-test.txt	18	3	57556.722	12
+GBFS	Distance	tests/direct-test.txt	18	3	20853.743	7
+GBFS	Angle	tests/direct-test.txt	18	3	30038.561	7
+Uniform_Cost		tests/direct-test.txt	18	3	37692.313	16
+Beam	Distance	tests/direct-test.txt	18	3	16760.547	12
+Beam	Angle	tests/direct-test.txt	18	3	31303.525	12
+BFS		tests/false-spiral-test.txt	26	1	8623.566	26
+DFS		tests/false-spiral-test.txt	26	1	11286.147	20
+A_star	Distance	tests/false-spiral-test.txt	26	1	65543.478	26
+A_star	Angle	tests/false-spiral-test.txt	26	1	104837.212	26
+GBFS	Distance	tests/false-spiral-test.txt	26	1	72560.887	25
+GBFS	Angle	tests/false-spiral-test.txt	26	1	98818.003	25
+Uniform_Cost		tests/false-spiral-test.txt	26	1	56023.681	26
+Beam	Distance	tests/false-spiral-test.txt	26	1	23208.963	22
+Beam	Angle	tests/false-spiral-test.txt	26	1	57309.876	26
+BFS		tests/shallow-test.txt	12	1	3601.401	12
+DFS		tests/shallow-test.txt	12	1	4112.17	9
+A_star	Distance	tests/shallow-test.txt	12	1	12372.41	5
+A_star	Angle	tests/shallow-test.txt	12	1	18334.492	5
+GBFS	Distance	tests/shallow-test.txt	12	1	12276.987	5
+GBFS	Angle	tests/shallow-test.txt	12	1	18345.542	5
+Uniform_Cost		tests/shallow-test.txt	12	1	18539.882	9
+Beam	Distance	tests/shallow-test.txt	12	1	8222.913	9
+Beam	Angle	tests/shallow-test.txt	12	1	19602.996	9
+BFS		tests/spiral-test.txt	18	1	5710.697	18
+DFS		tests/spiral-test.txt	18	1	10122.951	18
+A_star	Distance	tests/spiral-test.txt	18	1	45349.638	18
+A_star	Angle	tests/spiral-test.txt	18	1	70737.607	18
+GBFS	Distance	tests/spiral-test.txt	18	1	42869.255	18
+GBFS	Angle	tests/spiral-test.txt	18	1	68563.888	18
+Uniform_Cost		tests/spiral-test.txt	18	1	37869.696	18
+Beam	Distance	tests/spiral-test.txt	18	1	19336.099	18
+Beam	Angle	tests/spiral-test.txt	18	1	44178.557	18
+BFS		tests/thin-test.txt	12	1	3067.706	10
+DFS		tests/thin-test.txt	12	1	5179.939	10
+A_star	Distance	tests/thin-test.txt	12	1	23503.573	10
+A_star	Angle	tests/thin-test.txt	12	1	39000.514	10
+GBFS	Distance	tests/thin-test.txt	12	1	23455.189	10
+GBFS	Angle	tests/thin-test.txt	12	1	36525.079	10
+Uniform_Cost		tests/thin-test.txt	12	1	19828.938	10
+Beam	Distance	tests/thin-test.txt	12	1	10535.17	10
+Beam	Angle	tests/thin-test.txt	12	1	23446.652	10
+BFS		tests/unreachable-goal.txt	10	1	3011.97	9
+DFS		tests/unreachable-goal.txt	10	1	5022.04	10
+A_star	Distance	tests/unreachable-goal.txt	10	1	23592.908	9
+A_star	Angle	tests/unreachable-goal.txt	10	1	35929.78	9
+GBFS	Distance	tests/unreachable-goal.txt	10	1	23849.494	9
+GBFS	Angle	tests/unreachable-goal.txt	10	1	36789.904	9
+Uniform_Cost		tests/unreachable-goal.txt	10	1	19998.507	9
+Beam	Distance	tests/unreachable-goal.txt	10	1	9030.709	9
+Beam	Angle	tests/unreachable-goal.txt	10	1	19989.264	9
+BFS		tests/large-test.txt	24	3	8491.538	22
+DFS		tests/large-test.txt	24	3	7702.942	16
+A_star	Distance	tests/large-test.txt	24	3	58253.521	22
+A_star	Angle	tests/large-test.txt	24	3	106272.471	24
+GBFS	Distance	tests/large-test.txt	24	3	34407.022	14
+GBFS	Angle	tests/large-test.txt	24	3	70983.97	18
+Uniform_Cost		tests/large-test.txt	24	3	50351.711	24
+Beam	Distance	tests/large-test.txt	24	3	29937.0	22
+Beam	Angle	tests/large-test.txt	24	3	62060.106	22
+BFS		tests/lots-of-goals-test.txt	15	7	3430.113	9
+DFS		tests/lots-of-goals-test.txt	15	7	3575.921	7
+A_star	Distance	tests/lots-of-goals-test.txt	15	7	24166.382	7
+A_star	Angle	tests/lots-of-goals-test.txt	15	7	42444.268	8
+GBFS	Distance	tests/lots-of-goals-test.txt	15	7	18673.37	5
+GBFS	Angle	tests/lots-of-goals-test.txt	15	7	36548.245	7
+Uniform_Cost		tests/lots-of-goals-test.txt	15	7	17331.857	9
+Beam	Distance	tests/lots-of-goals-test.txt	15	7	12287.246	6
+Beam	Angle	tests/lots-of-goals-test.txt	15	7	22320.98	6
+BFS		tests/mesh-test.txt	12	2	5053.352	12
+DFS		tests/mesh-test.txt	12	2	6712.865	13
+A_star	Distance	tests/mesh-test.txt	12	2	25207.607	10
+A_star	Angle	tests/mesh-test.txt	12	2	48757.949	12
+GBFS	Distance	tests/mesh-test.txt	12	2	25560.079	12
+GBFS	Angle	tests/mesh-test.txt	12	2	41494.51	12
+Uniform_Cost		tests/mesh-test.txt	12	2	26437.703	12
+Beam	Distance	tests/mesh-test.txt	12	2	13928.032	12
+Beam	Angle	tests/mesh-test.txt	12	2	29171.093	12
+BFS		tests/rug-pull-test.txt	12	1	4366.22	12
+DFS		tests/rug-pull-test.txt	12	1	5866.236	12
+A_star	Distance	tests/rug-pull-test.txt	12	1	30960.262	12
+A_star	Angle	tests/rug-pull-test.txt	12	1	45754.912	12
+GBFS	Distance	tests/rug-pull-test.txt	12	1	19795.451	8
+GBFS	Angle	tests/rug-pull-test.txt	12	1	41973.806	12
+Uniform_Cost		tests/rug-pull-test.txt	12	1	25120.284	12
+Beam	Distance	tests/rug-pull-test.txt	12	1	13207.562	12
+Beam	Angle	tests/rug-pull-test.txt	12	1	27328.393	12
+BFS		tests/low-cost-test.txt	22	1	7259.006	21
+DFS		tests/low-cost-test.txt	22	1	9497.845	19
+A_star	Distance	tests/low-cost-test.txt	22	1	42191.53	18
+A_star	Angle	tests/low-cost-test.txt	22	1	67662.414	18
+GBFS	Distance	tests/low-cost-test.txt	22	1	42481.78	18
+GBFS	Angle	tests/low-cost-test.txt	22	1	78565.154	21
+Uniform_Cost		tests/low-cost-test.txt	22	1	36395.91	18
+Beam	Distance	tests/low-cost-test.txt	22	1	16900.949	16
+Beam	Angle	tests/low-cost-test.txt	22	1	37592.954	16
+BFS		tests/single-node-unreachable.txt	1	0	627.182	1
+DFS		tests/single-node-unreachable.txt	1	0	733.102	1
+A_star	Distance	tests/single-node-unreachable.txt	1	0	4223.827	1
+A_star	Angle	tests/single-node-unreachable.txt	1	0	4514.661	1
+GBFS	Distance	tests/single-node-unreachable.txt	1	0	4414.143	1
+GBFS	Angle	tests/single-node-unreachable.txt	1	0	4315.628	1
+Uniform_Cost		tests/single-node-unreachable.txt	1	0	4316.417	1
+Beam	Distance	tests/single-node-unreachable.txt	1	0	861.418	1
+Beam	Angle	tests/single-node-unreachable.txt	1	0	919.908	1
+BFS		tests/single-node-reachable.txt	1	1	732.787	1
+DFS		tests/single-node-reachable.txt	1	1	751.134	1
+A_star	Distance	tests/single-node-reachable.txt	1	1	4073.904	1
+A_star	Angle	tests/single-node-reachable.txt	1	1	4175.067	1
+GBFS	Distance	tests/single-node-reachable.txt	1	1	4706.143	1
+GBFS	Angle	tests/single-node-reachable.txt	1	1	4268.219	1
+Uniform_Cost		tests/single-node-reachable.txt	1	1	4112.479	1
+Beam	Distance	tests/single-node-reachable.txt	1	1	912.211	1
+Beam	Angle	tests/single-node-reachable.txt	1	1	923.506	1
+BFS		tests/duplicate-positions.txt	7	1	2788.225	7
+DFS		tests/duplicate-positions.txt	7	1	4722.088	8
+A_star	Distance	tests/duplicate-positions.txt	7	1	18571.633	7
+A_star	Angle	tests/duplicate-positions.txt	7	1	27007.2	7
+GBFS	Distance	tests/duplicate-positions.txt	7	1	18290.61	7
+GBFS	Angle	tests/duplicate-positions.txt	7	1	26601.628	7
+Uniform_Cost		tests/duplicate-positions.txt	7	1	16205.18	7
+Beam	Distance	tests/duplicate-positions.txt	7	1	9027.193	7
+Beam	Angle	tests/duplicate-positions.txt	7	1	16553.281	7
+BFS		tests/edges-to-self.txt	6	1	2515.828	6
+DFS		tests/edges-to-self.txt	6	1	4295.885	7
+A_star	Distance	tests/edges-to-self.txt	6	1	16587.928	6
+A_star	Angle	tests/edges-to-self.txt	6	1	22682.026	6
+GBFS	Distance	tests/edges-to-self.txt	6	1	15611.113	6
+GBFS	Angle	tests/edges-to-self.txt	6	1	22096.933	6
+Uniform_Cost		tests/edges-to-self.txt	6	1	14383.666	6
+Beam	Distance	tests/edges-to-self.txt	6	1	7355.407	6
+Beam	Angle	tests/edges-to-self.txt	6	1	13517.05	6
+BFS		tests/cluster-test.txt	32	1	5652.309	16
+DFS		tests/cluster-test.txt	32	1	17539.44	33
+A_star	Distance	tests/cluster-test.txt	32	1	19913.534	10
+A_star	Angle	tests/cluster-test.txt	32	1	99903.452	27
+GBFS	Distance	tests/cluster-test.txt	32	1	16085.48	8
+GBFS	Angle	tests/cluster-test.txt	32	1	25610.359	8
+Uniform_Cost		tests/cluster-test.txt	32	1	58155.84	27
+Beam	Distance	tests/cluster-test.txt	32	1	9040.581	10
+Beam	Angle	tests/cluster-test.txt	32	1	20299.098	10
+BFS		tests/lattice-test.txt	16	1	6365.713	16
+DFS		tests/lattice-test.txt	16	1	8874.843	17
+A_star	Distance	tests/lattice-test.txt	16	1	41425.293	16
+A_star	Angle	tests/lattice-test.txt	16	1	61271.178	16
+GBFS	Distance	tests/lattice-test.txt	16	1	26225.269	12
+GBFS	Angle	tests/lattice-test.txt	16	1	41020.31	12
+Uniform_Cost		tests/lattice-test.txt	16	1	35135.357	16
+Beam	Distance	tests/lattice-test.txt	16	1	16629.82	16
+Beam	Angle	tests/lattice-test.txt	16	1	35469.936	16
+BFS		tests/generated/test-generated-0.txt	35	2	3820.751	13
+DFS		tests/generated/test-generated-0.txt	35	2	15454.464	31
+A_star	Distance	tests/generated/test-generated-0.txt	35	2	36099.3	15
+A_star	Angle	tests/generated/test-generated-0.txt	35	2	64064.814	16
+GBFS	Distance	tests/generated/test-generated-0.txt	35	2	22543.788	9
+GBFS	Angle	tests/generated/test-generated-0.txt	35	2	31185.978	8
+Uniform_Cost		tests/generated/test-generated-0.txt	35	2	33182.67	18
+Beam	Distance	tests/generated/test-generated-0.txt	35	2	31213.343	26
+Beam	Angle	tests/generated/test-generated-0.txt	35	2	90618.706	34
+BFS		tests/generated/test-generated-1.txt	6	4	1207.997	4
+DFS		tests/generated/test-generated-1.txt	6	4	1954.731	4
+A_star	Distance	tests/generated/test-generated-1.txt	6	4	11497.72	4
+A_star	Angle	tests/generated/test-generated-1.txt	6	4	16856.875	4
+GBFS	Distance	tests/generated/test-generated-1.txt	6	4	12355.823	4
+GBFS	Angle	tests/generated/test-generated-1.txt	6	4	17306.748	4
+Uniform_Cost		tests/generated/test-generated-1.txt	6	4	8224.899	4
+Beam	Distance	tests/generated/test-generated-1.txt	6	4	5481.845	4
+Beam	Angle	tests/generated/test-generated-1.txt	6	4	10833.726	4
+BFS		tests/generated/test-generated-10.txt	18	5	2025.189	8
+DFS		tests/generated/test-generated-10.txt	18	5	2671.133	6
+A_star	Distance	tests/generated/test-generated-10.txt	18	5	23215.595	8
+A_star	Angle	tests/generated/test-generated-10.txt	18	5	37351.562	8
+GBFS	Distance	tests/generated/test-generated-10.txt	18	5	13063.788	4
+GBFS	Angle	tests/generated/test-generated-10.txt	18	5	28081.212	6
+Uniform_Cost		tests/generated/test-generated-10.txt	18	5	14085.281	8
+Beam	Distance	tests/generated/test-generated-10.txt	18	5	6128.424	4
+Beam	Angle	tests/generated/test-generated-10.txt	18	5	11938.434	4
+BFS		tests/generated/test-generated-100.txt	5	4	1183.071	4
+DFS		tests/generated/test-generated-100.txt	5	4	1840.32	4
+A_star	Distance	tests/generated/test-generated-100.txt	5	4	11528.352	4
+A_star	Angle	tests/generated/test-generated-100.txt	5	4	16725.991	4
+GBFS	Distance	tests/generated/test-generated-100.txt	5	4	12263.851	4
+GBFS	Angle	tests/generated/test-generated-100.txt	5	4	16911.085	4
+Uniform_Cost		tests/generated/test-generated-100.txt	5	4	7916.285	4
+Beam	Distance	tests/generated/test-generated-100.txt	5	4	5584.9	4
+Beam	Angle	tests/generated/test-generated-100.txt	5	4	10507.389	4
+BFS		tests/generated/test-generated-101.txt	18	3	1286.405	5
+DFS		tests/generated/test-generated-101.txt	18	3	2349.198	5
+A_star	Distance	tests/generated/test-generated-101.txt	18	3	22219.53	8
+A_star	Angle	tests/generated/test-generated-101.txt	18	3	31991.283	8
+GBFS	Distance	tests/generated/test-generated-101.txt	18	3	13342.183	5
+GBFS	Angle	tests/generated/test-generated-101.txt	18	3	33093.114	8
+Uniform_Cost		tests/generated/test-generated-101.txt	18	3	14021.765	8
+Beam	Distance	tests/generated/test-generated-101.txt	18	3	6004.084	5
+Beam	Angle	tests/generated/test-generated-101.txt	18	3	12009.999	5
+BFS		tests/generated/test-generated-102.txt	36	0	12655.928	36
+DFS		tests/generated/test-generated-102.txt	36	0	18168.002	36
+A_star	Distance	tests/generated/test-generated-102.txt	36	0	82654.151	36

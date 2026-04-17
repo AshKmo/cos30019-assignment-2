@@ -51,7 +51,7 @@ class Heuristic:
 # this heuristic judges nodes based on their distance to the nearest destination node
 class DistanceHeuristic(Heuristic):
     def judge(self, node):
-        # keep track of the smallest straight-line distance to any destination node
+        # if no destinations are found, return infinite expected cost
         min_distance = math.inf
 
         # compare the current node to every destination node
@@ -69,6 +69,10 @@ class AngleHeuristic(Heuristic):
         # if this is the root node, it should always be expanded first
         if not node.parent:
             return 0
+
+        # if there are no destinations, then there is infinite expected cost
+        if len(self.destinations) == 0:
+            return math.inf
 
         # find the closest destination relative to the parent node
         min_distance = math.inf
