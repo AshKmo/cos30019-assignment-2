@@ -9,4 +9,11 @@ from test_file_lib import to_test_file
 
 for i in range(0, n):
     with open(f"tests/generated/test-generated-{i}.txt", "w") as f:
-        f.write(to_test_file(*generate_problem()))
+        # generate a random problem
+        problem = generate_problem()
+
+        # convert this problem to the text format
+        test_file = to_test_file(*problem)
+
+        # write this test to a new test file
+        f.write(test_file)

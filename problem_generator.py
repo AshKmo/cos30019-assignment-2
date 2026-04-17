@@ -15,11 +15,11 @@ height = 100
 
 # the total number of nodes (including destinations and the origin) will be randomly drawn from this range
 # note that `range(0, x)` means "can be every value between 0 and x, EXCEPT x"
-node_count_range = range(4, 41)
+node_count_range = range(2, 41)
 
 # the number of destination nodes will be randomly drawn from this range
 # note that `range(0, x)` means "can be every value between 0 and x, EXCEPT x"
-dest_count_range = range(1, 7)
+dest_count_range = range(0, 7)
 
 # the problem generator uses a spanning tree to ensure that every node has a path to the origin
 # the number of nodes that each node will attempt to connect to when forming the spanning tree will be randomly drawn from this range
@@ -46,17 +46,11 @@ def generate_problem(width = width, height = height, node_count_range = node_cou
     def make_node(name):
         new_node = None
 
-        while new_node == None:
-            new_node = GraphNode(
-                    name,
-                    random.randrange(width) + 1,
-                    random.randrange(height) + 1,
-                    )
-
-            for other_node in nodes:
-                if other_node.x == new_node.x and other_node.y == new_node.y:
-                    new_node = None
-                    break
+        new_node = GraphNode(
+                name,
+                random.randrange(width) + 1,
+                random.randrange(height) + 1,
+                )
 
         nodes.append(new_node)
 

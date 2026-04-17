@@ -18,23 +18,27 @@ You can create a Heuristic object like this: `DistanceHeuristic(origin, destinat
 
 """
 
+# a 2D vector class
 class Vec2:
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
+    # the dot product of two vectors is the sum of the products of their components
     def dot(self, other):
         return self.x * other.x + self.y * other.y
     
+    # the magnitude of a vector is the square root of the sum of the squares of its components
     def mag(self):
         return math.sqrt(self.x ** 2 + self.y ** 2)
 
+    # a vector can be converted to a unit vector by dividing its components by its magnitude
     def unit(self):
         m = self.mag()
-        if m == 0:
-            return Vec2(1, 0)
+        if m == 0: return Vec2(1, 0)
         return Vec2(self.x / m, self.y / m)
 
+# the base heuristic class
 class Heuristic:
     def __init__(self, origin, destinations, nodes):
         self.origin = origin
@@ -44,6 +48,7 @@ class Heuristic:
     def judge(self, graph_node):
         raise NotImplementedError("you should have used a subclass, e.g. DistanceHeuristic")
 
+# this heuristic judges nodes based on their distance to the nearest destination node
 class DistanceHeuristic(Heuristic):
     def judge(self, node):
         # keep track of the smallest straight-line distance to any destination node
@@ -58,6 +63,7 @@ class DistanceHeuristic(Heuristic):
 
         return min_distance
 
+# this heuristic judges each node based on how closely the angle from its parent to itself matches that from its parent to the nearest destination
 class AngleHeuristic(Heuristic):
     def judge(self, node):
         # if this is the root node, it should always be expanded first
@@ -67,18 +73,14 @@ class AngleHeuristic(Heuristic):
         # find the closest destination relative to the parent node
         min_distance = math.inf
         parent_to_dest = None
-
         for dest in self.destinations:
-            candidate = Vec2(
-                dest.x - node.parent.state.x,
-                dest.y - node.parent.state.y
-            )
+            new_parent_to_dest = Vec2(dest.x - node.parent.state.x, dest.y - node.parent.state.y);
 
-            candidate_distance = candidate.mag()
+            new_distance = new_parent_to_dest.mag()
 
-            if candidate_distance < min_distance:
-                min_distance = candidate_distance
-                parent_to_dest = candidate
+            if new_distance < min_distance:
+                parent_to_dest = new_parent_to_dest
+                min_distance = new_distance
 
         # vector from parent node to current node
         parent_to_child = Vec2(
@@ -86,7 +88,7 @@ class AngleHeuristic(Heuristic):
             node.state.y - node.parent.state.y
         )
 
-        # compare direction of travel to direction of nearest destination
+        # determine how similar the angle from the parent to the child is to the angle from the parent to the closest destination
         angle_similarity = parent_to_child.unit().dot(parent_to_dest.unit())
 
         # lower value means the move is more aligned with the goal direction

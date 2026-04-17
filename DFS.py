@@ -44,7 +44,8 @@ def depth_first_search(origin):
             node_count += 1
 
     # if the loop exited normally then a destination was not found
-    if not frontier: branch = None
+    if not frontier:
+        return (None, node_count)
 
     # return the path to the destination
     return (action_path(branch), node_count)
