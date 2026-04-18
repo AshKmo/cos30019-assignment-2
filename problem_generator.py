@@ -15,22 +15,22 @@ height = 100
 
 # the total number of nodes (including destinations and the origin) will be randomly drawn from this range
 # note that `range(0, x)` means "can be every value between 0 and x, EXCEPT x"
-node_count_range = range(2, 41)
+node_count_range = range(2, 81)
 
 # the number of destination nodes will be randomly drawn from this range
 # note that `range(0, x)` means "can be every value between 0 and x, EXCEPT x"
-dest_count_range = range(0, 7)
+dest_count_range = range(0, 13)
 
 # the problem generator uses a spanning tree to ensure that every node has a path to the origin
 # the number of nodes that each node will attempt to connect to when forming the spanning tree will be randomly drawn from this range
 # the lower limit for this should always be >= 1, as anything lower could result in an incomplete tree
 # note that `range(0, x)` means "can be every value between 0 and x, EXCEPT x"
-spanning_tree_selection_range = range(1, 3)
+spanning_tree_selection_range = range(1, 6)
 
 # once the problem generator creates the spanning tree, it allows each node to potentially form random connections with the other nodes
 # the number of extra connections that each node can make will be randomly drawn from this range
 # note that `range(0, x)` means "can be every value between 0 and x, EXCEPT x"
-extra_edge_range = range(0, 3)
+extra_edge_range = range(0, 6)
 
 # by default, the path cost of each edge is equal to the length of the edge, rounded up
 # however, the cost of each edge can be increased by a random amount up to this value

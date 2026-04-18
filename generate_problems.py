@@ -1,7 +1,7 @@
 # This script uses the problem generator ("problem_generator.py") to quickly generate a large number of random tests at once
 
 # the number of tests to generate
-n = 200
+n = 2000
 
 from problem_generator import generate_problem
 

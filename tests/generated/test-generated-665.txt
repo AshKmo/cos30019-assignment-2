@@ -1,0 +1,11 @@
+Nodes:
+1: (78,29)
+2: (60,90)
+Edges:
+(1,2): 78
+(2,1): 65
+
+Origin:
+2
+Destinations:
+1

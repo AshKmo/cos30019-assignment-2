@@ -17,7 +17,7 @@ import heuristics
 
 # the number of tests to perform for each algorithm under each set of conditions
 # more tests, in theory, means a more accurate timing average
-tests_per_algorithm = 1000
+tests_per_algorithm = 100
 
 # each algorithm to test
 # for each algorithm, a tuple is stored containing the name of the algorithm, whether or not heuristics are applicable to this algorithm, and the algorithm itself
@@ -58,18 +58,18 @@ for path in test_case_file_paths:
         test_case_files.append(path + file.name)
 
 # print the TSV header
-print("Algorithm\tHeuristic\tTest\tNumber of Nodes in Test\tNumber of Destination Nodes\tAverage Time\tNodes")
+print("Algorithm\tHeuristic\tTest\tNumber of Nodes in Test\tNumber of Edges in Test\tNumber of Destination Nodes in Test\tAverage Time\tNodes Created")
 
 # iterate through each combination of algorithm, heuristic, and test case, printing the results along the way
 for test_i, test in enumerate(test_case_files):
     # show a progress report to the user each time a new test case is being worked on
     stderr.write(f"{test} ({test_i + 1} of {len(test_case_files)}; {test_i * 100 // len(test_case_files)}%)\n")
 
-    for algorithm in all_algorithms:
-        for heuristic in (all_heuristics if algorithm[1] else [None]):
-            # read the test case file
-            test_data = read_test_file(test)
+    # read the test case file
+    (origin, destinations, nodes) = read_test_file(test)
 
+    for (alg_name, alg_needs_heuristic, alg) in all_algorithms:
+        for heuristic in (all_heuristics if alg_needs_heuristic else [None]):
             # the cumulative difference between the start and end times of each test
             total_diff = 0
 
@@ -80,18 +80,18 @@ for test_i, test in enumerate(test_case_files):
             # test the algorithm against each test case some number of times
             for i in range(tests_per_algorithm):
                 # if heuristics are involved, call the algorithm with the heuristic
-                if algorithm[1]:
-                    heuristic_object = heuristic[1](*test_data)
+                if alg_needs_heuristic:
+                    heuristic_object = heuristic[1](origin, destinations, nodes)
 
                     start = perf_counter_ns()
-                    test_result = algorithm[2](test_data[0], heuristic_object)
+                    test_result = alg(origin, heuristic_object)
                     end = perf_counter_ns()
                 else:
                     start = perf_counter_ns()
-                    test_result = algorithm[2](test_data[0])
+                    test_result = alg(origin)
                     end = perf_counter_ns()
 
                 total_diff += end - start
 
             # print the algorithm name, the heuristic used (if applicable), the test case used, the number of nodes in this test case, the number of destination nodes in this test case, the average amount of time this algorithm took to complete the test case, and the number of nodes created
-            print(f"{algorithm[0]}\t{heuristic[0] if heuristic else ""}\t{test}\t{len(test_data[2])}\t{len(test_data[1])}\t{total_diff / tests_per_algorithm}\t{test_result[1]}")
+            print(f"{alg_name}\t{heuristic[0] if heuristic else ""}\t{test}\t{len(nodes)}\t{sum(len(n.edges) for n in nodes.values())}\t{len(destinations)}\t{total_diff / tests_per_algorithm}\t{test_result[1]}")
