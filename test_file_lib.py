@@ -109,7 +109,7 @@ def read_test_file(path):
     lines = None
 
     # read the file into `lines`
-    with open(path) as file:
+    with open(path, encoding="utf-8-sig") as file:
         lines = list(file)
 
     # iterate through each line and parse it
