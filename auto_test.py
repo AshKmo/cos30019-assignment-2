@@ -91,6 +91,7 @@ for test_i, test in enumerate(test_case_files):
                     test_result = alg(origin)
                     end = perf_counter_ns()
 
+                # calculate the elapsed time
                 total_diff += end - start
 
             # print the algorithm name, the heuristic used (if applicable), the test case used, the number of nodes in this test case, the number of destination nodes in this test case, the average amount of time this algorithm took to complete the test case, and the number of nodes created

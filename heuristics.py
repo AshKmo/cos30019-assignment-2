@@ -45,6 +45,7 @@ class Heuristic:
         self.destinations = destinations
         self.nodes = nodes
 
+    # throw an error if the Heuristic class itself is used as a heuristic
     def judge(self, graph_node):
         raise NotImplementedError("you should have used a subclass, e.g. DistanceHeuristic")
 
@@ -61,6 +62,7 @@ class DistanceHeuristic(Heuristic):
                 math.dist((node.state.x, node.state.y), (dest.x, dest.y))
             )
 
+        # return the minimum distance to the destination node
         return min_distance
 
 # this heuristic judges each node based on how closely the angle from its parent to itself matches that from its parent to the nearest destination
@@ -74,14 +76,19 @@ class AngleHeuristic(Heuristic):
         if len(self.destinations) == 0:
             return math.inf
 
-        # find the closest destination relative to the parent node
         min_distance = math.inf
+
         parent_to_dest = None
+
+        # find the closest destination relative to the parent node
         for dest in self.destinations:
+            # create a vector from the parent node to the destination
             new_parent_to_dest = Vec2(dest.x - node.parent.state.x, dest.y - node.parent.state.y);
 
+            # obtain the magnitude of this vector, which is the same as the distance from the parent to the destination
             new_distance = new_parent_to_dest.mag()
 
+            # update the new distance and vector values if shorter ones are found
             if new_distance < min_distance:
                 parent_to_dest = new_parent_to_dest
                 min_distance = new_distance
@@ -92,8 +99,9 @@ class AngleHeuristic(Heuristic):
             node.state.y - node.parent.state.y
         )
 
-        # determine how similar the angle from the parent to the child is to the angle from the parent to the closest destination
+        # determine how similar the angle from the parent to the child is to the angle from the parent to the closest destination, using the dot product of the two unit vectors
+        # this will return a value -1 <= angle_similarity <= 1 where 1 is maximum similarity and -1 indicates that the two vectors are in opposite directions
         angle_similarity = parent_to_child.unit().dot(parent_to_dest.unit())
 
-        # lower value means the move is more aligned with the goal direction
+        # return the full minimum distance if the two vectors are in opposite directions, and zero if they are equal
         return min_distance * (1 - angle_similarity) / 2

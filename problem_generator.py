@@ -105,14 +105,16 @@ def generate_problem(width = width, height = height, node_count_range = node_cou
         # collect a list of nodes that this node is not already attached to
         not_next_tree_nodes = [n for n in nodes if n not in new_tree_nodes and n != branch]
 
-        # select a random number of nodes according to the range and attach this node to them
+        # select a random number of additional nodes (according to the range) and attach this node to them
         for next_node in random.sample(not_next_tree_nodes, min(random.choice(extra_edge_range), len(not_next_tree_nodes))):
             edge_between(branch, next_node)
 
+    # kick off the spanning tree calculation, starting at the origin
     spanning_tree(origin)
 
     nodes_dict = {}
 
+    # add each node to the nodes dictionary according to its name (number)
     for n in nodes:
         nodes_dict[n.name] = n
 
